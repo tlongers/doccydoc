@@ -14,46 +14,38 @@ We use the term ``incident`` interchangeably with the term ``event``.
 Event: ID
 ---------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 A unique code assigned to each event in the dataset.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``a407be6a-28e6-4237-b4e9-307f27b1202e``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 This field is created automatically when data is uploaded into the Monitor's online platform.
 
 Event: Start date
 -----------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The date on which an event started.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 If an event occurred within a single day, ``Event: Start date`` and ``Event: End date`` should be the same.
 
@@ -68,23 +60,19 @@ In keeping with all date fields we include in this dataset, where our research c
 Event: End date
 ---------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The date on which an event ended.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 If ``Event: End date`` is unclear there are several ways to determine what should be used.
 
@@ -105,92 +93,76 @@ In keeping with all date fields we include in this dataset, where our research c
 Event: Date of publication
 --------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The date of publication of the source used to evidence the event.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Event: Date of publication``.
 
 Event: Date of last update
 --------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The date of most recent update about the event
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Event: Date of last update``.
 
 Event: Status as of last update
 -------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Most recently available status of the event
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text, controlled vocabulary
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 Field is not yet implemented.
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 Field is not yet implemented.
 
 Event: Location
 ---------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 A description of the where the event occurred.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Giwa Barracks``, ``Rikkos neighborhood``, ``Campo Militar Número 6-B``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 We use this field to record the location of an event.
 
@@ -215,99 +187,79 @@ In such instances, researchers should consider the initial arrest and transporta
 Event: Exact location (Longitude or OSM object Name)
 ----------------------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 Event: Exact location (Latitude or OSM object ID number)
 --------------------------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 Event: Settlement (OSM object Name)
 -----------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The city, town or village in which an event occurred.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text, OSM object name, first in a pair of values
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Monclova``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 Often, information about events does not list a settlement by name. If so, we will leave this field blank even if by the description it seems to indicate a particular place. This is because we do not add to reporting only to transcribe what other groups have reported.
 
 Event: Settlement (OSM object ID Number)
 ----------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The city, town or village in which an event occurred.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Number, OSM object ID number, second in a pair of values
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``747101009``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 Often, information about events does not list a settlement by name. If so, we will leave this field blank even if by the description it seems to indicate a particular place. This is because we do not add to reporting only to transcribe what other groups have reported.
 
 Event: Top Administrative Area (OSM object name)
 ------------------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The OSM object name of the highest sub-national administrative area in which an organization site is based.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text, OSM relation name, first in a pair of values
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Michoacán``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 We identify ``Events`` with a number of different levels of geographical precision. In ``Event: Top Administrative Area (OSM relation name)`` we record the text name of highest level subnational boundary for the country in which the site is located, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__.
 
@@ -316,23 +268,19 @@ We identify ``Events`` with a number of different levels of geographical precisi
 Event: Top Administrative Area (OSM object ID number)
 -----------------------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The OSM relation ID number of the highest sub-national administrative area in which an organization site is based.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text, OSM relation ID number, second in a pair of values
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2340636``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 We identify ``Events`` with a number of different levels of geographical precision. In ``Event: Top Administrative Area (OSM relation ID number)`` we record the text name of highest level subnational boundary for the country in which the event occurred, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__.
 
@@ -341,23 +289,19 @@ We identify ``Events`` with a number of different levels of geographical precisi
 Event: Country
 --------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The country in which an event occurred.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Two letter country code
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``mx``, ``ug``, ``ng``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 We identify the location of events with a number of different levels of geographical precision. The ``Event: Country`` field identifies the country in which an event occurred. All entries in this field are two letter country codes taken from `ISO 3166 which can be searched here <https://www.iso.org/obp/ui/#search>`__.
 
@@ -366,46 +310,38 @@ We identify the location of events with a number of different levels of geograph
 Event: Violation type
 ---------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Type of alleged violation of human rights committed during the event.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text, controlled vocabulary
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Torture``, ``Violations of the Right to Life``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 In ``Event: Violation type``, values are taken "as is" from the source.
 
 Event: Description
 ------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 A description of the event.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
     According to Amnesty International: "Usman Modu, a 26-year-old scrap metal dealer from Maiduguri, spent almost two and a half years in Giwa barracks. He was arrested in April 2012 in Gwange, Maiduguri, during a screening operation after a Boko Haram attack. All the people who left the mosque were gathered together: the elderly and children were allowed to go home. The men were brought before a “pointer”, who pointed at him and 17 other men. He was first taken to a JTF station called NEPA and then to Giwa Barracks. “One by one we were brought in front of an armoured tank. I never saw anything. People said there was someone inside. When I went up, soldiers said I should go left. They started beating me. One soldier beat me with his gun and I fell down. They tied my hands behind my back and beat me. Then told me to go inside the car. I don't know why I was chosen. I was surprised, I don't know what I have done.” The military released Usman with 41 others in November 2014. The 17 men arrested with Usman all died in military custody."
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 In this field we record a direct quotation from the civil society, governmental or other source about the event. When an event has more than one report tied to it, start the quotation as below:
 
@@ -414,23 +350,19 @@ In this field we record a direct quotation from the civil society, governmental 
 Event: Perpetrator name
 -----------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The name of the person alleged to have committed the human rights violation(s) in the event.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers, taken from ``Person: Name``
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Friday Iyamabo``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 If a person or persons are named in the sources for the event, we will record it in the ``Event: Perpetrator name`` field. The value in ``Event: Perpetrator name`` will correspond to a value in ``Person: Name``.
 
@@ -441,23 +373,19 @@ In this case, the alleged perpetrator is named in the source report. We would re
 Event: Perpetrator organization
 -------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The organization(s) alleged to have committed the human rights violation(s) in the event.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers, multiple entry, taken from ``Organization: Name``
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2 Batallón de Fuerzas Especiales``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 If the sources that specific organizations committed the alleged human rights violations described in the event, we include these names in ``Event: Perpetrator name``. The value in ``Event: Perpetrator organization`` will correspond to a value in ``Organization: Name``.
 
@@ -468,23 +396,19 @@ Here is an example of source material that contains information that would be in
 Event: Perpetrator classification
 ---------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 General branch or tier of the security force alleged to have committed the human rights violation(s).
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers, controlled vocabulary, taken from ``Organization: Classification``
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Army``, ``Ejército``,\ ``Police``, ``Military``,\ ``Military Police``,\ ``Joint Operation``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 Sometimes a source will report that the alleged perpetrators of a human rights violation are from a generic security force such as “soldiers”, “police” or some other formulation. In this case, use this field to record a classification in the same way as for ``Organization: Classification``. For example:
 
@@ -495,23 +419,19 @@ The only alleged perpetrators described in this alleged event are "soldiers". Th
 Event: Source
 -------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The source of information about the event.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``"Recomendación No. 49/2011 sobre el caso de retención ilegal y tortura en agravio de V1 en Ciudad Juárez, Chihuahua". Comisión Nacional de los Derechos Humanos (Mexico). 30 August 2011. http://www.cndh.org.mx/sites/all/doc/Recomendaciones/2011/Rec_2011_049.pdf Internet Archive link: http://www.cndh.org.mx/sites/all/doc/Recomendaciones/2011/Rec_2011_049.pdf``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 The values we enter here should follow the general citation format used by Security Force monitor, as set out in this Research Handbook:
 
@@ -522,23 +442,19 @@ Where there are multiple sources about the same event, they are listed in the or
 Event: Notes
 ------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 To DO.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``"Recomendación No. 49/2011 sobre el caso de retención ilegal y tortura en agravio de V1 en Ciudad Juárez, Chihuahua". Comisión Nacional de los Derechos Humanos (Mexico). 30 August 2011. http://www.cndh.org.mx/sites/all/doc/Recomendaciones/2011/Rec_2011_049.pdf Internet Archive link: http://www.cndh.org.mx/sites/all/doc/Recomendaciones/2011/Rec_2011_049.pdf``
 
-Guidance for use
-~~~~~~~~~~~~~~~~
+**Guidance for use**
 
 The values we enter here should follow the general citation format used by Security Force monitor, as set out in this Research Handbook:
 

@@ -6,8 +6,7 @@ Every piece of data in Security Force Monitor has at least one source. Confidenc
 Sources
 -------
 
-Citation format
-~~~~~~~~~~~~~~~
+**Citation format**
 
 Every data point in Security Force Monitor must have one or more sources associated with it. A source should be recorded in this format:
 
@@ -18,13 +17,11 @@ For example:
     | Army parades oil bunkers in Kaduna. Premium Times (Nigeria). 8 May 2013. http://www.premiumtimesng.com/regional/nwest/133295-army-parades-oil-bunkers-in-kaduna.html
     | Internet Archive link: https://web.archive.org/web/20140912060820/https://www.premiumtimesng.com/regional/nwest/133295-army-parades-oil-bunkers-in-kaduna.html#sthash.Fc0DTTxe.dpbs
 
-Country information
-~~~~~~~~~~~~~~~~~~~
+**Country information**
 
 We include the country information because there could be a publication with the same name based in another country - for example there is `a publication based in Nigeria named The Guardian <https://guardian.ng/>`__ as well as `a publication based in the United Kingdom named The Guardian <https://www.theguardian.com/uk>`__.
 
-Date
-~~~~
+**Date**
 
 When recording the date of a source for use in its citation, we always use the format ``DAY MONTH YEAR (DD MMMM YYYY)``
 

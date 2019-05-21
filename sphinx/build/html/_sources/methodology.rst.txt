@@ -6,8 +6,7 @@ Security Force Monitor follows a four phase process when researching the securit
 Phase 1: Scope out sources
 --------------------------
 
-General sources
-~~~~~~~~~~~~~~~
+**General sources**
 
 Security Force Monitor collects data about the persons and organizations that comprise security forces, along with allegations of human rights abuses made against security forces. This data is carefully collected from a variety of sources, generally online. These include:
 
@@ -28,15 +27,13 @@ Security Force Monitor collects data about the persons and organizations that co
 
 The Monitor also identifies non-digital resources such as monographs, scholarly literature, biographies and other materials about security services. The existence and availability of these type of sources vary widely from country to country.
 
-State administrative structures and geography
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**State administrative structures and geography**
 
 Security Force Monitor researchers familiarize themselves with the country’s governance and administrative structures, gaining understanding about the levels of government (for example: local, regional, state, national) and their connection to different security forces. In examining this we also flag where there might be major changes in the structure of government, such as those that may accompany a constitutional referendum or a peace process. These affect how the Monitor will represent data on security forces over time.
 
 Examining the administrative geography of a country provides important context for the structure and operations of the security forces. This part of the scoping process also gives us insight into how much of a country’s administrative geography is represented in online gazetteers (like `OpenStreetMap <https://nominatim.openstreetmap.org/>`__ or `GeoNames <https://www.geonames.org>`__) that the Monitor uses in its analysis.
 
-Potential high value datasets
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Potential high value datasets**
 
 During this first phase, researchers also identify sources that could be turned into large, high value datasets for the Monitor. These are sources that contain a sufficiently large amount or complex type of data that technical help is necessary to extract it in a timely way; doing the work “by hand” is possible, but would be slow and error prone. These high value data extraction tasks use techniques such as web-scraping, scripted parsing and geospatial analysis. An example of these types of sources are the `Internet Archive snapshots the official webpage of the Mexican Army and Air Force <https://web.archive.org/web/20050908175401/http://www.sedena.gob.mx/ejercito/comandancias/index.html>`__ (and child pages) going back more than a decade which outline the top level structures of the Mexican army and its commanding officers.
 
@@ -57,7 +54,7 @@ Phase 3: Conduct detailed research
 
 Researchers use the initial keywords and sources to begin a “deep dive” into the security forces.
 
-Anything relating to the types of information the Monitor collects is entered into the Monitor’s database. The :ref:`Data Model section` of this Research Handbook gives detailed guidance to Monitor researchers about the types of data to take from sources and how it should be entered.
+Anything relating to the types of information the Monitor collects is entered into the Monitor’s database. The Data Model section of this Research Handbook gives detailed guidance to Monitor researchers about the types of data to take from sources and how it should be entered.
 
 Additionally, data from this research is used to update the Country Guide to provide greater granular detail on the security forces of a country or to update sections as needed. New sources and keywords discovered during research are added to the existing guide as well.
 
@@ -67,7 +64,7 @@ As the Monitor builds its database on the security forces of a country, new info
 -  "Is it possible this source is correct and our other sources are incorrect?"
 -  "Do I have enough information to accept or reject what this source says?"
 
-The Country Guide acts as a framework for researchers to understand the security forces and to help a researcher answer these questions. Data entered into the Monitor’s databases are progressively updated as new information is found. Throughout, researchers take a number of quality assurance steps to validate the data against the standards set out in the :ref:`Data Model section`.
+The Country Guide acts as a framework for researchers to understand the security forces and to help a researcher answer these questions. Data entered into the Monitor’s databases are progressively updated as new information is found. Throughout, researchers take a number of quality assurance steps to validate the data against the standards set out in the Data Model section
 
 Phase 4: Publish data
 ---------------------

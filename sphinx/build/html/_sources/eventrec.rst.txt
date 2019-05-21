@@ -5,16 +5,15 @@ This page contains an overview of the data that visitors to WhoWasInCommand will
 
 This includes the different sections of the incident record, the data fields that are used to create it and links to more information about each field.
 
-Title area
-----------
+Incident title area
+-------------------
 
 .. figure:: _static/incident_record_anatomy_title_area.png
    :alt: 
 
 This section contains key information about the incident. It also contains links to download and print actions for the displayed record. Hover over any value in the title area to display a little coloured circle; clicking on this will display the sources and confidence rating for we have assigned to each value.
 
-Fields used in incident title area
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Fields used in incident title area**
 
 The following fields are used in the incident title area section:
 
@@ -23,44 +22,42 @@ The following fields are used in the incident title area section:
 -  :ref:`Event: Country`
 -  :ref:`Event: Violation type`
 
-Content sidebar
----------------
+Incident content sidebar
+------------------------
 
 .. figure:: _static/incident_record_anatomy_content_sidebar.png
    :alt: 
 
 The content sidebar is a navigation aid. It provides quick links to different sections of the record. The items inside the content sidebar indicate what sort of data is available about this incident. For example if "Perpetrator organizations" is not listed in the content sidebar, then there is no data available about alleged perpetrators of the incident.
 
-Location
---------
+Incident location
+-----------------
 
 .. figure:: _static/incident_record_anatomy_location.png
    :alt: 
 
 This section contains an interactive map and some text that describe the location where sources indicate that an incident occured. Click on the pins placed in the map to display the name of a location. Grab the map to drag/pan it around. Swipe or use the ``+`` and ``-`` controls on the map to zoom in or zoom out. Hover over the text description of the location and a little coloured circle will appear. Click on this to view the sources and confidence rating we have assigned to that value.
 
-Fields used in incident location section
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Fields used in incident location section**
 
 -  :ref:`Event: Location`
--  :ref:`Event: Exact location (Longitude or OSM Node Name)`
--  :ref:`Event: Exact location (Latitude or OSM Node ID number)`
+-  :ref:`Event: Exact location (Longitude or OSM object Name)`
+-  :ref:`Event: Exact location (Latitude or OSM object ID number)`
 -  :ref:`Event: Settlement (OSM object Name)`
 -  :ref:`Event: Settlement (OSM object ID Number)`
--  :ref:`Event: Top Adminstrative Area (OSM relation name)`
+-  :ref:`Event: Top Administrative Area (OSM object name)`
 -  :ref:`Event: Top Administrative Area (OSM object ID number)`
 -  :ref:`Event: Country`
 
-Description
------------
+Incident description
+--------------------
 
 .. figure:: _static/incident_record_anatomy_description.png
    :alt: 
 
 This section contains a direct quotation from the civil society, governmental or other source that describes the incident. As with all tables in person, unit and incident records on WhoWasInCommand, hovering over or tapping any value in the table will cause a little coloured circle to appear. Clicking or tapping again on this will show the sources and confidence ratings we have assigned to that value.
 
-Fields used in description section
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Fields used in incident description section**
 
 The following field is used in the incident description section:
 
@@ -74,8 +71,7 @@ Perpetrator organizations
 
 This section contains a table listing the organization(s) that sources allege committed the human rights violation(s) described in the incident. As with all tables in person, unit and incident records on WhoWasInCommand, hovering over or tapping any value in the table will cause a little coloured circle to appear. Clicking or tapping again on this will show the sources and confidence ratings we have assigned to that value.
 
-Fields used in perpetrator organizations section
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Fields used in perpetrator organizations section**
 
 The following fields are used in the perpetrator organizations section:
 
@@ -84,8 +80,8 @@ The following fields are used in the perpetrator organizations section:
 -  :ref:`Organization: Aliases`
 -  :ref:`Organization: Classification`
 
-Changelog
----------
+Incident Changelog
+------------------
 
 .. figure:: _static/incident_record_anatomy_changelog.png
    :alt: 

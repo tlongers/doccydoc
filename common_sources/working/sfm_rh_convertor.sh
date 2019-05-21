@@ -22,9 +22,11 @@ shopt -s failglob
 for i in $(ls in/|sed 's/\.md//g'); do
 
 	cat in/${i}.md \
-	| pandoc --wrap=none -f markdown+header_attributes+pipe_tables -t rst \
+	| sed 's/^###\(.*$\)/**\1**/g' \
+	| pandoc --wrap=none -f markdown+auto_identifiers+pipe_tables -t rst \
 	| sed 's/`\(.*\) <\/.*>`__/:ref:`\1`/g' \
 	| sed 's/\/en\/assets\//_static\//g'\
+	| sed '/^\\\*/s/\\//g ; s/^\(\*\*\) /\1/g ; /^\*\*/s/{.*}//g ; s/ \(\*\*\)$/\1/g' \
 	> out/${i}.rst
 	
 	 done
@@ -41,6 +43,3 @@ awk '/Summary of person fields/ {f=1} /Person: ID/ {f=0} !f' out/persons.rst > t
 
 # Scraps
 
-
-	#| grep -v "figure" \
-	#| grep -v ":alt:" \

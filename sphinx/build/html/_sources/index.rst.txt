@@ -30,7 +30,7 @@ Security Force Monitor: Research Handbook
 
    generalfunctions
    unitrec
-   personrec
+   personsrec
    eventrec
 
 Indices and tables

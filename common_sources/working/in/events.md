@@ -38,7 +38,7 @@ We use the term `incident` interchangeably with the term `event`.
 
 ## Event: ID {#event_id}
 
-### Description
+### Description {#eventdesc}
 
 A unique code assigned to each event in the dataset.
 

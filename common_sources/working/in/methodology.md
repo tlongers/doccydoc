@@ -50,7 +50,7 @@ This Country Guide is updated as new details on the security forces are discover
 
 Researchers use the initial keywords and sources to begin a “deep dive” into the security forces.
 
-Anything relating to the types of information the Monitor collects is entered into the Monitor’s database. The [Data Model section](/en/datamodel/README.md) of this Research Handbook gives detailed guidance to Monitor researchers about the types of data to take from sources and how it should be entered.
+Anything relating to the types of information the Monitor collects is entered into the Monitor’s database. The Data Model section of this Research Handbook gives detailed guidance to Monitor researchers about the types of data to take from sources and how it should be entered.
 
 Additionally, data from this research is used to update the Country Guide to provide greater granular detail on the security forces of a country or to update sections as needed. New sources and keywords discovered during research are added to the existing guide as well.
 
@@ -60,7 +60,7 @@ As the Monitor builds its database on the security forces of a country, new info
 * "Is it possible this source is correct and our other sources are incorrect?"
 * "Do I have enough information to accept or reject what this source says?"
 
-The Country Guide acts as a framework for researchers to understand the security forces and to help a researcher answer these questions. Data entered into the Monitor’s databases are progressively updated as new information is found. Throughout, researchers take a number of quality assurance steps to validate the data against the standards set out in the [Data Model section](/en/datamodel/README.md).
+The Country Guide acts as a framework for researchers to understand the security forces and to help a researcher answer these questions. Data entered into the Monitor’s databases are progressively updated as new information is found. Throughout, researchers take a number of quality assurance steps to validate the data against the standards set out in the Data Model section
 
 ## Phase 4: Publish data {#method-phase-4}
 

@@ -14,46 +14,38 @@ Documented in this chapter are a range of different pieces of data about organiz
 Organization: ID
 ----------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 A unique code assigned to each organization in the dataset.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``a407be6a-28e6-4237-b4e9-307f27b1202e``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 This field is created automatically when data is uploaded into the Monitor's online platform.
 
 Organization: Name
 ------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Name of the organization.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``3 Armoured Division``, ``3 Compañía de Infantería No Encuadrada``, ``7 Military Operations Command``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 As different sources will spell an organization's name in different ways the Security Force Monitor works to create a single canonical version of an organization's name based on sources and standardized to match the overall structure of and reporting about the security forces:
 
@@ -80,23 +72,19 @@ In cases where multiple organizations have the same name the Monitor will distin
 Organization: Aliases
 ---------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Other names for an organization, including aliases, alternative spellings and abbreviations
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 If ``3 Armoured Division`` is used as the canonical ``Organization: Name`` of an organization, entries in the ``Organization: Aliases`` field may include ``3 Div`` and ``Three Division``.
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Different sources will spell an organization's name in different ways. We choose and record a canonical version of a organization's name in the ``Organization: Name`` field. All other spellings that we have found are treated as aliases and stored in this field.
 
@@ -107,23 +95,19 @@ Although we do not use ordinal indicators like ``2nd`` or ``10/o`` in the canoni
 Organization: Country
 ---------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 ISO 3166 code for the country in which an organization originates
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Two letter country code
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``mx``, ``ug``, ``ng``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 The ``Organization: Country`` field identifies the country this organization comes from. All entries in this field are two letter country codes taken from `ISO 3166 which can be searched here <https://www.iso.org/obp/ui/#search>`__.
 
@@ -132,23 +116,19 @@ The ``Organization: Country`` field identifies the country this organization com
 Organization: Classification
 ----------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Branch of the security services that the organization a part of or general descriptor for the organization.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Army``, ``Ejército``, ``Police``, ``Military``, ``Military Police``, ``Joint Operation``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We use classifications to describe the basic nature of a specific organization and to assist investigations of potential linkages between reports of human rights abuses and the Security Force Monitor's dataset. As alleged perpetrators are usually identified in general terms of "soldiers" and "police" this field is important as a first step to understand potential linkages between organizations, persons and incidents. ``Organization: Classification`` values are useful supplements to ``Organization: Parent`` and ``Organization: Membership`` data we use to connect different units together.
 
@@ -163,23 +143,19 @@ Organizations may have more than one classification, usually this will be when a
 Organization: Date first cited
 ------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The earliest date that a source shows an organization exists, either through direct reference in the source or by the date of its publication.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Along with the fields ``Organization: Start date?``, ``Organization: Date last cited`` and ``Organization: Open-ended?`` the field ``Organization: Date first cited`` provides data about the time period we can evidence an organization has existed.
 
@@ -197,46 +173,38 @@ This field is clarified by the field ``Organization: Start date?`` which indicat
 Organization: Start date?
 -------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Is the value in ``Organization: Date first cited`` the actual date on which an organization was founded (Y), or the earliest date a source has referred to an organization (N)?
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Boolean
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Y``, ``N``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 This is a clarifying field for ``Organization: Date first cited``. Where a source references an organization and specifies the date that organization was created we will enter ``Y`` . In all other cases we will enter a value of ``N`` to indicate that the date is not a start date, but the date of first citation.
 
 Organization: Date last cited
 -----------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The most recent date for sourcing the organization's existence, either through direct reference in the source or by the date of its publication.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2013``, ``2013-12``, ``2013-12-28``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Along with the fields ``Organization: Date first cited``, ``Organization: Start date?``\ and ``Organization: Open-ended?`` the field ``Date last cited`` provides data on the time period we can say an organization has existed.
 
@@ -254,23 +222,19 @@ This field is clarified by ``Organization: Open-ended?``, which indicates whethe
 Organization: Open-ended?
 -------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Is the value in ``Organization: Date last cited`` the actual date on which an organization was disbanded (E), or can we assume this organization continues to exist after this date to the present (Y), or should it not be assumed that the organization continues to exist after ``Organization: Date last cited`` because of poor sourcing or disbandment at an unclear point in time (N)?
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Single choice
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Y``, ``N``, ``E``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We use this field to clarify the meaning of the date entered in ``Organization: Date last cited``. One of the below values should be chosen:
 
@@ -281,23 +245,19 @@ We use this field to clarify the meaning of the date entered in ``Organization: 
 Organization: Parent
 --------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The immediate superior organization in the overall hierarchy.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``301 Artillery Regiment``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 ``Organization: Parent`` describes a hierarchical, time-bound relationship between two organizations that are part of the same branch of a security force. The parent is “above” or distinct and separate from the organization in some way. Over time, an organization may have different parents.
 
@@ -310,23 +270,19 @@ In our data model ``Organization: Parent`` relationships are different from ``Or
 Parent relationship: Classification
 -----------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Type of relationships that exists between two organizations.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Controlled vocabulary, single choice
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Command, Administrative, Informal``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Organizations have a ``Command`` relationship when the parent organization can order the organization to perform some operational activity. These cover both *de jure* and *de facto* relationships between organizations.
 
@@ -341,23 +297,19 @@ Organizations have a ``Command`` relationship when the parent organization can o
 Parent relationship: Date first cited
 -------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The earliest date that a source shows a parent organization relationship exists, either through direct reference in the source or by the date of its publication.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Along with the fields ``Parent relationship: Start date?``, ``Parent relationship: Sate last cited`` and ``Parent relationship: Open-ended?`` the field ``Parent organization: Date first cited`` provides data on the time period we can say one organization is the parent of another .
 
@@ -375,46 +327,38 @@ This field is clarified by the field ``Parent relationship: Start date?`` which 
 Parent relationship: start date?
 --------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Is the value in ``Parent relationship: Date first cited`` the actual date on which an organization became the parent of another, or the earliest date a source has referred to the relationship?
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Boolean (Yes, No)
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Y``, ``N``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 This is a clarifying field for ``Parent relationship: Date first cited``. Where a source references the parent relationship and specifies the date that the relationship began we will enter ``Y`` . In all other cases we will enter a value of ``N`` to indicate that the date is not a start date, but the date of first citation.
 
 Parent organization: date last cited
 ------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The latest date that a source shows a parent organization relationship exists, either through direct reference in the source or by the date of its publication.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Along with the fields ``Parent relationship: Date first cited``, ``Parent relationship: Start date?`` and ``Parent relationship: Open-ended?`` the field ``Parent organization: Date last cited`` provides data on the time period we can evidence that one organization is the parent of another.
 
@@ -436,23 +380,19 @@ This field is clarified by the field ``Parent relationship: Open-ended?`` which 
 Parent relationship: Open-ended?
 --------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Is the value in ``Parent relationship: Date last cited`` the actual date on which the parent relationship ended (E), or can we assume this relationship continues to exist after this date (Y), or can we not assume the relationship continues to exist after this date, but the exact end point is unknown (N)?
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Single choice (Y, N, E)
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Y``, ``N``, ``E``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We use this field to clarify the meaning of the date entered in ``Parent relationship: Date last cited``. One of the below values should be chosen:
 
@@ -463,23 +403,19 @@ We use this field to clarify the meaning of the date entered in ``Parent relatio
 Site: Base
 ----------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 A base is a distinctively named building or complex - like a barracks or camp - where the organization is located.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Leopard Base , Giwa Barracks , Bonny Camp``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 The ``Base`` field adds detail about a site. This field is used to record data about organizations that are located in a distinctively-named building or complex.
 
@@ -490,24 +426,20 @@ This field should not be used for anything that matches the name or alias of a o
 Site: Exact Location (Longitude or OSM object Name)
 ---------------------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The longitude or OSM object name of the most precise location of a site associated with this organization.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 First value of a latitude/longitude pair (using `EPSG:3857 <http://spatialreference.org/ref/epsg/wgs-84/>`__), or an OSM object Name.
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 | If used to record an OSM Node Name: ``Masr Al-Gedida``
 | If used to record a latitude: ``31.3280332``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We identify ``sites`` with a number of different levels of geographical precision.
 
@@ -519,24 +451,20 @@ We identify ``sites`` with a number of different levels of geographical precisio
 Site: Exact Location (Latitude or OSM object ID)
 ------------------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The latitude or OSM object ID number of the most precise location of a site associated with this organization.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Second value of a longitude/latitude pair (using `EPSG:3857 <http://spatialreference.org/ref/epsg/wgs-84/>`__), or an OSM object ID number.
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 | If used to record an OSM object ID number: ``452377264``
 | If used to record a Longitude: ``30.09716``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We identify ``sites`` with a number of different levels of geographical precision.
 
@@ -548,69 +476,57 @@ We identify ``sites`` with a number of different levels of geographical precisio
 Site: Settlement (OSM object Name)
 ----------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The city, town or village in which an organization site is based.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text, OSM object name, first in a pair of values
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Tampico``, ``Francisco Escarcega``, ``Abu al Matamir``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We identify ``sites`` with a number of different levels of geographical precision. In ``Site: Settlement (OSM Object Name)`` we record the name of the OSM object (node, way or relation) that identifies a settlement in which there is an organization site. It could be a city, town or village or other OSM object that denotes a settlement.
 
 Site: Settlement (OSM object ID)
 --------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The city, town or village in which an organization site is based.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Number, OSM object ID number, second in a pair of values
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``273584290``,\ ``286989920``,\ ``769127625``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We identify ``sites`` with a number of different levels of geographical precision. In ``Site: Settlement (OSM Object ID)`` field we record the name of the OSM object (node, way or relation) ID number that identifies a settlement in which there is an organization site. It could be a city, town or village or other OSM object that denotes a settlement.
 
 Site: Top Administrative Area (OSM object Name)
 -----------------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The OSM name of the largest, generally used administrative area of a country (usually admin level 4).
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text, OSM object name, first in a pair of values
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Michoacán, Borno``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We identify ``sites`` with a number of different levels of geographical precision. In ``Site: Top Administrative Area (OSM Object Name)`` we record the text name of highest level subnational boundary for the country in which the site is located, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, these are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset tagged as administrative level 4.
 
@@ -619,23 +535,19 @@ We identify ``sites`` with a number of different levels of geographical precisio
 Site: Top Administrative Area (OSM object ID number)
 ----------------------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The OSM ID of the largest, generally used administrative area of a country (usually admin level 4).
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Number, OSM relation ID number, second in a pair of values
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2340636``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We identify ``sites`` with a number of different levels of geographical precision. In ``Site: Top Administrative Area (OSM Object ID number)`` we record OSM object ID number of the highest level subnational boundary for the country in which the site is located, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, these are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset tagged as administrative e level 4.
 
@@ -644,23 +556,19 @@ We identify ``sites`` with a number of different levels of geographical precisio
 Site: Country
 -------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 ISO 3166 code for the country in which the organization's site is located.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Two letter country code
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``mx``, ``ug``, ``ng``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We identify ``sites`` with a number of different levels of geographical precision.The ``Site: Country`` field identifies the country in which an organization site is located. All entries in this field are two letter country codes taken from `ISO 3166 which can be searched here <https://www.iso.org/obp/ui/#search>`__.
 
@@ -669,23 +577,19 @@ We identify ``sites`` with a number of different levels of geographical precisio
 Site: Date of first citation
 ----------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 This field is for the earliest citation for the location of a site, either through direct reference in the source or by the date of its publication.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Along with the fields ``Site: Founding date?``, ``Site: Date last cited`` and ``Site: Open-ended?`` the field ``Site: Date first cited`` provides data on the time period for a site's location.
 
@@ -701,46 +605,38 @@ This field is clarified by the field ``Site: Founding date?`` which indicates wh
 Site: Founding date?
 --------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Is the value in ``Site: Date first cited`` the actual date on which an organization site was founded (Y), or the earliest date a source has referred to an organization site (N)?
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Boolean (Yes, No)
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Y``, ``N``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 This is a clarifying field for ``Site: Date first cited``. Where a source references an organization site and specifies the date that organization site was founded we will enter ``Y`` . In all other cases we will enter a value of ``N`` to indicate that the date is not a start date, but the date of first citation.
 
 Site: Date last cited
 ---------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 This field is for the latest citation for the location of a site, either through direct reference in the source or by the date of its publication.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Along with the fields ``Site: Date first cited``, ``Site: Founding date?`` and ``Site is Open-ended?`` the field ``Site: Date last cited`` provides data on the time period for a site's location.
 
@@ -756,23 +652,19 @@ This field is clarified by the field ``Site: Open-ended?`` which indicates wheth
 Site: Open-ended?
 -----------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Indicates whether the value in ``Site: Date last cited`` is the actual date on which an organization site was disbanded, the latest date a source has referred to an organization site, and whether can we assume this organization site continues to exist.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Single choice (Y, N, E)
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Y``, ``N``, ``E``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We use this field to clarify the meaning of the date entered in ``Date last cited``. In entering a value for this field we use a variety of factors including: the history of basing for the unit, the overall structure and nature of the security forces, and the frequency of movement of similar units.
 
@@ -785,92 +677,76 @@ The values that can be entered in this field are restricted to the below:
 Area of Operations: OSM object name
 -----------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 A geographical area in which an organization exercises jurisdiction or has operated in any manner
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers, OSM object name, first in a pair of fields
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Baja California Sur``, ``Kafr el-Sheikh Governorate``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 The ``Area of Operations`` fields document multiple and concurrent areas of operation of an organization. The value entered in this field is the OpenStreetMap name for the lowest-level formal geographical area that best describes where an organization has operated in some manner.
 
 Area of Operations: OSM object ID number
 ----------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 A geographical area in which an organization exercises jurisdiction or has operated in any manner
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Numbers, OSM object ID number, second in a pair of fields
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2589611``, ``4103405``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 The ``Area of Operations`` fields document multiple and concurrent areas of operation of an organization. The value entered in this field is the OpenStreetMap object ID number for the lowest-level formal geographical area that best describes where an organization has operated in some manner.
 
 Area of Operations: Country
 ---------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 The country in which an Area of Operation is located.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Two letter country code
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``mx``, ``ug``, ``ng``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We identify ``Area of Operations`` with two different levels of geographical precision.The ``Area of Operations: Country`` field identifies the country in which an organization has operated in some manner. All entries in this field are two letter country codes taken from `ISO 3166, which can be searched here <https://www.iso.org/obp/ui/#search>`__.
 
 Area of Operations: Date first cited
 ------------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 This field is for the earliest citation for an organization's ``Area of Operations``, either through direct reference in the source or by the date of its publication.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Along with the fields ``Area of Operations: Founding date?``, ``Area of Operations: Date last cited`` and ``Area of Operations: Open-ended?`` the field ``Area of Operations: Date first cited`` provides data on the time period for which can specify an organization's Area of operations.
 
@@ -886,46 +762,38 @@ This field is clarified by the field ``Area of Operations: start date?`` which i
 Area of Operations: Start date?
 -------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Is the value in ``Area of Operations: Date first cited`` the actual date on which an organization's Area of Operations started, or the earliest date a source has referred to an organization's Area of Operations?
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Boolean (Yes, No)
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Y``,\ ``N``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 This is a clarifying field for ``Area of Operations: Date first cited``. Where a source references an organization site and specifies the date that organization Area of Operations was started we will enter ``Y`` . In all other cases we will enter a value of ``N`` to indicate that the date is not a start date, but the date of first citation.
 
 Area of Operations: Date last cited
 -----------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 This field is for the latest citation for an Area of Operations, either through direct reference in the source or by the date of its publication.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Along with the fields ``Area of Operations: Date first cited``, ``Area of Operations: start date?`` and ``Area of Operations: Open-ended?`` the field ``Site: Date last cited`` provides data on the time period for which can specify an Area of Operations location.
 
@@ -939,23 +807,19 @@ This field is clarified by the field ``Site: Open-ended?`` which indicates wheth
 Area of Operations: Open-ended?
 -------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Indicates whether the value in ``Area of Operations: Date last cited`` is the actual date on which an organization ended operations in the specified area, the latest date a source has referred to this Area of Operations, and whether can we assume an organization will continue to operate in an area beyond the date of last citation.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Single choice from selection
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Y``,\ ``N``,\ ``E``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We use this field to clarify the meaning of the date entered in ``Area of Operations: Date last cited``. In entering a value for this field we use a variety of factors to assess whether an organization continues to operation in any manner in this area beyond the date of the last citation. These include: the history of operations of the organization, the overall structure and nature of the security forces, and the frequency of movement of similar units.
 
@@ -970,23 +834,19 @@ The values that can be entered in this field are restricted to the below:
 Organization Membership
 -----------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Internal/national joint operations, international peacekeeping operations, or other multi-unit efforts that this organization is a part of
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers,.
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Operación Conjunta Chihuahua``, ``Operation BOYONA``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 This field indicates whether an organization has had any memberships or attachments to internal/national joint operations, international peacekeeping operations, or other multi-unit efforts. Generally this means one of two things:
 
@@ -1000,23 +860,19 @@ We treat task forces, operations, peacekeeping missions and anything else repres
 Membership: Date first cited
 ----------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 This field is for the earliest citation for the location of a membership, either through direct reference in the source or by the date of its publication.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Along with the fields ``Membership: Start date?``, ``Membership: Date last cited`` and ``Membership: Open-ended?`` the field ``Membership: Date first cited`` provides data on the duration of one organization's membership in another.
 
@@ -1030,46 +886,38 @@ This field is clarified by the field ``Membership: Founding date?`` which indica
 Membership: Start date?
 -----------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Is the value in ``Membership: Date first cited`` the actual date on which a membership was started, or the earliest date a source has referred to an organization Membership?
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Boolean (Yes, No)
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Y``, ``N``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 This is a clarifying field for ``Membership: Date first cited``. Where a source references a membership and specifies the exact date the relationship was established we will enter ``Y`` . In all other cases we will enter a value of ``N`` to indicate that the date is not a start date, but the date of first citation.
 
 Membership: Date of last citation
 ---------------------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 This field is for the latest citation of a membership, either through direct reference in the source or by the date of its publication.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Date (YYYY-MM-DD), fuzzy
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 Along with the fields ``Membership: Date first cited``, ``Membership: Start date?`` and ``Membership: End-date?`` the field ``Membership: Date last cited`` provides data on duration of a membership.
 
@@ -1083,23 +931,19 @@ This field is clarified by the field ``Membership: Open-ended?`` which indicates
 Membership: End Date?
 ---------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Is the value in ``Membership: Date last cited`` the actual date on which the membership ended (Y), or the latest date a source has referred to an organizational Membership (N)?
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Boolean
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``Y``, ``N``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We use this field to clarify the meaning of the date entered in ``Membership: Date last cited``.
 
@@ -1111,22 +955,18 @@ The values that can be entered in this field are restricted to the below:
 Organization: Notes
 -------------------
 
-Description
-~~~~~~~~~~~
+**Description**
 
 Analysis, commentary and notes about the organization that do not fit into the data structure.
 
-Type of field
-~~~~~~~~~~~~~
+**Type of field**
 
 Text and numbers
 
-Example of use
-~~~~~~~~~~~~~~
+**Example of use**
 
 ``In March 1990 the previous Central Regional Military Command based in Taungoo was renamed Southern Regional Military Command, the previous Northwestern Regional Military Command based in Mandalay was renamed as the Central Regional Military Command and a new Northwestern Regional Military Command was created in Monywa.``
 
-Guidance on use
-~~~~~~~~~~~~~~~
+**Guidance on use**
 
 We use this field to record information about the organization that is likely to provide useful context, additional information that does not fit into the data structure, and notes about how decisions were made about which data to include. Any sources used should be referenced in the field.

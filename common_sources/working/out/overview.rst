@@ -6,9 +6,9 @@ About this Research Handbook
 
 This Research Handbook contains information about the data and tools used by Security Force Monitor, a project of the Columbia Law School Human Rights Initiative. Currently, it has three main sections:
 
--  :ref:`WhoWasInCommand.com` User Guide: The data created by Security Force Monitor is published online on WhoWasInCommand.com, a platform with powerful search functions, clean and interactive views of data on persons, organizations and events.
--  :ref:`Methodology`: Security Force Monitor has a four phase approach to researching a country's security forces. This section outlines our process.
--  :ref:`Data Model`: this section describes the way that Security Force Monitor structures the data it collects, outlines the main entities in use (``persons``,\ ``organizations`` and ``events``) and details how each field is used.
+-  WhoWasInCommand.com User Guide: The data created by Security Force Monitor is published online on WhoWasInCommand.com, a platform with powerful search functions, clean and interactive views of data on persons, organizations and events.
+-  Methodology: Security Force Monitor has a four phase approach to researching a country's security forces. This section outlines our process.
+-  Data Model: this section describes the way that Security Force Monitor structures the data it collects, outlines the main entities in use (``persons``,\ ``organizations`` and ``events``) and details how each field is used.
 
 The Research Handbook is a work-in-progress, and is updated during the course of the work of Security Force Monitor.
 
@@ -20,8 +20,7 @@ Contributors
 
 Security Force Monitor has partnered with DataMade to create WhoWasInCommand.com. DataMade has operationalized and refined Security Force Monitor's data structure, created a powerful open source platform to put the data online, and made a significant contribution to the concept and design of WhoWasInCommand.com.
 
-How to contribute
-~~~~~~~~~~~~~~~~~
+**How to contribute**
 
 The `Research Handbook source is hosted on Github <https://github.com/security-force-monitor/sfm-research-handbook>`__, and published here as a Gitbook.
 

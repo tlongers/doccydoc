@@ -30,8 +30,15 @@ release = '1.0.1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autosectionlabel'
+extensions = [ 
+    'sphinx.ext.autosectionlabel'
 ]
+
+
+# ext.autosectionlabel settings: greyed out for now
+# autosectionlabel_prefix_document = True
+# autosectionlabel_maxdepth = 2
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -57,7 +64,7 @@ html_theme_options = {
     'display_version': True,
     'prev_next_buttons_location': 'both',
     'style_external_links': True,
-    'vcs_pageview_mode': '',
+    # 'vcs_pageview_mode': '',
     'style_nav_header_background': 'black',
     # Toc options
     'collapse_navigation': False,

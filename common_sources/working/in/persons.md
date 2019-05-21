@@ -100,115 +100,127 @@ Text, controlled vocabulary
 
 Values for this field are chosen from the list of ISO 3166-1 alpha-2 codes, which can be found \([on the ISO website](https://www.iso.org/obp/ui/#search/code/) and on [Wikipedia](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements). This field does not denote the citizenship or country of origin of a person. Rather, it denotes where a unit they are a member of is located. For example, if `1 Batallón de Infantería` is located in Juarez, Mexico, the organization will be assigned a value of `mx` in the field `Organization: Country`. Any person who is a member of that organization will be assigned a value of `mx` in the field `Person: Country` as well.  A person may have multiple  entries for `Person: Country` where our research shows they or an organization they are a member of is deployed to different countries.
 
-## Person: Gender {#person_country}
+## Person: Gender
+
+To do
 
 ### Description
 
-The gender of the person.
+To do
 
 ### Type of field
 
-Text, controlled vocabulary
+To do
 
 ### Example of use
 
-`Female , Male`
+To do
 
 ### Guidance on use
 
-TO DO
+To do
 
-## Person: Date of Birth {#person_country}
+## Person: Date of Birth 
+
+To do
 
 ### Description
 
-The gender of the person.
+To do
 
 ### Type of field
 
-Text, controlled vocabulary
+To do
 
 ### Example of use
 
-`Female , Male`
+To do
 
 ### Guidance on use
 
-TO DO
+To do
 
-## Person: Date of Death {#person_country}
+## Person: Date of Death
+
+To do
 
 ### Description
 
-The gender of the person.
+To do
 
 ### Type of field
 
-Text, controlled vocabulary
+To do
 
 ### Example of use
 
-`Female , Male`
+To do
 
 ### Guidance on use
 
-TO DO
+To do
 
-## Person: Deceased {#person_country}
+## Person: Deceased
+
+To do
 
 ### Description
 
-The gender of the person.
+To do
 
 ### Type of field
 
-Text, controlled vocabulary
+To do
 
 ### Example of use
 
-`Female , Male`
+To do
 
 ### Guidance on use
 
-TO DO
+To do
 
-## Person: Biography {#person_country}
+## Person: Biography
+
+To do
 
 ### Description
 
-The gender of the person.
+To do
 
 ### Type of field
 
-Text, controlled vocabulary
+To do
 
 ### Example of use
 
-`Female , Male`
+To do
 
 ### Guidance on use
 
-TO DO
+To do
 
-## Person: Gender {#person_country}
+## Person: External Link
+
+To do
 
 ### Description
 
-The gender of the person.
+To do
 
 ### Type of field
 
-Text, controlled vocabulary
+To do
 
 ### Example of use
 
-`Female , Male`
+To do
 
 ### Guidance on use
 
-TO DO
+To do
 
-## Person: External Link {#person_organization_name}
+## Person: Organization
 
 ### Description
 
@@ -345,19 +357,12 @@ Where the content of the source has indicated the exact date that a  relationshi
 
 ### Description
 
-The gender of the person.
-
 ### Type of field
-
-Text, controlled vocabulary
 
 ### Example of use
 
-`Female , Male`
-
 ### Guidance on use
 
-TO DO
 
 ## Person Membership: Date last cited {#person_date_last_cited}
 
@@ -415,19 +420,11 @@ This is a clarifying field for `Person Membership: Date last cited`. One of the 
 
 ### Description
 
-The gender of the person.
-
 ### Type of field
-
-Text, controlled vocabulary
 
 ### Example of use
 
-`Female , Male`
-
 ### Guidance on use
-
-TO DO
 
 ## Person: Notes {#person_notes}
 
@@ -446,4 +443,3 @@ Text and numbers
 ### Guidance on use
 
 We use this field to record information about the organization that is likely to provide useful context, additional information that does not fit into the data structure, and notes about how decisions were made about which data to include. Any sources used should be included inside the field.
-

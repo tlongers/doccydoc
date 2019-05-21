@@ -4,7 +4,7 @@ This page contains an overview of the data that visitors to WhoWasInCommand will
 
 This includes the different sections of the incident record, the data fields that are used to create it and links to more information about each field. 
 
-## Title area {#incident_record_anatomy_title_area}
+## Incident title area {#incident_record_anatomy_title_area}
 
 ![](/en/assets/incident_record_anatomy_title_area.png)
 
@@ -19,13 +19,13 @@ The following fields are used in the incident title area section:
  * [Event: Country](/en/datamodel/events.md#event_country)
  * [Event: Violation type](/en/datamodel/events.md#event_violation_type)
 
-## Content sidebar {#incident_record_anatomy_content_sidebar}
+## Incident content sidebar {#incident_record_anatomy_content_sidebar}
 
 ![](/en/assets/incident_record_anatomy_content_sidebar.png)
 
 The content sidebar is a navigation aid. It provides quick links to different sections of the record. The items inside the content sidebar indicate what sort of data is available about this incident. For example if "Perpetrator organizations" is not listed in the content sidebar, then there is no data available about alleged perpetrators of the incident.
 
-## Location {#incident_record_anatomy_location}
+## Incident location {#incident_record_anatomy_location}
 
 ![](/en/assets/incident_record_anatomy_location.png)
 
@@ -34,21 +34,21 @@ This section contains an interactive map and some text that describe the locatio
 ### Fields used in incident location section 
 
  * [Event: Location](/en/datamodel/events.md#event_location)
- * [Event: Exact location (Longitude or OSM Node Name)](/en/datamodel/events.md#event_exact_location_longitude_name)
- * [Event: Exact location (Latitude or OSM Node ID number)](/en/datamodel/events.md#event_exact_location_latitude_id)
+ * [Event: Exact location (Longitude or OSM object Name)](/en/datamodel/events.md#event_exact_location_longitude_name)
+ * [Event: Exact location (Latitude or OSM object ID number)](/en/datamodel/events.md#event_exact_location_latitude_id)
  * [Event: Settlement (OSM object Name)](/en/datamodel/events.md#event_settlement_name)
  * [Event: Settlement (OSM object ID Number)](/en/datamodel/events.md#event_settlement_id)
- * [Event: Top Adminstrative Area (OSM relation name)](/en/datamodel/events.md#event_top_admin_name)
+ * [Event: Top Administrative Area (OSM object name)](/en/datamodel/events.md#event_top_admin_name)
  * [Event: Top Administrative Area (OSM object ID number)](/en/datamodel/events.md#event_top_admin_id)
  * [Event: Country](/en/datamodel/events.md#event_country)
 
-## Description {#incident_record_anatomy_description}
+## Incident description {#incident_record_anatomy_description}
 
 ![](/en/assets/incident_record_anatomy_description.png)
 
 This section contains a direct quotation from the civil society, governmental or other source that describes the incident. As with all tables in person, unit and incident records on WhoWasInCommand, hovering over or tapping any value in the table will cause a little coloured circle to appear. Clicking or tapping again on this will show the sources and confidence ratings we have assigned to that value.
 
-### Fields used in description section
+### Fields used in incident description section
 
 The following field is used in the incident description section:
 
@@ -69,7 +69,7 @@ The following fields are used in the perpetrator organizations section:
  * [Organization: Aliases](/en/datamodel/organizations.md#organization_aliases)
  * [Organization: Classification](/en/datamodel/organizations.md#organization_classification)
 
-## Changelog {#incident_record_anatomy_changelog}
+## Incident Changelog {#incident_record_anatomy_changelog}
 
 ![](/en/assets/incident_record_anatomy_changelog.png)
 
