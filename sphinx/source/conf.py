@@ -22,7 +22,7 @@ copyright = '2019, Security Force Monitor'
 author = 'Security Force Monitor'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.1'
+#release = '1.0.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -51,6 +51,12 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
+
+## Add locale and translation options here
+
+locale_dirs = ['locale']
+gettext_compact = False
+gettext_uuid = True
 
 
 # -- Options for HTML output -------------------------------------------------
