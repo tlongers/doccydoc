@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../source/index.rst:4
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction (German language test)"
 
 #: ../../source/index.rst:10
 msgid "Methodology"
