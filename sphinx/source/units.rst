@@ -1038,7 +1038,7 @@ We identify sites with a number of different levels of geographical precision. I
     Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: Site, First-level Administrative Area (OSM object Name)`` the name of the administrative level 4 object or the state.
 
 Unit: Site, First-level Administrative Area (OSM object ID number)
-----------------------------------------------------
+-----------------------------------------------------------------
 
 **Description**
 
@@ -1279,35 +1279,51 @@ The values that can be entered in this field are restricted to the below:
 -  ``Y``: indicates that we assume this unit site continues to exist.
 -  ``N``: indicates we do not assume that this unit site continues to exist, but we do not have an exact end date.
 
-Area of Operations: OSM object name
------------------------------------
+Unit: Area of Operations (OSM object Name)
+-----------------------------------------
 
 **Description**
 
-A geographical area in which a unit exercises jurisdiction or has operated in any manner
+A geographical area in which a unit exercises jurisdiction or has operated in any manner.
 
 **Type of field**
 
-Text and numbers, OSM object name, first in a pair of fields
+First in a pair of fields with ``Unit: Area of Operations (OSM object ID)``, OSM object name (text)
 
 **Example of use**
 
 ``Baja California Sur``, ``Kafr el-Sheikh Governorate``
 
+**Spreadsheet column name**
+
+``unit:area_ops_osm_name``
+
+**Shortcode**
+
+``u_an``
+
+**Sources**
+
+Yes (``unit:area_ops_country:source``, ``u_ac_s``)
+
+**Confidence**
+
+Yes (``unit:area_ops_country:confidence``, ``u_ac_c``)
+
 **Guidance on use**
 
-The ``Area of Operations`` fields document multiple and concurrent areas of operation of a unit. The value entered in this field is the OpenStreetMap name for the lowest-level formal geographical area that best describes where a unit has operated in some manner.
+This pair of fields document multiple and concurrent areas of operation of a unit. The value entered in this field is the OSM name for the lowest-level formal geographical area that best describes where a unit has operated in some manner. In most cases, the OSM object type used in this field will be a ``relation``.
 
-Area of Operations: OSM object ID number
-----------------------------------------
+Unit: Area of Operations (OSM object ID number)
+----------------------------------------------
 
 **Description**
 
-A geographical area in which a unit exercises jurisdiction or has operated in any manner
+A geographical area in which a unit exercises jurisdiction or has operated in any manner.
 
 **Type of field**
 
-Numbers, OSM object ID number, second in a pair of fields
+Second in a pair of fields with ``Unit: Area of Operations (OSM object Name)``, OSM object ID (number)
 
 **Example of use**
 
@@ -1315,7 +1331,7 @@ Numbers, OSM object ID number, second in a pair of fields
 
 **Guidance on use**
 
-The ``Area of Operations`` fields document multiple and concurrent areas of operation of a unit. The value entered in this field is the OpenStreetMap object ID number for the lowest-level formal geographical area that best describes where a unit has operated in some manner.
+This pair fo fields document multiple and concurrent areas of operation of a unit. The value entered in this field is the OSM object ID number for the lowest-level formal geographical area that best describes where a unit has operated in some manner. In most cases, the OSM object type used in this field will be a ``relation``.
 
 Area of Operations: Country
 ---------------------------
