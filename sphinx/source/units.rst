@@ -419,7 +419,7 @@ Yes. Inherits from ``Unit: First Cited Date`` (``unit:first_cited_date:source``,
 
 **Confidence**
 
-Yes. Inherits from ``Unit:First Cited Date`` (``unit:first_cited_date:confidence``, ``u_cfd_c``).
+Yes. Inherits from ``Unit:First Cited Date`` (``unit:first_cited_date:confidence``, ``u_fcd_c``).
 
 **Guidance on use**
 
@@ -518,7 +518,7 @@ Unit: Related Unit
 
 **Description**
 
-The immediate superior unit in the overall hierarchy of security force.
+The immediate superior or parent unit in the overall hierarchy of security force.
 
 **Type of field**
 
@@ -546,20 +546,29 @@ Yes (``unit:related_unit:confidence``, ``u_rc_c``)
 
 **Guidance on use**
 
-``Unit: Related Unit`` describes a hierarchical, time-bound relationship between two units that are part of the same branch of a security force. The parent is “above” or distinct and separate from the unit in some way. Over time, a unit may have different parents.
+``Unit: Related Unit`` describes a hierarchical, time-bound relationship between two units that are part of the same branch of a security force. ``Unit: Related Unit`` is a synonym for  "parent unit" in that is describes a unit that “above” and distinct and separate from the unit in some way. The aggregated upwards relationships form organizational structured and command chains.
 
-    Example: In Nigeria the ``112 Task Force Battalion`` had the parent of a parent of ``7 Division Garrison`` between 12 November 2015 and 24 March 2016. The ``112 Task Force Battalion`` was then under the ``22 Task Force Brigade`` from 14 March 2017 to 26 October 2017.
+Over time, a unit may have different parents. 
+
+    Example: In Nigeria the ``112 Task Force Battalion`` had the parent of ``7 Division Garrison`` between 12 November 2015 and 24 March 2016. The ``112 Task Force Battalion`` was then under the ``22 Task Force Brigade`` from 14 March 2017 to 26 October 2017.
 
 Units can also have multiple parent relationships at the same time. For example, sources could indicate a unit has a formal legal parent unit while at the same time a new security body established by decree can also directly order the unit to carry out operations, establishing a second parent relationship.
 
 Relationships between units described with ``Unit: Related Unit`` are different from ``Unit: Membership``. Often when there is an "operation" or "joint task force", it may not have have personnel of its own. Rather, personnel from a range of different units are assigned to it. Generally, these types of arrangements don’t put the operation “above” the unit in the unital chart. We outline these types of relationships using the field ``Unit: Membership``, which is documented below.
+
+The field ``Unit: Related Unit`` always contains data about then immediate superior unit. In WhoWasInCommand, this value can be specified from both sides of the relationship. In the example above, this means that the record for ``7 Division Garrison`` could be edited to add ``112 Task Force Battalion`` as a subordinate or child unit. However, this would mean that the ``Unit: Related Unit`` field for ``112 Task Froce Battalion`` would then be populated with ``7 Division Garrison``. In WhoWasInCommand, a clarifying field called ``Unit: Type of Relationship`` enables this ability.
+
 
 Unit: Type of Relationship
 --------------------------
 
 **Description**
 
+A field specific to WhoWasInCommand that indicates whether a unit specified in ``Unit: Related Unit`` is an immediate subordinate (child) or superior (parent) unit.
+
 **Type of field**
+
+Boolean
 
 **Example of use**
 
@@ -567,19 +576,27 @@ Unit: Type of Relationship
 
 **Spreadheet column name**
 
+Specific to WhoWasInCommand and not used in spreadsheets.
+
 **Shortcode**
+
+None
 
 **Sources**
 
+No
+
 **Confidence**
+
+No
 
 **Guidance on use**
 
+The field ``Unit: Related Unit`` always contains data about then immediate superior unit. In WhoWasInCommand, this value can be specified from both sides of the relationship. In the example above, this means that the record for ``7 Division Garrison`` could be edited to add ``112 Task Force Battalion`` as a subordinate or child unit. However, this would mean that the ``Unit: Related Unit`` field for ``112 Task Froce Battalion`` would then be populated with ``7 Division Garrison``. In WhoWasInCommand, a clarifying field called ``Unit: Type of Relationship`` enables this ability. It simply chooses which record should be used to define the relationship; no additional data is created when this field is used.
 
 
-
-Parent relationship: Classification
------------------------------------
+Unit: Related Unit Classification
+---------------------------------
 
 **Description**
 
@@ -591,11 +608,27 @@ Controlled vocabulary, single choice
 
 **Example of use**
 
-``Command, Administrative, Informal``
+``Command``, ``Administrative``, ``Informal``
+
+**Spreadsheet column name**
+
+``unit:related_unit_class``
+
+**Shortcode**
+
+``u_ruc``
+
+**Sources**
+
+Yes (``unit:related_unit_class:source``, ``u_ruc_s``)
+
+**Confidence**
+
+Yes (``unit:related_unit_class:confidence``, ``u_ruc_c``)
 
 **Guidance on use**
 
-Units have a ``Command`` relationship when the parent unit can order the unit to perform some operational activity. These cover both *de jure* and *de facto* relationships between units.
+Units have a ``Command`` relationship when the related parent unit can order the unit to perform some operational activity. These cover both *de jure* and *de facto* relationships between units.
 
 ``Informal`` relationships occur when there is a relationship outside of the legal or formal structure of security forces and where the exact nature of the relationship is unclear.
 
@@ -605,12 +638,12 @@ Units have a ``Command`` relationship when the parent unit can order the unit to
 
     Example: By law the Ministry of Defence in Nigeria provides administrative support to the Nigerian Army, establishing a relationship we could classify as ``Administrative``. The Standards Department of an Army Headquarters might be under the control of the Army Headquarters, meaning the Army Headquarters could order the Department to take some sort of action. This technically means the Department is under the “command” of the Headquarters, but the Monitor would describe this relationship as ``Administrative`` because the Department is not in the field conducting operations, it's an administrative organ of the Army Headquarters.
 
-Parent relationship: Date first cited
--------------------------------------
+Unit: Related Unit First Cited Date
+-----------------------------------
 
 **Description**
 
-The earliest date that a source shows a parent unit relationship exists, either through direct reference in the source or by the date of its publication.
+The earliest date that a source evidences a relationship between units, either through direct reference in the source or by the date of its publication.
 
 **Type of field**
 
@@ -620,27 +653,43 @@ Date (YYYY-MM-DD), fuzzy
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
+**Spreadsheet column heading**
+
+``unit:related_unit_first_cited_date``
+
+**Shortcode**
+
+``u_rufcd``
+
+**Sources**
+
+Yes (``unit:related_unit_first_cited_date:source``, ``u_rufcd_s``)
+
+**Confidence**
+
+Yes (``unit:related_unit_first_cited_date:confidence``, ``u_rufcd_c``)
+
 **Guidance on use**
 
-Along with the fields ``Parent relationship: Start date?``, ``Parent relationship: Sate last cited`` and ``Parent relationship: Open-ended?`` the field ``Parent unit: Date first cited`` provides data on the time period we can say one unit is the parent of another .
+Along with the fields ``Unit: Unit Relationship Start Date``, ``Unit: Related Unit Last Cited Date`` and ``Unit: Related Unit is Open-Ended`` the field ``Unit: Related Unit First Cited Date`` provides data on the time period for which sources provide evidence that one unit is related to another as a parent.
 
-The ``Parent unit: Date first cited`` field contains a date that is either:
+The ``Unit: Related Unit First Cited Date`` field contains a date that is either:
 
 -  The earliest date found in a source that specifically references a parent relationship; or,
 -  The earliest date of publication of sources that make reference to a parent relationship.
 
-    For example, if three sources published on 1 January 2012, 1 February 2012 and 1 March 2012 all say that 3 Armoured Division became the parent of 1 Motorized Brigade, we will enter 1 January 2012 in ``Parent relationship: date first cited``. If the source published on 1 March 2012 says that 3 Armoured Division became the parent of 1 Motorized Brigade on 30 June 2011, we will use 30 June 2011 as the ``Parent relationship: date first cited``.
+    For example, if three sources published on 1 January 2012, 1 February 2012 and 1 March 2012 all say that 3 Armoured Division became the parent of 1 Motorized Brigade, we will enter 1 January 2012 in ``Unit: Related Unit First Cited Date``. If the source published on 1 March 2012 says that 3 Armoured Division became the parent of 1 Motorized Brigade on 30 June 2011, we will use 30 June 2011 as the ``Unit: Related Unit First Cited Date``.
 
-In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included ``Parent relationship: Date first cited`` .
+In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, such partial dates can be included in ``Unit: Related Unit First Cited Date`` .
 
-This field is clarified by the field ``Parent relationship: Start date?`` which indicates whether the date included here is the actual date on which a unit became the parent of another.
+This field is clarified by the field ``Unit: Unit Relationship Start Date`` (documented below) which indicates whether the date included here is the actual date on which a unit became the parent of another.
 
-Parent relationship: start date?
---------------------------------
+Unit: Unit Relationship Start Date
+----------------------------------
 
 **Description**
 
-Is the value in ``Parent relationship: Date first cited`` the actual date on which a unit became the parent of another, or the earliest date a source has referred to the relationship?
+Indicates whether the value in ``Parent relationship: Date first cited`` is the actual date on which a unit became the parent of another, or the earliest date a source has referred to the relationship
 
 **Type of field**
 
@@ -650,16 +699,32 @@ Boolean (Yes, No)
 
 ``Y``, ``N``
 
+**Spreadsheet column name**
+
+``unit:related_unit_first_cited_date_start``
+
+**Shortcode**
+
+``u_rufcds``
+
+**Sources**
+
+Yes. Inherits from ``Unit: Related Unit First Cited Date`` (``unit:related_unit_first_cited_date:source``, ``u_rufcd_s``)
+
+**Confidence**
+
+Yes. Inherits from ``Unit: Related Unit First Cited Dates`` (``unit:related_unit_first_cited_date:confidence``, ``u_rufcd_c``)
+
 **Guidance on use**
 
-This is a clarifying field for ``Parent relationship: Date first cited``. Where a source references the parent relationship and specifies the date that the relationship began we will enter ``Y`` . In all other cases we will enter a value of ``N`` to indicate that the date is not a start date, but the date of first citation.
+This is a clarifying field for ``Unit: Related Unit First Cited Date``. Where a source references the parent relationship and specifies the date that the relationship began we will enter ``Y`` . In all other cases we will enter a value of ``N`` to indicate that the date is not a start date, but the date of first citation.
 
-Parent unit: date last cited
-------------------------------------
+Unit: Related Unit Last Cited Date
+----------------------------------
 
 **Description**
 
-The latest date that a source shows a parent unit relationship exists, either through direct reference in the source or by the date of its publication.
+The latest date that a source evidences a parent unit relationship, either through direct reference in the source or by the date of its publication.
 
 **Type of field**
 
@@ -669,31 +734,48 @@ Date (YYYY-MM-DD), fuzzy
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
+**Spreadheet column name**
+
+``unit:related_unit_last_cited_date``
+
+**Shortcode**
+
+``u_rulcd``
+
+**Sources**
+
+Yes (``unit:related_unit_last_cited_date:source``, ``u_rulcd_s``)
+
+**Confidence**
+
+Yes (``unit:related_unit_last_cited_date:confidence``, ``u_rulcd_c``)
+
 **Guidance on use**
 
-Along with the fields ``Parent relationship: Date first cited``, ``Parent relationship: Start date?`` and ``Parent relationship: Open-ended?`` the field ``Parent unit: Date last cited`` provides data on the time period we can evidence that one unit is the parent of another.
+Along with the fields ``Unit: Related Unit First Cited Date``, ``Unit: Unit Relationship Start Date`` and ``Unit: Related Unit is Open-Ended`` the field ``Unit: Related Unit Last Cited Date`` provides data on the time period we can evidence that one unit is the parent of another.
 
-The ``Parent unit: Date last cited`` field contains a date that is either:
+The ``Unit: Related Unit Last Cited Date`` field contains a date that is either:
 
 -  The latest date found in a source that specifically references a parent relationship; or,
 -  The latest date of publication of sources that make reference to a parent relationship.
 
-    Example: Three sources published on 1 January 2012, 1 February 2012 and 1 March 2012 all state that the 1 Motorized Brigade is under the 3 Armoured Division (which evidences a parent relationship), we will enter 1 March 2012 in ``Parent relationship: Date last cited``.
+    Example: Three sources published on 1 January 2012, 1 February 2012 and 1 March 2012 all state that the 1 Motorized Brigade is under the 3 Armoured Division (which evidences a parent relationship), we will enter 1 March 2012 in ``Unit: Related Unit Last Cited Date``.
 
-    Example: A source published on 23 July 2017 describes actions undertaken by the 1 Motorized Brigade is under the 3 Armoured Division during riots in 2009, and another source published on 8 June 2008 states that the 1 Motorized Brigade is under the 3 Armoured Division, we would enter 2009 in ``Parent relationship: Date last cited``.
+    Example: A source published on 23 July 2017 describes actions undertaken by the 1 Motorized Brigade is under the 3 Armoured Division during riots in 2009, and another source published on 8 June 2008 states that the 1 Motorized Brigade is under the 3 Armoured Division, we would enter 2009 in ``Unit: Related Unit Last Cited Date``.
 
-In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included ``Parent relationship: Date last cited`` .
+In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Unit: Related Unit Last Cited Date``
 
-    Example: A source published on 23 July 2017 describes actions undertaken by the 1 Motorized Brigade is under the 3 Armoured Division during riots in 2009, and another source published on 8 June 2008 states that the 1 Motorized Brigade is under the 3 Armoured Division, we would enter 2009 in ``Parent relationship: Date last cited``.
+    Example: A source published on 23 July 2017 describes actions undertaken by the 1 Motorized Brigade is under the 3 Armoured Division during riots in 2009, and another source published on 8 June 2008 states that the 1 Motorized Brigade is under the 3 Armoured Division, we would enter 2009 in ``Unit: Related Unit Last Cited Date``.
 
-This field is clarified by the field ``Parent relationship: Open-ended?`` which indicates whether the date included here is the actual date on which a unit stopped being the parent of another.
+This field is clarified by the field ``Unit: Related Unit is Open-Ended``, which indicates whether the date included here is the actual date on which a unit stopped being the parent of another.
 
-Parent relationship: Open-ended?
+
+Unit: Related Unit is Open-Ended
 --------------------------------
 
 **Description**
 
-Is the value in ``Parent relationship: Date last cited`` the actual date on which the parent relationship ended (E), or can we assume this relationship continues to exist after this date (Y), or can we not assume the relationship continues to exist after this date, but the exact end point is unknown (N)?
+Indicates whether or not the value in ``Unit: Related Unit Last Cited Date`` is the actual date on which the parent relationship ended.
 
 **Type of field**
 
@@ -703,16 +785,31 @@ Single choice (Y, N, E)
 
 ``Y``, ``N``, ``E``
 
+**Spreadsheet column name**
+
+``unit:related_unit_last_cited_date_open``
+
+**Shortcode**
+
+``u_rulcdo``
+
+**Sources**
+
+Yes. Inherits from ``Unit: Related Unit Last Cited Date`` (``unit:related_unit_last_cited_date:source``, ``u_rulcd_s``)
+**Confidence**
+
+Yes. Inherits from ``Unit: Related Unit Last Cited Date`` (``unit:related_unit_last_cited_date:confidence``, ``u_rulcd_c``)
+
 **Guidance on use**
 
-We use this field to clarify the meaning of the date entered in ``Parent relationship: Date last cited``. One of the below values should be chosen:
+We use this field to clarify the meaning of the date entered in ``Unit: Related Unit Last Cited Date`` One of the below values should be chosen:
 
 -  ``E`` indicates the exact date one unit stopped being the parent of another.
 -  ``Y`` indicates that we assume this parent relationship continues to exist.
 -  ``N`` indicates we do not assume that this parent relationship continues to exist, but we do not have an exact end date.
 
-Site: Base
-----------
+Unit: Base Name
+--------------
 
 **Description**
 
@@ -724,22 +821,39 @@ Text and numbers
 
 **Example of use**
 
-``Leopard Base , Giwa Barracks , Bonny Camp``
+``Leopard Base``, ``Giwa Barracks``, ``Bonny Camp``
+
+**Spreadsheet column name**
+
+``unit:base_name```
+
+**Shortcode**
+
+``u_bn``
+
+**Sources**
+
+Yes (``unit:base_name:source``, ``u_b_s``)
+
+**Confidence**
+
+Yes (``unit:base_name:confidence``, ``u_b_c``)
 
 **Guidance on use**
 
-The ``Base`` field adds detail about a site. This field is used to record data about units that are located in a distinctively-named building or complex.
+
+The ``Unit: Base Name`` field adds detail about a site. This field is used to record data about units that are located in a distinctively-named building or complex.
 
     For example, ``3 Battalion`` in Nigeria is cited as being based in the ``Lubanga Barracks`` in ``Enugu, Enugu State, Nigeria``.
 
 This field should not be used for anything that matches the name or alias of a unit. For example, ``North Sector Police Station`` should not be put in this field if the name of the unit is ``North Sector Police Station``.
 
-Site: Exact Location (Longitude or OSM object Name)
+Unit: Site, Exact Location (Longitude or OSM object Name)
 ---------------------------------------------------
 
 **Description**
 
-The longitude or OSM object name of the most precise location of a site associated with this unit.
+The longitude or OSM object name of the most precise location of a site associated with a unit.
 
 **Type of field**
 
@@ -747,24 +861,40 @@ First value of a latitude/longitude pair (using `EPSG:3857 <http://spatialrefere
 
 **Example of use**
 
-| If used to record an OSM Node Name: ``Masr Al-Gedida``
-| If used to record a latitude: ``31.3280332``
+- If used to record an OSM Node Name: ``Masr Al-Gedida``
+- If used to record a latitude: ``31.3280332``
+
+**Spreadsheet column name**
+
+``unit:site_exact_location_name_longitude``
+
+**Shortcode**
+
+``u_selnlon``
+
+**Sources**
+
+Yes (``unit:site_exact_location:source``, ``u_sel_s``)
+
+**Confidence** 
+
+Yes (``unit:site_exact_location:confidence``, ``u_sel_c``)
 
 **Guidance on use**
 
-We identify ``sites`` with a number of different levels of geographical precision.
+We identify sites with a number of different levels of geographical precision.
 
-``Site: Exact Location (Longitude or OSM Object Name)`` is the first of a pair of values with ``Site: Exact Location (Latitude or OSM Object ID)``. It is used to record the most precise location of a site associated with a unit, whether this is an object (node, way or relation) on OpenStreetMap or a pair of geographical coordinates.
+``Unit: Site, Exact Location (Longitude or OSM Object Name)`` is the first of a pair of values with ``Unit: Site, Exact Location (Latitude or OSM Object ID)``. This pair of fields is used to record the most precise location of a site associated with a unit, whether this is an object (``node``, ``way`` or ``relation``) in OpenStreetMap or a pair of geographical coordinates.
 
 -  Where an object for the exact site is present on OpenStreetMap we will enter its name in this field.
 -  Where no OSM object exists for the exact site a pair of coordinates will be used, the latitude value recorded in this field.
 
-Site: Exact Location (Latitude or OSM object ID)
-------------------------------------------------
+Unit: Site, Exact Location (Latitude or OSM object ID)
+------------------------------------------------------
 
 **Description**
 
-The latitude or OSM object ID number of the most precise location of a site associated with this unit.
+The latitude or OSM object ID number of the most precise location of a site associated with a unit.
 
 **Type of field**
 
@@ -772,19 +902,35 @@ Second value of a longitude/latitude pair (using `EPSG:3857 <http://spatialrefer
 
 **Example of use**
 
-| If used to record an OSM object ID number: ``452377264``
-| If used to record a Longitude: ``30.09716``
+- If used to record an OSM object ID number: ``452377264``
+- If used to record a Longitude: ``30.09716``
+
+**Spreadsheet column name**
+
+``unit:site_exact_location_id_latitude``
+
+**Shortcode**
+
+``u_selidlat``
+
+**Sources**
+
+Yes (``unit:site_exact_location:source``, ``u_sel_s``)
+
+**Confidence**
+
+Yes (``unit:site_exact_location:confidence``, ``u_sel_c``)
 
 **Guidance on use**
 
-We identify ``sites`` with a number of different levels of geographical precision.
+We identify sites with a number of different levels of geographical precision.
 
-``Site: Exact Location (Latitude or OSM Object ID)`` is the second of a pair of values with ``Site: Exact Location (Longitude or OSM Object Name)``. It is used to record the most precise location of a site associated with a unit, whether this is an object (node, way or relation) on OpenStreetMap or a pair of geographical coordinates.
+``Unit: Site, Exact Location (Latitude or OSM Object ID)`` is the second of a pair of values with ``Unit: Site, Exact Location (Longitude or OSM Object Name)``. It is used to record the most precise location of a site associated with a unit, whether this is an object (``node``, ``way`` or ``relation``) on OpenStreetMap or a pair of geographical coordinates.
 
 -  Where an object for the exact site is present on OpenStreetMap we will enter its ID number in this field.
 -  Where no OSM object exists for the exact site a pair of coordinates will be used, the latitude value recorded in this field.
 
-Site: Settlement (OSM object Name)
+Unit: Site, Nearest Settlement (OSM object Name)
 ----------------------------------
 
 **Description**
@@ -793,17 +939,33 @@ The city, town or village in which a unit site is based.
 
 **Type of field**
 
-Text, OSM object name, first in a pair of values
+First in a pair of values with ``Unit: Site, Settlement (OSM object ID)``, OSM object Name (text)
 
 **Example of use**
 
 ``Tampico``, ``Francisco Escarcega``, ``Abu al Matamir``
 
+**Spreadsheet column name**
+
+``unit:site_nearest_settlement_osm_name``
+
+**Shortcode**
+
+``u_nsn``
+
+**Sources**
+
+Yes (``unit:site_neartest_settlement_osm_name:source``, ``u_nsn_s``)
+
+**Confidence**
+
+Yes (``unit:site_neartest_settlement_osm_name:confidence``, ``u_nsn_c``)
+
 **Guidance on use**
 
 We identify ``sites`` with a number of different levels of geographical precision. In ``Site: Settlement (OSM Object Name)`` we record the name of the OSM object (node, way or relation) that identifies a settlement in which there is a unit site. It could be a city, town or village or other OSM object that denotes a settlement.
 
-Site: Settlement (OSM object ID)
+Unit: Site, Nearest Settlement (OSM object ID)
 --------------------------------
 
 **Description**
@@ -812,64 +974,112 @@ The city, town or village in which a unit site is based.
 
 **Type of field**
 
-Number, OSM object ID number, second in a pair of values
+Second in a pair of values with ``Unit: Site, Settlement (OSM object ID)``, OSM object ID (number)
 
 **Example of use**
 
 ``273584290``,\ ``286989920``,\ ``769127625``
 
+**Spreadsheet column name**
+
+``unit:site_nearest_settlement_osm_id``
+
+**Shortcode**
+
+``u_nsid``
+
+**Sources**
+
+Yes. Inherits from ``Unit: Site, Nearest Settlement (OSM object Name)`` (``unit:site_neartest_settlement_osm_name:source``, ``u_nsn_s``)
+
+**Confidence**
+
+Yes. Inherits from ``Unit: Site, Nearest Settlement (OSM object Name)`` (``unit:site_neartest_settlement_osm_name:confidence``, ``u_nsn_c``)
+
 **Guidance on use**
 
-We identify ``sites`` with a number of different levels of geographical precision. In ``Site: Settlement (OSM Object ID)`` field we record the name of the OSM object (node, way or relation) ID number that identifies a settlement in which there is a unit site. It could be a city, town or village or other OSM object that denotes a settlement.
+We identify sites with a number of different levels of geographical precision. In ``Unit: Site, Nearest Settlement (OSM Object ID)`` field we record the name of the OSM object (``node``, ``way`` or ``relation``) ID number that identifies a settlement in which there is a unit site. It could be a city, town or village or other OSM object that denotes a settlement.
 
-Site: Top Administrative Area (OSM object Name)
+Unit: Site, First-level Administrative Area (OSM object Name)
 -----------------------------------------------
 
 **Description**
 
-The OSM name of the largest, generally used administrative area of a country (usually admin level 4).
+The OSM name of the largest, generally used sub-national administrative area of a country, as defined by OSM (usually administrative level 4).
 
 **Type of field**
 
-Text, OSM object name, first in a pair of values
+First in a pair of values, OSM object name (text)
 
 **Example of use**
 
 ``Michoacán, Borno``
 
+**Spreadsheet column name**
+
+``unit:site_first_admin_area_osm_name``
+
+**Shortcode**
+
+``u_sfaan``
+
+**Sources**
+
+Yes (``unit:site_first_admin_area_osm_name:source``, ``u_sfaan_s``)
+
+**Confidence**
+
+Yes (``unit:site_first_admin_area_osm_name:confidence``, ``u_sfaan_c``)
+
 **Guidance on use**
 
-We identify ``sites`` with a number of different levels of geographical precision. In ``Site: Top Administrative Area (OSM Object Name)`` we record the text name of highest level subnational boundary for the country in which the site is located, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, these are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset tagged as administrative level 4.
+We identify sites with a number of different levels of geographical precision. In ``Unit: Site, First-level Administrative Area (OSM object Name)`` we record the text name of highest level subnational boundary for the country in which the site is located, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, these are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset, and are tagged as administrative level 4.
 
-    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Site: Top Administrative Area (OSM Name)`` the name of the administrative level 4 object or the state.
+    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: Site, First-level Administrative Area (OSM object Name)`` the name of the administrative level 4 object or the state.
 
-Site: Top Administrative Area (OSM object ID number)
+Unit: Site, First-level Administrative Area (OSM object ID number)
 ----------------------------------------------------
 
 **Description**
 
-The OSM ID of the largest, generally used administrative area of a country (usually admin level 4).
+The OSM ID of the largest, generally used sub-national administrative area of a country, as defined by OSM (usually administrative level 4).
 
 **Type of field**
 
-Number, OSM relation ID number, second in a pair of values
+Second in a pair of values,OSM object ID (number), second in a pair of values
 
 **Example of use**
 
 ``2340636``
 
+**Spreadsheet column name**
+
+``unit:site_first_admin_area_osm_id``
+
+**Shortcode**
+
+``u_sfaaid``
+
+**Sources**
+
+Yes. Inherits from ``Unit: First-level Administrative Area (OSM object Name)`` (``unit:site_first_admin_area_osm_name:source``, ``u_sfaan_s``)
+
+**Confidence**
+
+Yes. Inherits from ``Unit: First-level Administrative Area (OSM object Name)`` (``unit:site_first_admin_area_osm_name:confidence``, ``u_sfaan_c``)
+
 **Guidance on use**
 
-We identify ``sites`` with a number of different levels of geographical precision. In ``Site: Top Administrative Area (OSM Object ID number)`` we record OSM object ID number of the highest level subnational boundary for the country in which the site is located, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, these are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset tagged as administrative e level 4.
+We identify sites with a number of different levels of geographical precision. In ``Unit: First-level Administrative Area (OSM Object ID number)`` we record OSM object ID number of the highest level subnational boundary for the country in which the site is located, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, these are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset, and are tagged as administrative level 4.
 
-    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Site: Top Administrative Area (OSM Name)`` the name of the administrative level 4 object or the state.
+    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: First-level Administrative Area (OSM object ID number)`` the OSM object ID number of the administrative level 4 object or the state.
 
-Site: Country
--------------
+Unit: Site Country
+------------------
 
 **Description**
 
-ISO 3166 code for the country in which the unit's site is located.
+ISO 3166 two letter code for the country in which a unit site is located.
 
 **Type of field**
 
@@ -879,18 +1089,34 @@ Two letter country code
 
 ``mx``, ``ug``, ``ng``
 
+**Spreadsheet column name**
+
+``unit:site_country``
+
+**Shortcodes**
+
+``u_sc``
+
+**Sources**
+
+Yes (``unit:site_country:source``, ``u_sc_s``). These are not in use in spreadsheets.
+
+**Confidence**
+
+Yes (``unit:site_country:confidence``, ``u_sc_c``). These are not in use in spreadsheets.
+
 **Guidance on use**
 
-We identify ``sites`` with a number of different levels of geographical precision.The ``Site: Country`` field identifies the country in which a unit site is located. All entries in this field are two letter country codes taken from `ISO 3166 which can be searched here <https://www.iso.org/obp/ui/#search>`__.
+We identify sites with a number of different levels of geographical precision. The ``Unit: Site Country`` field identifies the country in which a unit site is located. All entries in this field are two letter country codes taken from `ISO 3166 which can be searched here <https://www.iso.org/obp/ui/#search>`__.
 
     For example, a unit site located in Nigeria would have the code ``ng`` and a unit site located in Brazil would have the code ``br``.
 
-Site: Date of first citation
+Unit: Site, First Cited Date
 ----------------------------
 
 **Description**
 
-This field is for the earliest citation for the location of a site, either through direct reference in the source or by the date of its publication.
+This field captures the earliest citation date for the location of a site, either through direct reference in the source or by the date of its publication.
 
 **Type of field**
 
@@ -900,25 +1126,42 @@ Date (YYYY-MM-DD), fuzzy
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
+**Spreadsheet column name**
+
+``unit:site_first_cited_date``
+
+**Shortcode**
+
+``u_sfcd``
+
+**Sources**
+
+Yes (``unit:site_first_cited_date:source``, ``u_sfcd_s``)
+
+**Confidence**
+
+
+Yes (``unit:site_first_cited_date:confidence``, ``u_sfcd_c``)
+
 **Guidance on use**
 
-Along with the fields ``Site: Founding date?``, ``Site: Date last cited`` and ``Site: Open-ended?`` the field ``Site: Date first cited`` provides data on the time period for a site's location.
+Along with the fields ``Unit: Site was founded on First Cited Date``, ``Unit: Site, Last Cited Date`` and ``Unit: Site, Last Cited Date is Open-Ended`` the field ``Unit: Site, First Cited Date`` provides data on the time period for a site's location.
 
-The ``Site: Date first cited`` field contains a date that is either:
+The ``Unit: Site, First Cited Date`` field contains a date that is either:
 
--  The earliest date found in any source that references the values contained in the pairs of fields that record ``Site: Settlement``, or failing that, ``Site: Top Administrative area``.
--  The earliest date of publication of any source that references the values contained in the pairs of fields that record ``Site: Settlement``, or failing that, ``Site: Top Administrative area``.
+-  The earliest date found in any source that references the values contained in the pairs of fields that record ``Unit: Site, Nearest Settlement``, or failing that, ``Unit: Site, First-level Administrative Area``.
+-  The earliest date of publication of any source that references the values contained in the pairs of fields that record ``Unit: Site, Nearest Settlement``, or failing that, ``Unit: Site, First-level Administrative area``.
 
-In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Site: Date first cited``.
+In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Unit: Site, First Cited Date``.
 
-This field is clarified by the field ``Site: Founding date?`` which indicates whether the date included here is the actual date on which a unit site was founded.
+This field is clarified by the field ``Unit: Site was Founded on First Cited Date`` which indicates whether the date included here is the actual date on which a unit site was founded.
 
-Site: Founding date?
---------------------
+Unit: Site was Founded on First Cited Date
+------------------------------------------
 
 **Description**
 
-Is the value in ``Site: Date first cited`` the actual date on which a unit site was founded (Y), or the earliest date a source has referred to a unit site (N)?
+Indicates whether or not the value in ``Unit: Site, First Cited Date`` the actual date on which a unit site was founded
 
 **Type of field**
 
@@ -928,12 +1171,31 @@ Boolean (Yes, No)
 
 ``Y``, ``N``
 
+**Spreadsheet column name**
+
+``unit:site_first_cited_date_founding``
+
+**Shortcode**
+
+``u_sfcdf``
+
+**Sources**
+
+Yes. Inherits from ``Unit: Site, First Cited Date`` (``unit:site_first_cited_date:source``, ``u_sfcd_s``)
+
+**Confidence**
+
+Yes. Inherits from ``Unit: Site, First Cited Date`` (``unit:site_first_cited_date:confidence``, ``u_sfcd_c``)
+
 **Guidance on use**
 
-This is a clarifying field for ``Site: Date first cited``. Where a source references a unit site and specifies the date that unit site was founded we will enter ``Y`` . In all other cases we will enter a value of ``N`` to indicate that the date is not a start date, but the date of first citation.
+This is a clarifying field for ``Unit: Site, First Cited Date``. There are two options for use in this field:
 
-Site: Date last cited
----------------------
+- ``Y``: Where a source references a unit site and specifies the date that unit site was founded.
+- ``N``: In all other cases, indicate that the date is not a start date, but the date of first citation.
+
+Unit: Site, Last Cited Date
+---------------------------
 
 **Description**
 
@@ -947,25 +1209,41 @@ Date (YYYY-MM-DD), fuzzy
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
+**Spreadsheet column name**
+
+``unit:site_last_cited_date``
+
+**Shortcode**
+
+``u_slcd``
+
+**Sources**
+
+Yes (``unit:site_last_cited_date:source``, ``u_slcd_s``)
+
+**Confidence**
+
+Yes (``unit:site_last_cited_date:confidence``, ``u_slcd_c``)
+
 **Guidance on use**
 
-Along with the fields ``Site: Date first cited``, ``Site: Founding date?`` and ``Site is Open-ended?`` the field ``Site: Date last cited`` provides data on the time period for a site's location.
+Along with the fields ``Unit: Site, First Cited Date``, ``Unit: Site was founded on First Cited Date`` and ``Unit: Site, Last Cited Date is Open-Ended`` the field ``Unit: Site, Last Cited Date`` provides data on the time period for a site's location.
 
-The ``Site: Date last cited`` field contains a date that is either:
+The ``Unit: Site, Last Cited Date`` field contains a date that is either:
 
--  The latest date found in any source that references the values contained in the pairs of fields that record ``Site: Settlement``, or failing that, ``Site: Top Administrative area``.
--  The latest date of publication of any source that references the values contained in the pairs of fields that record ``Site: Settlement``, or failing that, ``Site: Top Administrative area``.
+-  The latest date found in any source that references the values contained in the pairs of fields that record ``Unit: Site, Nearest Settlement``, or failing that, ``Unit: Site, First-level Administrative area``.
+-  The latest date of publication of any source that references the values contained in the pairs of fields that record ``Unit: Site, Nearest Settlement``, or failing that, ``Unit: Site, First-level Administrative area``.
 
-In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Site: Date last cited``.
+In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Unit: Site, Last Cited Date``.
 
-This field is clarified by the field ``Site: Open-ended?`` which indicates whether the date included here is the actual date on which a unit was no longer located at this site.
+This field is clarified by the field ``Unit: Site, Last Cited Date is Open-Ended`` which indicates whether the date included here is the actual date on which a unit was no longer located at this site.
 
-Site: Open-ended?
------------------
+Unit: Site, Last Cited Date is Open-Ended
+-----------------------------------------
 
 **Description**
 
-Indicates whether the value in ``Site: Date last cited`` is the actual date on which a unit site was disbanded, the latest date a source has referred to a unit site, and whether can we assume this unit site continues to exist.
+Indicates whether the value in ``Unit: Site, Last Cited Date`` is the actual date on which a unit site was disbanded, the latest date a source has referred to a unit site, and whether can we assume this unit site continues to exist.
 
 **Type of field**
 
@@ -975,15 +1253,31 @@ Single choice (Y, N, E)
 
 ``Y``, ``N``, ``E``
 
+**Spreadsheet column name**
+
+``unit:site_last_cited_date_open``
+
+**Shortcode**
+
+``u_slcdo``
+
+**Sources**
+
+Yes. Inherits from ``Unit: Site, Last Cited Date`` (``unit:site_last_cited_date:source``, ``u_slcd_s``)
+
+**Confidence**
+
+Yes. Inherits from ``Unit: Site, Last Cited Date`` (``unit:site_last_cited_date:confidence``, ``u_slcd_c``)
+
 **Guidance on use**
 
-We use this field to clarify the meaning of the date entered in ``Date last cited``. In entering a value for this field we use a variety of factors including: the history of basing for the unit, the overall structure and nature of the security forces, and the frequency of movement of similar units.
+We use this field to clarify the meaning of the date entered in ``Unit: Site, Last Cited Date``. In entering a value for this field we use a variety of factors including: the history of basing for the unit, the overall structure and nature of the security forces, and the frequency of movement of similar units.
 
 The values that can be entered in this field are restricted to the below:
 
--  ``E`` indicates the exact date this unit site was disbanded, or ceases to exist.
--  ``Y`` indicates that we assume this unit site continues to exist.
--  ``N`` indicates we do not assume that this unit site continues to exist, but we do not have an exact end date.
+-  ``E``: indicates the exact date this unit site was disbanded, or ceases to exist.
+-  ``Y``: indicates that we assume this unit site continues to exist.
+-  ``N``: indicates we do not assume that this unit site continues to exist, but we do not have an exact end date.
 
 Area of Operations: OSM object name
 -----------------------------------
@@ -1059,7 +1353,7 @@ Date (YYYY-MM-DD), fuzzy
 
 **Guidance on use**
 
-Along with the fields ``Area of Operations: Founding date?``, ``Area of Operations: Date last cited`` and ``Area of Operations: Open-ended?`` the field ``Area of Operations: Date first cited`` provides data on the time period for which can specify a unit's Area of operations.
+Along with the fields ``Area of Operations: Founding date?``, ``Area of Operations: Date last cited`` and ``Unit: Site, Last Cited Date is Open-Ended`` the field ``Area of Operations: Date first cited`` provides data on the time period for which can specify a unit's Area of operations.
 
 The ``Area of Operations: Date first cited`` field contains a date that is either:
 
@@ -1068,7 +1362,7 @@ The ``Area of Operations: Date first cited`` field contains a date that is eithe
 
 In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Area of Operations: Date first cited``.
 
-This field is clarified by the field ``Area of Operations: start date?`` which indicates whether the date included here is the actual date on which an Area of Operations started.
+This field is clarified by the field ``Unit: Site was founded on First Cited Date`` which indicates whether the date included here is the actual date on which an Area of Operations started.
 
 Area of Operations: Start date?
 -------------------------------
@@ -1106,16 +1400,16 @@ Date (YYYY-MM-DD), fuzzy
 
 **Guidance on use**
 
-Along with the fields ``Area of Operations: Date first cited``, ``Area of Operations: start date?`` and ``Area of Operations: Open-ended?`` the field ``Site: Date last cited`` provides data on the time period for which can specify an Area of Operations location.
+Along with the fields ``Area of Operations: Date first cited``, ``Unit: Site was founded on First Cited Date`` and ``Unit: Site, Last Cited Date is Open-Ended`` the field ``Unit: Site, Last Cited Date`` provides data on the time period for which can specify an Area of Operations location.
 
 The ``Area of Operations: Date last cited`` field contains a date that is either:
 
 -  The latest date found in any source that references the values contained in the pairs of fields that record ``Area of Operations``.
--  The latest date of publication for any source that references the values contained in the pairs of fields that record ``Area of Operations``. . In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Site: Date last cited``.
+-  The latest date of publication for any source that references the values contained in the pairs of fields that record ``Area of Operations``. . In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Unit: Site, Last Cited Date``.
 
 This field is clarified by the field ``Site: Open-ended?`` which indicates whether the date included here is the actual date on which a unit site was ended, or whether we have reason to assume its continued existence beyond that date.
 
-Area of Operations: Open-ended?
+Unit: Site, Last Cited Date is Open-Ended
 -------------------------------
 
 **Description**
