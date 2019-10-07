@@ -1304,11 +1304,11 @@ First in a pair of fields with ``Unit: Area of Operations (OSM object ID)``, OSM
 
 **Sources**
 
-Yes (``unit:area_ops_country:source``, ``u_ac_s``)
+Yes (``unit:area_ops_osm_name:source``, ``u_an_s``)
 
 **Confidence**
 
-Yes (``unit:area_ops_country:confidence``, ``u_ac_c``)
+Yes (``unit:area_ops_osm_name:confidence``, ``u_an_c``)
 
 **Guidance on use**
 
@@ -1329,12 +1329,28 @@ Second in a pair of fields with ``Unit: Area of Operations (OSM object Name)``, 
 
 ``2589611``, ``4103405``
 
+**Spreadsheet column name**
+
+``unit:area_ops_osm_id``
+
+**Shortcode**
+
+``u_aid``
+
+**Sources**
+
+Yes. Inherits from ``Unit: Area of Operations (OSM object Name)`` (``unit:area_ops_name:source``, ``u_an_s``)
+
+**Confidence**
+
+Yes. Inherits from ``Unit: Area of Operations (OSM object Name)`` (``unit:area_ops_name:confidence``, ``u_an_c``)
+
 **Guidance on use**
 
 This pair fo fields document multiple and concurrent areas of operation of a unit. The value entered in this field is the OSM object ID number for the lowest-level formal geographical area that best describes where a unit has operated in some manner. In most cases, the OSM object type used in this field will be a ``relation``.
 
-Area of Operations: Country
----------------------------
+Unit: Country of Area of Operations
+-----------------------------------
 
 **Description**
 
@@ -1348,12 +1364,30 @@ Two letter country code
 
 ``mx``, ``ug``, ``ng``
 
+**Spreadsheet column name**
+
+``unit:area_ops_country``
+
+**Shortcode**
+
+``u_ac``
+
+**Sources**
+
+Yes (``unit:area_ops_country:source``, ``u_ac_s``), though these are not in use in spreadheets.
+
+**Confidence**
+
+Yes (``unit:area_ops_country:confidence``, ``u_ac_c``), though these are not in use in spreadsheets.
+
 **Guidance on use**
 
-We identify ``Area of Operations`` with two different levels of geographical precision.The ``Area of Operations: Country`` field identifies the country in which a unit has operated in some manner. All entries in this field are two letter country codes taken from `ISO 3166, which can be searched here <https://www.iso.org/obp/ui/#search>`__.
+We identify ``Area of Operations`` with two different levels of geographical precision
 
-Area of Operations: Date first cited
-------------------------------------
+The ``Area of Operations: Country`` field identifies the country in which a unit has operated in some manner. All entries in this field are two letter country codes taken from `ISO 3166, which can be searched here <https://www.iso.org/obp/ui/#search>`__.
+
+Unit: Area of Operations, First Cited Date
+------------------------------------------
 
 **Description**
 
@@ -1367,44 +1401,80 @@ Date (YYYY-MM-DD), fuzzy
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
+**Spreadsheet column name**
+
+``unit:area_ops_first_cited_date``
+
+**Shortcode**
+
+``u_aofcd``
+
+**Sources**
+
+Yes (``unit:area_ops_first_cited_date:source``, ``u_aofcd_s``)
+
+**Confidence**
+
+Yes (``unit:area_ops_first_cited_date:confidence``, ``u_aofcd_c``)
+
 **Guidance on use**
 
-Along with the fields ``Area of Operations: Founding date?``, ``Area of Operations: Date last cited`` and ``Unit: Site, Last Cited Date is Open-Ended`` the field ``Area of Operations: Date first cited`` provides data on the time period for which can specify a unit's Area of operations.
+Along with the fields ``Unit: Area of Operations First Cited Date is Start Date``, ``Unit: Area of Operations Last Cited Date`` and ``Unit: Site, Last Cited Date is Open-Ended`` the field ``Unit: Area of Operations, First Cited Date`` provides data on the time period for which can specify a unit's Area of operations.
 
-The ``Area of Operations: Date first cited`` field contains a date that is either:
+The ``Unit: Area of Operations, First Cited Date`` field contains a date that is either:
 
 -  The earliest date found in any source that references the values contained in the pairs of fields that record ``Area of Operations``.
 -  The earliest date of publication for any source that references the values contained in the pairs of fields that record ``Area of Operations``.
 
-In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Area of Operations: Date first cited``.
+In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Unit: Area of Operations, First Cited``.
 
-This field is clarified by the field ``Unit: Site was founded on First Cited Date`` which indicates whether the date included here is the actual date on which an Area of Operations started.
+This field is clarified by the field ``Unit: Area of Operations First Cited Date is Start Date`` which indicates whether the date included here is the actual date on which an Area of Operations started.
 
-Area of Operations: Start date?
--------------------------------
+Unit: Area of Operations First Cited Date is Start Date
+-------------------------------------------------------
 
 **Description**
 
-Is the value in ``Area of Operations: Date first cited`` the actual date on which a unit's Area of Operations started, or the earliest date a source has referred to a unit's Area of Operations?
+Indicates whether or not the value in ``Unit: Area of Operations, First Cited Date`` is the actual date on which a unit's Area of Operations started, or the earliest date a source has referred to a unit's Area of Operations.
 
 **Type of field**
 
-Boolean (Yes, No)
+Boolean
 
 **Example of use**
 
-``Y``,\ ``N``
+``Y``, ``N``
+
+**Spreadsheet column name**
+
+``unit:area_ops_first_cited_date_start``
+
+**Shortcode**
+
+``u_aofcds``
+
+**Sources**
+
+
+Yes. Inherits from ``Unit: Area of Operations First Cited Date`` (``unit:area_ops_first_cited_date:source``, ``u_aofcd_s``)
+
+**Confidence**
+
+Yes. Inherits from ``Unit: Area of Operations First Cited Date`` (``unit:area_ops_first_cited_date:confidence``, ``u_aofcd_c``)
 
 **Guidance on use**
 
-This is a clarifying field for ``Area of Operations: Date first cited``. Where a source references a unit site and specifies the date that unit Area of Operations was started we will enter ``Y`` . In all other cases we will enter a value of ``N`` to indicate that the date is not a start date, but the date of first citation.
+This is a clarifying field for ``Unit: Area of Operations, Dirst Cited Date``. It has two options:
 
-Area of Operations: Date last cited
------------------------------------
+- ``Y``: Used where a source references a unit and specifies the date that unit Area of Operations was started.
+- ``N``: Used in all other cases to indicate that the date is not a start date, but the date of first citation.
+
+Unit: Area of Operations Last Cited Date
+----------------------------------------
 
 **Description**
 
-This field is for the latest citation for an Area of Operations, either through direct reference in the source or by the date of its publication.
+This field is for the date of latest citation for an Area of Operations, either through direct reference in the source or by the date of its publication.
 
 **Type of field**
 
@@ -1414,23 +1484,39 @@ Date (YYYY-MM-DD), fuzzy
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
+**Spreadsheet column name**
+
+``unit:area_ops_last_cited_date``
+
+**Shortcode**
+
+``u_aolcd``
+
+**Sources**
+
+Yes (``unit:area_ops_last_cited_date:source``, ``u_aolcd_s``)
+
+**Confidence**
+
+Yes (``unit:area_ops_last_cited_date:confidence``, ``u_aolcd_c``)
+
 **Guidance on use**
 
-Along with the fields ``Area of Operations: Date first cited``, ``Unit: Site was founded on First Cited Date`` and ``Unit: Site, Last Cited Date is Open-Ended`` the field ``Unit: Site, Last Cited Date`` provides data on the time period for which can specify an Area of Operations location.
+Along with the fields ``Unit: Area of Operations First Cited Date``, ``Unit: Area of Operations First Cited Date is Start Date`` and ``Unit: Area of Operations is Open-Ended`` the field ``Unit: Area of Operations Last Cited Date`` provides data on the time period for which can specify an Area of Operations location.
 
-The ``Area of Operations: Date last cited`` field contains a date that is either:
+The ``Unit: Area of Operations Last Cited Date`` field contains a date that is either:
 
 -  The latest date found in any source that references the values contained in the pairs of fields that record ``Area of Operations``.
--  The latest date of publication for any source that references the values contained in the pairs of fields that record ``Area of Operations``. . In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Unit: Site, Last Cited Date``.
+-  The latest date of publication for any source that references the values contained in the pairs of fields that record ``Area of Operations``. . In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Unit: Area of Operations Last Cited Date``.
 
 This field is clarified by the field ``Site: Open-ended?`` which indicates whether the date included here is the actual date on which a unit site was ended, or whether we have reason to assume its continued existence beyond that date.
 
-Unit: Site, Last Cited Date is Open-Ended
--------------------------------
+Unit: Area of Operations is Open-Ended
+--------------------------------------
 
 **Description**
 
-Indicates whether the value in ``Area of Operations: Date last cited`` is the actual date on which a unit ended operations in the specified area, the latest date a source has referred to this Area of Operations, and whether can we assume a unit will continue to operate in an area beyond the date of last citation.
+Indicates whether the value in ``Unit: Area of Operations Last Cited Date`` is the actual date on which a unit ended operations in the specified area, the latest date a source has referred to this Area of Operations, and whether can we assume a unit will continue to operate in an area beyond the date of last citation.
 
 **Type of field**
 
@@ -1438,52 +1524,84 @@ Single choice from selection
 
 **Example of use**
 
-``Y``,\ ``N``,\ ``E``
+``Y``, ``N``, ``E``
+
+**Spreadsheet column name**
+
+``unit:area_ops_last_cited_date_open``
+
+**Shortcode**
+
+``u_aolcdo``
+
+**Sources**
+
+Yes. Inherits from ``Unit: Area of Operations Last Cited Date`` (``unit:area_ops_last_cited_date:source``, ``u_aolcd_s``)
+
+**Confidence**
+
+Yes. Inherits from ``Unit: Area of Operations Last Cited Date`` (``unit:area_ops_last_cited_date:confidence``, ``u_aolcd_c``)
 
 **Guidance on use**
 
-We use this field to clarify the meaning of the date entered in ``Area of Operations: Date last cited``. In entering a value for this field we use a variety of factors to assess whether a unit continues to operation in any manner in this area beyond the date of the last citation. These include: the history of operations of the unit, the overall structure and nature of the security forces, and the frequency of movement of similar units.
+We use this field to clarify the meaning of the date entered in ``Unit: Area of Operations Last Cited Date``. In entering a value for this field we use a variety of factors to assess whether a unit continues to operation in any manner in this area beyond the date of the last citation. These include: the history of operations of the unit, the overall structure and nature of the security forces, and the frequency of movement of similar units.
 
-    For Example, the ``New York State police`` would likely maintain an AOO over all of ``New York State`` even if the last citation available to us was from 2015.
+    For Example, the ``New York State police`` would likely maintain an area of operation over all of ``New York State`` even if the last citation available to us was from 2015.
 
 The values that can be entered in this field are restricted to the below:
 
--  ``E`` indicates the exact date a unit stops operating in the specified area.
--  ``Y`` indicates that we assume this unit continues to operation in the specified area.
--  ``N`` indicates we do not assume that this unit will continue to operate in the specified area, but we do not have an exact end date for this.
+-  ``E``: indicates the exact date a unit stops operating in the specified area.
+-  ``Y``: indicates that we assume this unit continues to operation in the specified area.
+-  ``N``: indicates we do not assume that this unit will continue to operate in the specified area, but we do not have an exact end date for this.
 
-Unit Membership
------------------------
+Unit: Membership
+----------------
 
 **Description**
 
-Internal/national joint operations, international peacekeeping operations, or other multi-unit efforts that this unit is a part of
+Internal/national joint operations, international peacekeeping operations, or other multi-unit efforts that this unit is a part of.
 
 **Type of field**
 
-Text and numbers,.
+Text and numbers
 
 **Example of use**
 
 ``Operación Conjunta Chihuahua``, ``Operation BOYONA``
 
+**Spreadsheet column name**
+
+``unit:membership_name``
+
+**Shortcode**
+
+``u_m``
+
+**Sources**
+
+Yes (``unit:membership_name:source``, ``u_m_s``)
+
+**Confidence**
+
+Yes (``unit:membership_name:confidence``, ``u_m_c``)
+
 **Guidance on use**
 
 This field indicates whether a unit has had any memberships or attachments to internal/national joint operations, international peacekeeping operations, or other multi-unit efforts. Generally this means one of two things:
 
-| 1) Multiple units operate as part of an “operation” focused on a specific mission.
-| 2) Multiple units “lend” or otherwise deploy personnel who operate under the command of a force composition like a "Joint Task Force" or "Operation", which usually has a commander of its own.
+1. Multiple units operate as part of an “operation” focused on a specific mission.
+2. Multiple units “lend” or otherwise deploy personnel who operate under the command of a force composition like a "Joint Task Force" or "Operation", which usually has a commander of its own.
 
     Example: soldiers from ``1 Division`` are deployed to the northeast of Nigeria to operate under ``Operation BOYANA``. ``1 Division`` has a commander, but the soldiers as part of ``Operation BOYANA`` likely report to and take orders from the commander of ``Operation BOYANA``. When the soldiers are done with their rotation, after several months, they return to their “home unit” ``1 Division``. So while ``Operation BOYANA`` commands some soldiers who are part of ``1 Division`` it doesn’t technically command all of the soldiers of ``1 Division`` (otherwise it would be the parent unit).
 
 We treat task forces, operations, peacekeeping missions and anything else represented in this field as distinct units which must have their own record in the system.
 
-Membership: Date first cited
-----------------------------
+Unit: Membership First Cited Date
+---------------------------------
 
 **Description**
 
-This field is for the earliest citation for the location of a membership, either through direct reference in the source or by the date of its publication.
+This field is for the date of earliest citation for the location of a membership, either through direct reference in the source or by the date of its publication.
 
 **Type of field**
 
@@ -1493,42 +1611,77 @@ Date (YYYY-MM-DD), fuzzy
 
 ``2012``, ``2012-11``, ``2012-11-23``
 
+**Spreadsheet column name**
+
+``unit:membership_first_cited_date``
+
+**Shortcode**
+
+``u_mfcd``
+
+**Sources**
+
+Yes (``unit:membership_first_cited_date:source``, ``u_mfcd_s``)
+
+**Confidence**
+
+Yes (``unit:membership_first_cited_date:confidence``, ``u_mfcd_c``)
+
 **Guidance on use**
 
-Along with the fields ``Membership: Start date?``, ``Membership: Date last cited`` and ``Membership: Open-ended?`` the field ``Membership: Date first cited`` provides data on the duration of one unit's membership in another.
+Along with the fields ``Unit: Membership First Cited Date is Start Date``, ``Unit: Membership Last Cited Date`` and ``Unit: Membership End-Date`` the field ``Unit: Membership First Cited Date`` provides data on the duration of one unit's membership in another.
 
-The ``Membership: Date first cited`` field contains a date that is either:
+The ``Unit: Membership First Cited Date`` field contains a date that is either:
 
 -  The earliest date found in any source that references the values contained in the pairs of fields that record ``Membership``
--  The earliest date of publication of any source that references the values contained in the pairs of fields that record ``Membership``. . In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Membership: Date first cited``.
+-  The earliest date of publication of any source that references the values contained in the pairs of fields that record ``Membership``. . In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Unit: Membership First Cited Date``.
 
-This field is clarified by the field ``Membership: Founding date?`` which indicates whether the date included here is the actual date on which a unit membership was founded.
+This field is clarified by the field ``Unit: Membership First Cited Date is Start Date`` which indicates whether the date included here is the actual date on which a unit membership was founded.
 
-Membership: Start date?
------------------------
+Unit: Membership First Cited Date is Start Date
+-----------------------------------------------
 
 **Description**
 
-Is the value in ``Membership: Date first cited`` the actual date on which a membership was started, or the earliest date a source has referred to a unit Membership?
+Indicates whether or not the value in ``Membership: Date first cited`` is the actual date on which a membership was started, or the earliest date a source has referred to a unit Membership.
 
 **Type of field**
 
-Boolean (Yes, No)
+Boolean
 
 **Example of use**
 
 ``Y``, ``N``
 
+**Spreadsheet column name**
+
+``unit:membership_first_cited_date_start``
+
+**Shortcode**
+
+``u_mfcds``
+
+**Sources**
+
+Yes. Inherits from ``Unit: Membership First Cited Date`` (``unit:membership_first_cited_date:source``, ``u_mfcd_s``)
+
+**Confidence**
+
+Yes. Inherits from ``Unit: Membership First Cited Date`` (``unit:membership_first_cited_date:confidence``, ``u_mfcd_c``)
+
 **Guidance on use**
 
-This is a clarifying field for ``Membership: Date first cited``. Where a source references a membership and specifies the exact date the relationship was established we will enter ``Y`` . In all other cases we will enter a value of ``N`` to indicate that the date is not a start date, but the date of first citation.
+This is a clarifying field for ``Unit: Mmbership First Cited Date``:
 
-Membership: Date of last citation
----------------------------------
+- ``Y``:  Where a source references a membership and specifies the exact date the relationship was established.
+- ``N``:  Used in all other cases to indicate that the date is not a start date, but the date of first citation.
+
+Unit: Membership Last Cited Date
+--------------------------------
 
 **Description**
 
-This field is for the latest citation of a membership, either through direct reference in the source or by the date of its publication.
+This field is for the  latest date of citation of a membership, either through direct reference in the source or by the date of its publication.
 
 **Type of field**
 
@@ -1537,6 +1690,22 @@ Date (YYYY-MM-DD), fuzzy
 **Example of use**
 
 ``2012``, ``2012-11``, ``2012-11-23``
+
+**Spreadsheet column name**
+
+``unit:membership_last_cited_date``
+
+**Shortcode**
+
+``u_mlcd``
+
+**Sources**
+
+Yes (``unit:membership_last_cited_date:source``, ``u_mlcd_s``)
+
+**Confidence**
+
+Yes (``unit:membership_last_cited_date:confidence``, ``u_mlcd_c``)
 
 **Guidance on use**
 
@@ -1547,14 +1716,14 @@ The ``Membership: Date last cited`` field contains a date that is either:
 -  The latest date found in any source that references the values contained in the pairs of fields that record ``Membership``; or,
 -  The latest date of publication of any source that references the values contained in the pairs of fields that record ``Membership``. . In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Membership: Date last cited``.
 
-This field is clarified by the field ``Membership: Open-ended?`` which indicates whether the date included here is the actual date on which a unit Membership was terminated.
+This field is clarified by the field ``Unit: Membership End-Date`` which indicates whether the date included here is the actual date on which a unit Membership was terminated.
 
-Membership: End Date?
----------------------
+Unit: Membership End-Date
+-------------------------
 
 **Description**
 
-Is the value in ``Membership: Date last cited`` the actual date on which the membership ended (Y), or the latest date a source has referred to a unital Membership (N)?
+Indicate whether or not the value in ``Unit: Membership Last Cited Date`` the actual date on which the membership ended or the latest date a source has referred to a unital Membership.
 
 **Type of field**
 
@@ -1564,17 +1733,33 @@ Boolean
 
 ``Y``, ``N``
 
+**Spreadsheet column name**
+
+``unit:membership_last_cited_date_end``
+
+**Shortcode**
+
+``u_mclde``
+
+**Sources**
+
+Yes. Inherits from ``Unit: Membership Last Cited Date`` (``unit:membership_last_cited_date:source``, ``u_mlcd_s``)
+
+**Confidence**
+
+Yes. Inherits from ``Unit: Membership Last Cited Date`` (``unit:membership_last_cited_date:confidence``, ``u_mlcd_c``)
+
 **Guidance on use**
 
-We use this field to clarify the meaning of the date entered in ``Membership: Date last cited``.
+We use this field to clarify the meaning of the date entered in ``Unit: Membership Last Cited Date``.
 
 The values that can be entered in this field are restricted to the below:
 
--  ``Y`` indicates that the membership ended on that date.
--  ``N`` indicates that the date is the date of last citation for the membership.
+-  ``Y``: indicates that the membership ended on that date.
+-  ``N``: indicates that the date is the date of last citation for the membership.
 
 Unit: Notes
--------------------
+-----------
 
 **Description**
 
@@ -1588,6 +1773,22 @@ Text and numbers
 
 ``In March 1990 the previous Central Regional Military Command based in Taungoo was renamed Southern Regional Military Command, the previous Northwestern Regional Military Command based in Mandalay was renamed as the Central Regional Military Command and a new Northwestern Regional Military Command was created in Monywa.``
 
+**Spreadsheet column name**
+
+``unit:notes:admin``
+
+**Shortcode**
+
+``u_n_a``
+
+**Sources**
+
+No.
+
+**Confidence**
+
+No.
+
 **Guidance on use**
 
-We use this field to record information about the unit that is likely to provide useful context, additional information that does not fit into the data structure, and notes about how decisions were made about which data to include. Any sources used should be referenced in the field.
+We use this field to record information about the unit that is likely to provide useful context, additional information that does not fit into the data structure, and notes about how decisions were made about which data to include. Any sources used should be referenced directly in the field as a full, archived URL.
