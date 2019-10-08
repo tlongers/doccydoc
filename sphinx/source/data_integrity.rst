@@ -40,7 +40,7 @@ Implementing this sytem in practice is challenging. For simple data capture syst
 Confidence scores
 -----------------
 
-Confidence scores** are measures of the degree to which the sources available to us agree on the content of a particular data point. All the data points we create start with a confidence score of ``Low`` until a confluence of different sources indicate we should upgrade it to a designation of ``Medium``. The gap between upgrading the confidence score of a data point from ``Low`` to ``Medium`` is smaller than when moving from ``Medium`` to ``High``. This scoring system gives a useful indicator of a degree to which we can rely on a data point's accuracy.
+Confidence scores are measures of the degree to which the sources available to us agree on the content of a particular data point. All the data points we create start with a confidence score of ``Low`` until a confluence of different sources indicate we should upgrade it to a designation of ``Medium``. The gap between upgrading the confidence score of a data point from ``Low`` to ``Medium`` is smaller than when moving from ``Medium`` to ``High``. This scoring system gives a useful indicator of a degree to which we can rely on a data point's accuracy.
 
 Each data point (except those tied to alleged ``incidents``) has a confidence score attached to it. The confidence scores only relate to the specific data point to which they are attached.
 
