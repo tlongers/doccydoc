@@ -15,12 +15,12 @@ Unit: Unique Identifier
 -----------------------
 
 Description
-~~~~~~~~~~~
+-----------
 
 A unique 32 chracter code assigned to each unit in the dataset. 
 
 Type of field
-------------
+-------------
 
 Text and numbers
 
@@ -61,7 +61,7 @@ Unit: Research Owner
 --------------------
 
 Description
-~~~~~~~~~~
+-----------
 
 Initials of Staff Reseacher who first created the unit.
 
@@ -1786,11 +1786,11 @@ Text and numbers
 
 **Sources**
 
-No.
+No
 
 **Confidence**
 
-No.
+No
 
 **Guidance on use**
 
