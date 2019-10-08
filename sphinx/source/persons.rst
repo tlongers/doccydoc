@@ -267,15 +267,15 @@ Person: Gender
 
 **Description**
 
-Indicatators of a person's sex or gender identity, as observable from availabl sources.
+Indicators of a person's sex or gender identity, as observable from available sources.
 
 **Type of field**
 
-List, single choice
+Open list, single choice
 
 **Example of use**
 
-``Male``, ``Female``
+``Male``, ``Female``, ``Other``
 
 **Spreadsheet column name**
 
@@ -295,11 +295,11 @@ Yes (``person:gender:confidence``, ``p_g_c``)
 
 **Guidance on use**
 
-This field is used to capture the sex of a person, but may also be used to encompass a broad spectrum of gender identities that are not biologically defined. Ideally, we would be able to ask each person in our dataset how they wish their gender to be described, but in most cases the only opportunity we have is to infer this from the source available to us. Sources contain a number of indicators of a person's gender, such as a picture, their name and the pronouns used by the author to describe the person. For example:
+This field is used to capture data about the gender of a person, as determined only by the pronouns ("her", "she", "his", "him", etc) used in any available textual sources about this person. We do not infer a person's gender from their name or images of them. 
 
-   The Chief of Army Staff (COAS), Lt. Gen. Kenneth Minimah, in his first major decision since assumption of office, has approved the redeployment, postings and appointments of more than 107 senior officers most of whom were recently promoted to fill the vacuum created by the retired officers in the service.
+Echoing the definition used in the `FOAF standard<http://xmlns.com/foaf/spec/#term_gender>`__, the ``Person: Gender`` field is not intended to capture the full range of possible biological, social and sexual associated with the word "gender". In the majority of cases the value recorded in this field will be ``male`` or ``female``. However, we have left this field open to include alternatives that are expressed within the available sources about a person.
 
-In Nigeria, the name "Kenneth" most commonly denotes a male. The author refers to "*his* major decision", indicating that the author believe this person to be male. In this case, we would record ``Male`` in the ``Person: Gender`` field.
+Where the sources contain no textual indication about the person's gender, the field should be left blank.
 
 Person: Date of Birth
 ---------------------
