@@ -109,8 +109,7 @@ Text, controlled vocabulary
 
 **Guidance on use**
 
-Values for this field are the English language full names of countries contained in the list of ISO 3166-1 alpha-2 codes, which can be found (`on the ISO website <https://www.iso.org/obp/ui/#search/code/>`__ and on `Wikipedia <https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements>`__.
-
+Values for this field are the English language full names of countries contained in the list of ISO 3166-1 alpha-2 codes, which can be found (`on the ISO website <https://www.iso.org/obp/ui/#search/code/>`__ and on `Wikipedia <https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements>`__).
 
 Source: Publication Title
 -----
@@ -333,7 +332,7 @@ Text and numbers
 This value is a Universally Unique Indentifier (UUID) generated using a computer program. UUIDs can be created easily using either installable or online tools, for example:
 
 - Linux and OSX users: `uuidgen` command line tool.
-- On the web: `UUID Generator<https://www.uuidgenerator.net/version>`_.
+- On the web: `UUID Generator<https://www.uuidgenerator.net/version>`__.
 
 The field is administrative, providing a reliable way to differentiate between different access points. 
 
