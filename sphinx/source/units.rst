@@ -47,7 +47,7 @@ No
 This value is a Universally Unique Indentifier (UUID) generated using a computer program. UUIDs can be created easily using either installable or online tools, for example:
 
 - Linux and OSX users: `uuidgen` command line tool.
-- On the web: `UUID Generator<https://www.uuidgenerator.net/version>`_.
+- On the web: `UUID Generator <https://www.uuidgenerator.net/version>`_.
 
 The field is administrative, providing a reliable way to differentiate between different units. In earlier versions, Security Force Monitor used ``unit:name`` to do this role but this provided inefficient as the dataset grew.
 
@@ -297,7 +297,7 @@ Yes (``unit:country:confidence``, ``u_c_c``)
 
 **Guidance on use**
 
-The ``Unit: Country`` field identifies the country this unit comes from. All entries in this field are two letter country codes taken from `ISO 3166<https://www.iso.org/obp/ui/#search>`__.
+The ``Unit: Country`` field identifies the country this unit comes from. All entries in this field are two letter country codes taken from `ISO 3166 <https://www.iso.org/obp/ui/#search>`__.
 
     For example, a unit based in Nigeria would have the code ``ng`` and a unit based in Brazil would have the code ``br``
 

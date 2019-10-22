@@ -32,12 +32,20 @@ Text and numbers
 
 ``i_id_a``
 
+**Sources**
+
+No
+
+**Confidence**
+
+No
+
 **Guidance for use**
 
 This value is a Universally Unique Indentifier (UUID) generated using a computer program. UUIDs can be created easily using either installable or online tools, for example:
 
 - Linux and OSX users: `uuidgen` command line tool.
-- On the web: `UUID Generator<https://www.uuidgenerator.net/version>`_.
+- On the web: `UUID Generator <https://www.uuidgenerator.net/version>`__.
 
 The field is administrative, providing a reliable way to differentiate between different incidents.
 
@@ -68,6 +76,14 @@ Text
 
 ``i_own_a``
 
+**Sources**
+
+No
+
+**Confidence**
+
+No
+
 **Guidance for use**
 
 This field is adminstrative and only used where data are created in a spreadsheet. It is a simple measure to help researchers keep track of records they have created. These data are not imported into WhoWasInCommand. Instead, WhoWasInCommand keeps a record of the changes (edits, new records, deletion) by the name of the system user who made them.
@@ -94,6 +110,14 @@ Number range from 0 to 3.
 **Shortcode**
 
 ``i_sta_a``
+
+**Sources**
+
+No
+
+**Confidence**
+
+No
 
 **Guidance for use**
 
@@ -130,6 +154,14 @@ Text
 
 ``i_com_a``
 
+**Sources**
+
+No
+
+**Confidence**
+
+No
+
 **Guidance for use**
 
 This is an adminstrative field specific to data created in spreadsheets. Staff Researchers use it to pass on feedback about the data in the row. This may included changes needs to specific fields, references to sources that the owner of the row might look at, and other observations that can improve the quality of the data. Data in this field are not intended for publication. 
@@ -156,6 +188,14 @@ Date (YYYY-MM-DD), fuzzy
 **Shortcode**
 
 ``i_sd``
+
+**Sources**
+
+No
+
+**Confidence**
+
+No
 
 **Guidance for use**
 
@@ -191,6 +231,14 @@ Date (YYYY-MM-DD), fuzzy
 **Shortcode**
 
 ``i_ed``
+
+**Sources**
+
+No
+
+**Confidence**
+
+No
 
 **Guidance for use**
 
@@ -233,6 +281,14 @@ Date (YYYY-MM-DD), fuzzy
 
 ``i_pd``
 
+**Sources**
+
+No
+
+**Confidence**
+
+No
+
 **Guidance for use**
 
 In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Incident: Date of Publication``.
@@ -259,6 +315,14 @@ Date (YYYY-MM-DD), fuzzy
 **Shortcode**
 
 ``i_ud``
+
+**Sources**
+
+No
+
+**Confidence**
+
+No
 
 **Guidance for use**
 
@@ -287,6 +351,14 @@ Field is not yet implemented.
 
 ``i_us``
 
+**Sources**
+
+No
+
+**Confidence**
+
+No
+
 **Guidance for use**
 
 Field is not yet implemented.
@@ -313,6 +385,14 @@ Text and numbers
 **Shortcode**
 
 ``i_ld``
+
+**Sources**
+
+No
+
+**Confidence**
+
+No
 
 **Guidance for use**
 
@@ -359,6 +439,14 @@ Field pair that takes as input an EPSG:4326 coordinate pair, or an OSM object ID
 
 ``i_seln`` and  ``i_selid``
 
+**Sources**
+
+No
+
+**Confidence**
+
+No
+
 **Guidance for use**
 
 Where research indicates that an incident occurred at a location that can be geocoded precisely, we record this data in the pair of fields called ``Incident: Site, Exact Location``. This field pair will take input in two ways:
@@ -388,6 +476,14 @@ Field pair that takes as an input an OSM object name and ID number.
 **Shortcode**
 
 ``i_ssn`` and ``i_ssid``
+
+**Sources**
+
+No
+
+**Confidence**
+
+No
 
 **Guidance for use**
 
@@ -421,6 +517,14 @@ Field pair that takes as an input an OSM object name and ID number.
 **Shortcode**
 
 ``i_sfaan`` and ``i_sfaaid``
+
+**Sources**
+
+No
+
+**Confidence**
+
+No
 
 **Guidance for use**
 
@@ -456,6 +560,14 @@ Two letter country code
 
 ``i_sc``
 
+**Sources**
+
+No
+
+**Confidence**
+
+No
+
 **Guidance for use**
 
 We identify the location of incidents with a number of different levels of geographical precision. The ``Incident: Country`` field identifies the country in which an incident occurred. All entries in this field are two letter country codes taken from `ISO 3166 which can be searched here <https://www.iso.org/obp/ui/#search>`__.
@@ -484,6 +596,14 @@ Text, multiple entry, controlled vocabulary
 **Shortcode**
 
 ``i_vt``
+
+**Sources**
+
+No
+
+**Confidence**
+
+No
 
 **Guidance for use**
 
@@ -514,6 +634,14 @@ Text and numbers
 
 ``i_vd``
 
+**Sources**
+
+No
+
+**Confidence**
+
+No
+
 **Guidance for use**
 
 In this field we record a direct quotation from the civil society, governmental or other source that describes the incident. When an incident has more than one report tied to it, start the quotation as below:
@@ -542,6 +670,14 @@ Text and numbers, multiple entry, taken from entries recorded in ``Person: Name`
 **Shortcode**
 
 ``i_pn``
+
+**Sources**
+
+No
+
+**Confidence**
+
+No
 
 **Guidance for use**
 
@@ -573,6 +709,14 @@ Text and numbers, multiple entry, taken entries recorded in ``Unit: Name``
 **Shortcode**
 
 ``i_pu``
+
+**Sources**
+
+No
+
+**Confidence**
+
+No
 
 **Guidance for use**
 
@@ -607,6 +751,14 @@ Text and numbers, multiple entry, controlled vocabulary taken from ``Unit: Class
 
 ``i_pcl``
 
+**Sources**
+
+No
+
+**Confidence**
+
+No
+
 **Guidance for use**
 
 Sometimes a source will report general information about the alleged perpetrators of an act. For example, rather than state a unit or a specific person the source might include something generic like “soldiers” or “police". In cases like these where we can't be more specific we use this field to record the branch or general classification of the force implicated in the incident. For example:
@@ -639,6 +791,14 @@ Text and numbers, chosen from list
 **Shortcode**
 
 ``i_all_s``
+
+**Sources**
+
+No
+
+**Confidence**
+
+No
 
 **Guidance for use**
 

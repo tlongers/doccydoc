@@ -1,6 +1,33 @@
 Sources
 =======
 
+Security Force Monitor collects data about the persons and units that comprise security forces, along with allegations of human rights abuses made against security forces. This data is carefully collected from a variety of sources, generally online. These include:
+
+- Laws of the country;
+- Official government media;
+- Press releases from the relevant ministries of the country (Information, Defense, Interior, and others);
+- Security force newsletters;
+- Social media pages for security services or government agencies;
+- Statistics and data agencies;
+- Local government websites;
+- Human rights commissions;
+- Third country government publications and other documents;
+- United Nations publications and other documents;
+- Local news reportage;
+- Civil society and human rights reporting;
+- Academic research; and,
+- Other country-specific sources.
+
+We also identify non-digital resources such as monographs, scholarly literature, biographies and other materials about security services. The existence and availability of these type of sources vary widely from country to country.
+
+When we choose to use a source as evidence for a data point, we create a spreadsheet or database entry for it. This entry includes the data required to identify the source:  title, publication date, URL, name of publication and so on. However, a source can have multiple "access points". An access point directs us to a particular part of a source as evidence for a data point - it's much like a citation in an academic paper. This could be material from a specific page in the source; it could also be a specific archive snapshot of a page, as the content of a webpage can sometimes change over time even though its basic identifying data will not. In this way, a single source can have multiple access points. Below are some examples of how sources and access points work:
+
+- Access points based on page number: in the 2015 report `Stars on their shoulders. Blood on their hands. War crimes committed by the Nigerian military <https://www.amnesty.org/en/documents/afr44/1657/2015/en/>`__ Human Rights Watch made a large number of allegations against the Nigerian Army. The report is 133 pages long. We have used information from specific pages to evidence specific data points about units, persons and incidents. For example, we use information on page 11 as evidence of the ``Person: Name`` field for "John A. H. Ewansiha"; material from page 24 supplements what we know about the ``Unit: Name`` for "Civilian Joint Task Force". In total, we have created 13 access points for this single source.
+
+- Access points based on differences between archive snapshots: The website of the Bangladesh Police used to publish a page describing the subordinate units of "Dhaka Range". Although this page is no longer live it has been captured in the Internet Archive at various points in time between 2013 and 2018. An assessment of the snapshots shows that though the title, publisher and URL don't change, there are important differences in the content of the webpage. `A 2013 snapshot <https://web.archive.org/web/20180105142913/http://www.police.gov.bd/content.php?id=142>`__ contains details of 18 district police subdivisions that are subordinate to Dhaka Range, but a `2018 one <https://web.archive.org/web/20130904092442/http://www.police.gov.bd:80/content.php?id=142>`__ states there are only 14. This may indicate that some subdivisions of the Dhaka Range were disbanded or placed under a different command structure. In this case, although the details of the source remain the same we have created two access points for it: the first is for the 2013 archive snapshot, the second for the 2018 one.
+
+Access points are a flexible concept that enable us to specify precisely the material that we have used to evidence data point. We plan to extend this mechanism to cover other types of material we may wish to use as evidence, such as a specific point or range of time in a video, a line number in a witness transcript, a particular viewing angle on a 360 degree image.
+
 Source: Title
 -------------
 
@@ -332,7 +359,7 @@ Text and numbers
 This value is a Universally Unique Indentifier (UUID) generated using a computer program. UUIDs can be created easily using either installable or online tools, for example:
 
 - Linux and OSX users: `uuidgen` command line tool.
-- On the web: `UUID Generator<https://www.uuidgenerator.net/version>`__.
+- On the web: `UUID Generator<https://www.uuidgenerator.net/version>`_.
 
 The field is administrative, providing a reliable way to differentiate between different access points. 
 
