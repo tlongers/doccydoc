@@ -20,6 +20,9 @@ Security Force Monitor collects data about the persons and units that comprise s
 
 We also identify non-digital resources such as monographs, scholarly literature, biographies and other materials about security services. The existence and availability of these type of sources vary widely from country to country.
 
+Sources and Access Points
+-------------------------
+
 When we choose to use a source as evidence for a data point, we create a spreadsheet or database entry for it. This entry includes the data required to identify the source:  title, publication date, URL, name of publication and so on. However, a source can have multiple "access points". An access point directs us to a particular part of a source as evidence for a data point - it's much like a citation in an academic paper. This could be material from a specific page in the source; it could also be a specific archive snapshot of a page, as the content of a webpage can sometimes change over time even though its basic identifying data will not. In this way, a single source can have multiple access points. Below are some examples of how sources and access points work:
 
 - Access points based on page number: in the 2015 report `Stars on their shoulders. Blood on their hands. War crimes committed by the Nigerian military <https://www.amnesty.org/en/documents/afr44/1657/2015/en/>`__ Human Rights Watch made a large number of allegations against the Nigerian Army. The report is 133 pages long. We have used information from specific pages to evidence specific data points about units, persons and incidents. For example, we use information on page 11 as evidence of the ``Person: Name`` field for "John A. H. Ewansiha"; material from page 24 supplements what we know about the ``Unit: Name`` for "Civilian Joint Task Force". In total, we have created 13 access points for this single source.
