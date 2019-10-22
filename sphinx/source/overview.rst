@@ -6,23 +6,24 @@ About this Research Handbook
 
 This Research Handbook contains information about the data and tools used by Security Force Monitor, a project of the Columbia Law School Human Rights Initiative. Currently, it has three main sections:
 
--  WhoWasInCommand.com User Guide: The data created by Security Force Monitor is published online on WhoWasInCommand.com, a platform with powerful search functions, clean and interactive views of data on persons, organizations and events.
--  Methodology: Security Force Monitor has a four phase approach to researching a country's security forces. This section outlines our process.
--  Data Model: this section describes the way that Security Force Monitor structures the data it collects, outlines the main entities in use (``persons``,\ ``units`` and ``incidents``) and details how each field is used.
+-  **WhoWasInCommand.com User Guide**: The data created by Security Force Monitor is published online at https://WhoWasInCommand.com, a purpose-built platform with powerful search functions, clean and interactive views of the organizational structure, command of personnel and chains of command, and the geographical footprint of security forces in many countries.
+-  **Methodology**: Security Force Monitor has a four phase approach to researching a country's security forces. This section outlines our process.
+-  **Data Model**: this section describes the way that Security Force Monitor structures the data it collects, the steps taken to ensure data integrity, and it also details the main entities and the fields used to describe them (``persons``,\ ``units`` and ``incidents``).
 
 The Research Handbook is a work-in-progress, and is updated during the course of the work of Security Force Monitor.
 
 Contributors
 ------------
 
-| Tony Wilson, Tom Longley and Michel Manzur from `Security Force Monitor <https://securityforcemonitor.org>`__ wrote the first version of this Research Handbook.
-| `James McKinney <https://twitter.com/mckinneyjames>`__ - at the time with `OpenNorth <http://opennorth.ca>`__ - was a major contributor to the development of Monitor's data model, adapting Popolo (an international open government data standard) and developing the specifications for the Monitor's research tool.
+Tony Wilson, Tom Longley and Michel Manzur from `Security Force Monitor <https://securityforcemonitor.org>`__ wrote the first version of this Research Handbook.
 
-Security Force Monitor has partnered with DataMade to create WhoWasInCommand.com. DataMade has operationalized and refined Security Force Monitor's data structure, created a powerful open source platform to put the data online, and made a significant contribution to the concept and design of WhoWasInCommand.com.
+Security Force Monitor has partnered with `DataMade <https://datamade.us>`__ to create WhoWasInCommand.com. DataMade has operationalized and refined Security Force Monitor's data structure, worked with us to create a powerful open source platform to put the data online, and made a significant contribution to the concept and design of WhoWasInCommand.com.
+
+`James McKinney <https://twitter.com/mckinneyjames>`__ - at the time with `OpenNorth <http://opennorth.ca>`__ - was a major contributor to the development of Monitor's data model, adapting Popolo (an international open government data standard) and developing the specifications for the Monitor's research tool.
 
 **How to contribute**
 
-The `Research Handbook source is hosted on Github <https://github.com/security-force-monitor/sfm-research-handbook>`__, and published here as a Gitbook.
+The `Research Handbook source is hosted on Github <https://github.com/security-force-monitor/sfm-research-handbook>`__, and published through `ReadTheDocs<https://readthedocs.org>`__.
 
 When reading it, we are sure you will find things that can be improved - please let us know what needs to be done, either by `emailing us <mailto:info@securityforcemonitor.org>`__, `submitting a pull request or filing a issue on Github <https://github.com/security-force-monitor/sfm-research-handbook/issues>`__.
 

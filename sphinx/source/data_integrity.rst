@@ -42,7 +42,7 @@ Confidence scores
 
 Confidence scores are measures of the degree to which the sources available to us agree on the content of a particular data point. All the data points we create start with a confidence score of ``Low`` until a confluence of different sources indicate we should upgrade it to a designation of ``Medium``. The gap between upgrading the confidence score of a data point from ``Low`` to ``Medium`` is smaller than when moving from ``Medium`` to ``High``. This scoring system gives a useful indicator of a degree to which we can rely on a data point's accuracy.
 
-Each data point (except those tied to alleged ``incidents``) has a confidence score attached to it. The confidence scores only relate to the specific data point to which they are attached.
+Each data point (except those tied to an alleged ``incident``) has a confidence score attached to it. The confidence scores only relate to the specific data point to which they are attached.
 
 For instance, if a wide variety of sources agree that the ``1 Division`` is the name of an ``unit`` a confidence score of ``High`` would be assigned to this data point. However, if there is only one source for ``One Division`` as an alias, a confidence score of ``Low`` would be merited.
 
@@ -72,7 +72,7 @@ Broadly speaking the Security Force Monitor uses agreement among sources to buil
 
     Example: the Monitor comes across Source A published on 1 July 2012 stating that the 1 Battalion is based in Lagos. If Source B published on 3 August 2012 also states that the 1 Battalion is based in Lagos we have a decision point about what claim we should make.
 
-Utilizing sources A and B we have two options which can be expressed in text:
+Using sources A and B we have two options which can be expressed in text:
 
 1. Separate claims: “As of 1 July 2012 the 1 Battalion was based in Lagos and as of 3 August 2012 the 1 Battalion was based in Lagos, the Monitor does not know where the battalion was based between those two points in time.”
 2. Contiguity claim: “From at least 1 July 2012 to at least 3 August 2012 the 1 Battalion was based in Lagos.”
@@ -95,9 +95,9 @@ Perhaps the most important point is that it even though data points, like where 
 Unknown vs. Unnamed Units
 -------------------------
 
-The Security Force Monitor regularly encounters ambiguity in sourcing which it has sought to highlight and resolve through the creation of units with "Unknown" or "Unnamed" in the ``unit:name`` field. The methodology behind these decisions is laid out below:
+The Security Force Monitor regularly encounters ambiguity in sourcing which it has sought to highlight and resolve through the creation of units with "Unknown" or "Unnamed" in the ``Unit: Name`` field. The methodology behind these decisions is laid out below:
 
-1. For "Unknown" units the Monitor will have sources for the overall hierarchical structure of a branch of the security forces, laying out how units should relate to one another up the chain of command. However, the Monitor often will have data on a unit which indicates where it should be in the chain of command, but does not have sourcing for a direct parent. In this case the Monitor creates a unit with "Unknown" in the ``unit:name`` and "Placeholder" for the ``unit:classification`` field.
+1. For "Unknown" units the Monitor will have sources for the overall hierarchical structure of a branch of the security forces, laying out how units should relate to one another up the chain of command. However, the Monitor often will have data on a unit which indicates where it should be in the chain of command, but does not have sourcing for a direct parent. In this case the Monitor creates a unit with "Unknown" in the ``Unit: Name`` and "Placeholder" for the ``Unit: Classification`` field.
 
     Example: Multiple sources, including the laws of Nigeria, lay out that the chain of command for the Police goes from each state (and the Federal Capital Territory) having a single Police Command, under which are Police Area Commands and under Police Area Command are Police Divisions. For the Abayi Police Division the Monitor has sources placing it in Aba, Abia state, making it ultimately under the control of the Abia State Police Command, per the law. However, the Monitor does not have sources indicating which Police Area Command controls Abayi Police Division, thus the Monitor has created a unit called ``Unknown Police Area Command in Abia State`` which is the parent unit of ``Abayi Police Division``. In turn ``Abia State Police Command`` is the parent of ``Unknown Police Area Command in Abia State``, which connects ``Abayi Police Division`` to the wider police command structure.
 

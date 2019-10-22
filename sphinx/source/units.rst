@@ -209,6 +209,8 @@ As different sources will spell a unit's name in different ways the Security For
 
     Example: Army units of a country may follow a naming convention of a number and then name of unit: e.g. ``3 Battalion`` or ``25 Brigade``. There may be a unit of which we only have citations for a variation on that: e.g. ``Fourth Battalion``. In this case, the Monitor would list the name of the unit as ``4 Battalion`` with a note about the methodology behind that choice. The ``Fourth Battalion`` name variant would be entered in the ``Aliases or alternative spellings`` field
 
+Standardizations don't have specific sources, so we have created a specific source to use in these cases. Where a value in ``Unit: Name`` has been standardized, a source with the following title will be associated with it: "Name standardized in accordance with Security Force Monitor research".
+
 Additionally, wherever possible, we will choose the most complete and complex version of a unit’s name that can be evidenced by a source:
 
     Example: ``3 Armoured Division`` would be the entry, rather than the more informal ``3 Division`` (which may have more citations).
