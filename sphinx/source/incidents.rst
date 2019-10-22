@@ -1,20 +1,20 @@
 Incidents
 =========
 
-Incidents are publicly-documented allegations of human rights violations committed by state-controlled security forces. These include extrajudicial killings, rape, torture and other forms of violence. Security Force Monitor does not make these allegations itself, but compiles allegations made by governmental bodies, human rights organizations and other civil society actors around the world.
+Incidents are publicly-documented allegations of acts committed by state-controlled security forces that may violate human rights laws and standards, international criminal law and other sets of relevant norms. Incidents may include extrajudicial killings, rape, torture and other forms of violence. Security Force Monitor does not make these allegations itself, but compiles allegations made by governmental bodies, human rights organizations and other civil society actors around the world.
 
 The Security Force Monitor focuses its research on the structure, personnel and operations of security forces; we do not directly investigate specific allegations of human rights abuse in the way that Amnesty International or Human Rights Watch do. As such we consider all reports of human rights abuses as “alleged” in our documentation. This simply means these are claims that other organizations have made and which we are repeating without further verification. The Security Force Monitor does not make allegations against security forces and the data that we publish does not attempt to demonstrate involvement of individuals or units in human rights abuses beyond that which other organizations have alleged.
 
 For each incident, we include data about what happened and when, the location(s) it occurred at, the alleged perpetrators and the type of human rights violation the reporting organization claims has occurred.
 
-In a departure from how we compile data about ``units`` and ``persons``, individual fields in incident records are not sourced and rated for confidence. We provide a single source for the entire incident. This is because each incident is a direct copy of material from a single source, rather than a tapestry of material from a range of different sources.
+In a departure from how we compile data about ``units`` and ``persons``, individual fields in incident records are not sourced and rated for confidence. Rather, we provide a single source for the entire incident. This is because each incident is a direct copy of material from a single source rather than a tapestry of material from a range of different sources.
 
-Incident: ID
----------
+Incident: Unique Identifying Number
+-----------------------------------
 
 **Description**
 
-A unique code assigned to each incident in the dataset.
+A unique 32 character code assigned to each incident in the dataset.
 
 **Type of field**
 
@@ -26,14 +26,116 @@ Text and numbers
 
 **Spreadsheet column name**
 
+``incident:id:admin``
+
 **Shortcode**
+
+``i_id_a``
 
 **Guidance for use**
 
-This field is created automatically when data is uploaded into the Monitor's online platform.
+This value is a Universally Unique Indentifier (UUID) generated using a computer program. UUIDs can be created easily using either installable or online tools, for example:
 
-Incident: Start date
------------------
+- Linux and OSX users: `uuidgen` command line tool.
+- On the web: `UUID Generator<https://www.uuidgenerator.net/version>`_.
+
+The field is administrative, providing a reliable way to differentiate between different incidents.
+
+When a new incident is created directly in WhoWasInCommand, the platform automatically creates a UUID for that incident and stores it in this field. If a new incident is created in a spreadsheet, the Staff Researcher must generate a unique identifying number for that incident and copy it into the field ``incident:id:admin`` for the single row associated with that specific incident. This manual, copy-and-paste step is a potential source of error and the Staff Researcher must be careful not to re-use a UUID.
+
+Bulk updates made to WhoWasInCommand.com by spreadsheet import are based on the values in this field. For example, changes made in the row ``a407be6a-28e6-4237-b4e9-307f27b1202e`` in the spreadsheet will be applied to the incident with that UUID in WhoWasInCommand. 
+
+Incident: Research Owner
+------------------------
+
+**Description**
+
+Initials of the Staff Researcher who first created the incident.
+
+**Type of field**
+
+Text
+
+**Example of use**
+
+``TL``, ``TW``, ``MM``
+
+**Spreadsheet column name**
+
+``incident:owner:admin``
+
+**Shortcode**
+
+``i_own_a``
+
+**Guidance for use**
+
+This field is adminstrative and only used where data are created in a spreadsheet. It is a simple measure to help researchers keep track of records they have created. These data are not imported into WhoWasInCommand. Instead, WhoWasInCommand keeps a record of the changes (edits, new records, deletion) by the name of the system user who made them.
+
+Incident: Research Status
+-------------------------
+
+**Description**
+
+The place of a row of data in the research workflow.
+
+**Type of field**
+
+Number range from 0 to 3.
+
+**Example of use**
+
+``1``
+
+**Spreadsheet column name**
+
+``incident:status:admin``
+
+**Shortcode**
+
+``i_sta_a``
+
+**Guidance for use**
+
+This administrative field is only used in spreadsheets. Staff Researchers use this field to indicate where a row of data stands in the research workflow between the first cut of a row of data, review by other researchers, and final readiness for publication. Values in this field are taken from the below controlled list:
+
+
+- `0`: First commit. This row of data has just been added and needs review.
+- `1`: Fixes needed. A reviewer has made comments that need to be addressed, which will be recorded in the ``incident:comment:admin`` field.
+- `2`: Fixes made. The owner of this data has addressed the reviewer's comments.
+- `3`: Clean. A final check has been made by a reviewer, and this row of data can be published.
+
+Data created and managed in WhoWasInCommand does not use this mechanism. At the time of writing, a simple review system is being implemeneted in WhoWasInCommand.
+
+Incident: Research Comments
+---------------------------
+
+**Description**
+
+Observations specific to the process of reviewing data in this row, including fixes, refinements and other suggestions.
+
+**Type of field**
+
+Text
+
+**Example of use**
+
+``Check location``, ``Missing OSM objects``
+
+**Spreadsheet column name**
+
+``incidents:comments:admin``
+
+**Shortcode**
+
+``i_com_a``
+
+**Guidance for use**
+
+This is an adminstrative field specific to data created in spreadsheets. Staff Researchers use it to pass on feedback about the data in the row. This may included changes needs to specific fields, references to sources that the owner of the row might look at, and other observations that can improve the quality of the data. Data in this field are not intended for publication. 
+
+Incident: Start Date
+--------------------
 
 **Description**
 
@@ -49,11 +151,15 @@ Date (YYYY-MM-DD), fuzzy
 
 **Spreadsheet column name**
 
+``incident:start_date``
+
 **Shortcode**
+
+``i_sd``
 
 **Guidance for use**
 
-If an incident occurred within a single day, ``Incident: Start date`` and ``Event: End date`` should be the same.
+If an incident occurred within a single day, ``Incident: Start Date`` and ``Event: End Date`` should be the same.
 
 Incidents may occur at some point during a range:
 
@@ -61,10 +167,10 @@ Incidents may occur at some point during a range:
 
 We know from this source that the victims were alive as of 9 August 2006 and we know they were dead as of 17 August 2006. However the exact time of the killing occurred is not clear; it could have happened at any point during that time frame. To accommodate this, we would record ``2006-08-09`` in ``Incident: Start date`` and ``2006-08-17`` in ``Event: End date``.
 
-In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Incident: Start date`` .
+In keeping with all date fields we include in this dataset, where research indicates that only a year or a year and a month, these partial dates can be included in ``Incident: Start Date`` .
 
-Incident: End date
----------------
+Incident: End Date
+------------------
 
 **Description**
 
@@ -80,17 +186,21 @@ Date (YYYY-MM-DD), fuzzy
 
 **Spreadsheet column name**
 
+``incident:end_date``
+
 **Shortcode**
+
+``i_ed``
 
 **Guidance for use**
 
-If ``Incident: End date`` is unclear there are several ways to determine what should be used.
+If ``Incident: End Date`` is unclear there are several ways to determine what should be used.
 
-One option is to record the date of interview with victim as ``Incident: End date``. We can assume that the violation(s) ended at least the month/day of the interview - or that we at least know they occurred up to that date.
+One option is to record the date of interview with victim as ``Incident: End Date``. We can assume that the allegation(s) ended at least the month/day of the interview - or that we at least know they occurred up to that date.
 
     For example: "Abu Bakr, a former detainee in Giwa Barracks told Amnesty International that he had been forced to share a confined area with up to 400 other people [...] Abu Bakr who was held in Giwa barracks told Amnesty International in July 2014: “There was no toilet. To toilet you use a black plastic bag and when you go out you throw it… or if someone used his maybe he will give you.” He also explained: 'We had rice for breakfast. A small amount, they put it in your hand. You give your hand, they will put the rice, you swallow it, you go back to the cell. Later in the day they give you water once. It is in a jug and you drink and pass it to another inside the cell. In the evening it is rice and stew, small. They give it in a nylon bag. There is no washing, no showers. No sleep. You just sit down only, the place is very tight, just sit on your bottom. You can only pray in the cell where you are sitting.'"
 
-In this example we could record ``2014-07`` in ``Incident: End date`` because we know that at some time in July he talked to Amnesty International.
+In this example we could record ``2014-07`` in ``Incident: End Date`` because we know that at some time in July he talked to Amnesty International.
 
 Here's another example:
 
@@ -98,10 +208,10 @@ Here's another example:
 
 In this case, we can look at the footnotes. They often will give the date of when the victim was interviewed. In this case, both footnotes read: “Amnesty International interview in Port Harcourt, October 2011.” - so “last month” would be ``September 2011`` and we would record this as ``2011-09`` in ``Incident: Start date``. While they were detained for three days it is unclear if the complete incident occurred in September because Amnesty interviewed this person in October 2011. Accordingly, we could record ``2011-10`` in ``Event: End date`` as they could have been arrested on September 29 and then released on 1 October 2011.
 
-In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Incident: End date``.
+In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Incident: End Date``.
 
-Incident: Date of publication
---------------------------
+Incident: Date of Publication
+-----------------------------
 
 **Description**
 
@@ -117,18 +227,22 @@ Date (YYYY-MM-DD), fuzzy
 
 **Spreadsheet column name**
 
+``incident:pub_date``
+
 **Shortcode**
+
+``i_pd``
 
 **Guidance for use**
 
-In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Incident: Date of publication``.
+In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Incident: Date of Publication``.
 
-Incident: Date of last update
---------------------------
+Incident: Date of Last Update
+-----------------------------
 
 **Description**
 
-The date of most recent update about the incident
+The date of most recent update about the incident.
 
 **Type of field**
 
@@ -140,18 +254,22 @@ Date (YYYY-MM-DD), fuzzy
 
 **Spreadsheet column name**
 
+``incident:update_date``
+
 **Shortcode**
+
+``i_ud``
 
 **Guidance for use**
 
-In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Incident: Date of last update``.
+In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Incident: Date of Last Update``.
 
-Incident: Status as of last update
--------------------------------
+Incident: Status as of Last Update
+----------------------------------
 
 **Description**
 
-Most recently available status of the incident
+Most recently available status of the incident.
 
 **Type of field**
 
@@ -163,14 +281,18 @@ Field is not yet implemented.
 
 **Spreadsheet column name**
 
+``incident:update_status``
+
 **Shortcode**
+
+``i_us``
 
 **Guidance for use**
 
 Field is not yet implemented.
 
-Incident: Location
----------------
+Incident: Location Description
+------------------------------
 
 **Description**
 
@@ -186,23 +308,25 @@ Text and numbers
 
 **Spreadsheet column name**
 
+``incident:location_description``
+
 **Shortcode**
+
+``i_ld``
 
 **Guidance for use**
 
-We use this field to record the location of an incident.
-
-Example:
+We use this field to record the location of an incident exactly as described in the source. Here is an example:
 
     "Stanley Adiele Uwakwe and Faka Tamunotonye Kalio were arrested on 10 May and brought to Old GRA detention centre in Port Harcourt. After several days, they were transferred to another police station, but officers there told relatives that the men were not in detention. Unofficially, relatives were informed that the men had been killed by the police."
 
-While they were detained at Old GRA detention centre - the location of their killing is unclear. It is also not clear where they were located before they were disappeared - was it at the Old GRA or at the unnamed police station? Since we don’t know we’d leave the Location field blank.
+While they were detained at "Old GRA detention centre" the location of their killing is unclear. It is also not clear where they were located before they were disappeared - was it at the Old GRA or at the unnamed police station? Since we don’t know we’d leave the ``Incident: Location Description`` field blank.
 
 Here's another example of how to use this field:
 
     "And in yet a third case, Human Rights Watch interviewed three witnesses who saw soldiers shoot five men on the Customs Bridge in Maiduguri. One of the victims survived. He told Human Rights Watch that on the afternoon of July 28 soldiers entered a mosque where he was praying with four other men. The soldiers removed their robes, beat them, and marched them to their commander at the bridge. He described what happened next: The soldiers told us to lie down. Four of the soldiers opened fire on us. The commander was watching. I was lying on my side. They saw that some of us were moving and shot us again. I then lost consciousness. I regained consciousness in the night and dragged myself to an area in the dirt near Dandal Community Bank. I spent the night under a bus. In the morning an achaba [commercial motorcycle taxi] man who knew me took me to my house. My family called a doctor…. They removed four bullets from my body. A former Boko Haram member who witnessed the shootings at the Customs Bridge insisted to Human Rights Watch that the five men were not Boko Haram members. According to him, “The old man was holding prayer beads, and Boko Haram members don’t do that. The two youth wore T-shirts and the [other] two men wore long pants, not the short pants of Boko Haram.” The soldiers left the corpses on the bridge for three days."
 
-The location would be ``the Customs Bridge`` - while ``Maiduguri`` would be the ``City or other Node Name`` (more on that below)
+The location we would enter into ``Incident: Location Description`` would be  "the Customs Bridge",  while we would enter ``Maiduguri`` into the field called ``Incident: Site, Settlement`` (a field that is documented  below).
 
 A common issue is the separation of specific incidents contained within a single account of violations based on geography.
 
@@ -210,134 +334,107 @@ Often a person is arrested and, for example, beaten at a specific site (and the 
 
 In such instances, researchers should consider the initial arrest and transportation to the site of detention to be one ``incident`` and abuses committed or otherwise tied to site of detention a separate ``incident``.
 
-Incident: Exact location (Longitude or OSM object Name)
-----------------------------------------------------
+Incident: Site, Exact location
+------------------------------
 
 **Description**
 
+A pair of fields used to capture the most precise location of an incident, using whichever is the more precise of a geographical coordinates or the OSM object ID and name.
+
 **Type of field**
+
+Field pair that takes as input an EPSG:4326 coordinate pair, or an OSM object ID and name.
 
 **Example of use**
 
+``Ciudad Juárez`` and ``4145208823``
+
+``104.64728`` and ``24.0506``
+
 **Spreadsheet column name**
+
+``incident:site_exact_location_osm_name`` and ``incident:site_exact_location_osm_id``
 
 **Shortcode**
 
+``i_seln`` and  ``i_selid``
+
 **Guidance for use**
 
-Incident: Exact location (Latitude or OSM object ID number)
---------------------------------------------------------
+Where research indicates that an incident occurred at a location that can be geocoded precisely, we record this data in the pair of fields called ``Incident: Site, Exact Location``. This field pair will take input in two ways:
+
+- A coordinate pair in EPSG:4326 format: The number for longitude should go in ``incident:site_exact_location_osm_name`` and the number for latitude should go in ``incident:site_exact_location_osm_id``
+- An OSM object name and ID number: The OSM object name should go in ``incident:site_exact_location_osm_name`` and the OSM object ID should go in ``incident:site_exact_location_osm_id``.
+
+Incident: Site, Settlement
+--------------------------
 
 **Description**
 
+A pair of fields used to capture data on the city, town or village in which an incident occurred.
+
 **Type of field**
+
+Field pair that takes as an input an OSM object name and ID number.
 
 **Example of use**
 
+``Monclova`` and ``747101009``
+
 **Spreadsheet column name**
+
+``incident:site_settlement_osm_name`` and ``incident:site_settlement_osm_id``
 
 **Shortcode**
 
+``i_ssn`` and ``i_ssid``
+
 **Guidance for use**
 
-Incident: Settlement (OSM object Name)
------------------------------------
+Where a source states that an incident happened in a particular settlement (whether village, town or city), we find the appropriate OSM object name and ID, and record it in this pair of fields:
+
+- The OSM object name should be placed in ``incident:site_settlement_osm_name``
+- The OSM object ID number should be placed in ``incident:site_settlemtn_osm_id``
+
+Often, information about incidents does not list a settlement by name. If so, we will leave this field blank even if by the description it seems to indicate a particular place. This is because we only transcribe what other groups have reported about an incident, and do not augment it. 
+
+
+Incident: Site, First-level Administrative Area
+-----------------------------------------------
 
 **Description**
 
-The city, town or village in which an incident occurred.
+A pair of fields used to record the highest sub-national administrative area of the incident location.
 
 **Type of field**
 
-Text, OSM object name, first in a pair of values
+Field pair that takes as an input an OSM object name and ID number.
 
 **Example of use**
 
-``Monclova``
+``Michoacán`` and ``2340636``
 
 **Spreadsheet column name**
 
-**Shortcode**
-
-**Guidance for use**
-
-Often, information about incidents does not list a settlement by name. If so, we will leave this field blank even if by the description it seems to indicate a particular place. This is because we do not add to reporting only to transcribe what other groups have reported.
-
-Incident: Settlement (OSM object ID Number)
-----------------------------------------
-
-**Description**
-
-The city, town or village in which an incident occurred.
-
-**Type of field**
-
-Number, OSM object ID number, second in a pair of values
-
-**Example of use**
-
-``747101009``
-
-**Spreadsheet column name**
+``incident:site_first_admin_area_osm_name`` and ``incident:site_first_admin_area_osm_id``
 
 **Shortcode**
 
-**Guidance for use**
-
-Often, information about incidents does not list a settlement by name. If so, we will leave this field blank even if by the description it seems to indicate a particular place. This is because we do not add to reporting only to transcribe what other groups have reported.
-
-Incident: Top Administrative Area (OSM object name)
-------------------------------------------------
-
-**Description**
-
-The OSM object name of the highest sub-national administrative area in which an organization site is based.
-
-**Type of field**
-
-Text, OSM relation name, first in a pair of values
-
-**Example of use**
-
-``Michoacán``
-
-**Spreadsheet column name**
-
-**Shortcode**
+``i_sfaan`` and ``i_sfaaid``
 
 **Guidance for use**
 
-We identify ``Incidents`` with a number of different levels of geographical precision. In ``Event: Top Administrative Area (OSM relation name)`` we record the text name of highest level subnational boundary for the country in which the site is located, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__.
+We identify ``incidents`` with a number of different levels of geographical precision. In this field pair we record details of the first level subnational administrative area for the country in which the incident site is located, `as defined by OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. 
 
-    For example Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Incident: Top Administrative Area (OSM relation name)`` the name the "state" (admin level 4).
+For example, in  Mexico there are "*municipios*" (classified as administrative level 6 in OSM) and states (administrative level 4 in OSM). "States" are larger in area than "*municipios*" but in the hierarchy of administrative areas are immediately beneath the international national boundary of Mexico: therefore, "states" are the first-level administrative area. For a ``incident`` which occurred in Mexico, we would record the OSM object name and ID number of the relevant "state" in the field pair called ``Incident: Site, First-level Administrative Area``.
 
-Incident: Top Administrative Area (OSM object ID number)
------------------------------------------------------
+This pair of fields takes input in the following form:
 
-**Description**
-
-The OSM relation ID number of the highest sub-national administrative area in which an organization site is based.
-
-**Type of field**
-
-Text, OSM relation ID number, second in a pair of values
-
-**Example of use**
-
-``2340636``
-
-**Spreadsheet column name**
-
-**Shortcode**
-
-**Guidance for use**
-
-We identify ``Incidents`` with a number of different levels of geographical precision. In ``Event: Top Administrative Area (OSM relation ID number)`` we record the text name of highest level subnational boundary for the country in which the incident occurred, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__.
-
-    For example Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For an incident that occurred in Mexico, we would record in ``Incident: Top Administrative Area (OSM relation ID number)`` the name the "state" (admin level 4).
+- the OSM object name should be placed in the field ``incident:site_first_admin_area_osm_name``
+- the OSM object ID number should be placed in the field ``incident:site_first_admin_area_osm_id``
 
 Incident: Country
---------------
+-----------------
 
 **Description**
 
@@ -353,7 +450,11 @@ Two letter country code
 
 **Spreadsheet column name**
 
+``incident:site_country``
+
 **Shortcode**
+
+``i_sc``
 
 **Guidance for use**
 
@@ -362,30 +463,36 @@ We identify the location of incidents with a number of different levels of geogr
     For example, an incident that occurred in Nigeria would have the code ``ng`` and an incident that occurred in Brazil would have the code ``br``.
 
 Incident: Violation type
----------------------
+------------------------
 
 **Description**
 
-Type of alleged violation of human rights committed during the incident.
+Type of alleged violation of human rights law, international humanitarian law or other relevant laws committed during the incident.
 
 **Type of field**
 
-Text, controlled vocabulary
+Text, multiple entry, controlled vocabulary
 
 **Example of use**
 
-``Torture``, ``Violations of the Right to Life``
+``Torture; Violations of the Right to Life``, ``Intentionally directing attacks against the civilian population``
 
 **Spreadsheet column name**
 
+``incident:violation_type``
+
 **Shortcode**
+
+``i_vt``
 
 **Guidance for use**
 
-In ``Incident: Violation type``, values are taken "as is" from the source.
+In ``Incident: Violation Type``, a values is taken "as is" from the source. If the source states "torture", we transcribe this without further analysis.
 
-Incident: Description
-------------------
+This field can accept multiple entries. If the field is created in a spreadsheet, the discrete entries must be separated with semi-colon.
+
+Incident: Violation Description
+-------------------------------
 
 **Description**
 
@@ -401,24 +508,28 @@ Text and numbers
 
 **Spreadsheet column name**
 
+``incident:violation_description``
+
 **Shortcode**
+
+``i_vd``
 
 **Guidance for use**
 
-In this field we record a direct quotation from the civil society, governmental or other source about the incident. When an incident has more than one report tied to it, start the quotation as below:
+In this field we record a direct quotation from the civil society, governmental or other source that describes the incident. When an incident has more than one report tied to it, start the quotation as below:
 
     According to X organization, “Description of incident”. According to Y organization, “Description of incident”.
 
-Incident: Perpetrator name
------------------------
+Incident: Perpetrator Name
+--------------------------
 
 **Description**
 
-The name of the person alleged to have committed the human rights violation(s) in the incident.
+The name of the person alleged to have committed the act(s) described in the incident.
 
 **Type of field**
 
-Text and numbers, taken from ``Person: Name``
+Text and numbers, multiple entry, taken from entries recorded in ``Person: Name``
 
 **Example of use**
 
@@ -426,26 +537,30 @@ Text and numbers, taken from ``Person: Name``
 
 **Spreadsheet column name**
 
+``incident:perpetrator_name``
+
 **Shortcode**
+
+``i_pn``
 
 **Guidance for use**
 
-If a person or persons are named in the sources for the incident, we will record it in the ``Incident: Perpetrator name`` field. The value in ``Event: Perpetrator name`` will correspond to a value in ``Person: Name``.
+If a person or persons are named in the sources for the incident, we will record this information in the ``Incident: Perpetrator Name`` field. The value in ``Incident: Perpetrator Name`` will correspond to a value in ``Person: Name``.
 
     For example: "Nwanneka narrated to NOPRIN researchers her experience at the SCID in Enugu in May 2002. She was initially arrested with two other females by officers of the Ninth Mile Police Station on the outskirts of Enugu on charges of assisting an armed robbery suspect, before being transferred to the SCID on May 3, 2002. After taking the statements of the female detainees, NPF Inspector Friday Iyamabo ordered them detained in the cells of the SCID. He later reportedly returned to the cell with pepper spray and powdered chili pepper, ordered the female detainees to strip and one after the other applied the mixture of pepper spray and chili to their genitals after severely beating them with batons. The detainees were denied access to medical treatment. Five years after this experience, Nwanneka reported to NOPRIN researchers in April 2007 that, as a result of this experience, she continues to suffer from complications with both her reproductive system and urinary tract."
 
-In this case, the alleged perpetrator is named in the source report. We would record the name ``Friday Iyamabo`` in the field ``Incident: Perpetrator name``.
+In this case, the alleged perpetrator is named in the source report. We would record the name ``Friday Iyamabo`` in the field ``Incident: Perpetrator Name``.
 
-Incident: Perpetrator organization
--------------------------------
+Incident: Perpetrator Unit 
+--------------------------
 
 **Description**
 
-The organization(s) alleged to have committed the human rights violation(s) in the incident.
+The unit(s) alleged to have committed the act(s) described in the incident.
 
 **Type of field**
 
-Text and numbers, multiple entry, taken from ``Organization: Name``
+Text and numbers, multiple entry, taken entries recorded in ``Unit: Name``
 
 **Example of use**
 
@@ -453,93 +568,78 @@ Text and numbers, multiple entry, taken from ``Organization: Name``
 
 **Spreadsheet column name**
 
+``incident:perpetrator_unit``
+
 **Shortcode**
+
+``i_pu``
 
 **Guidance for use**
 
-If the sources that specific organizations committed the alleged human rights violations described in the incident, we include these names in ``Incident: Perpetrator name``. The value in ``Event: Perpetrator organization`` will correspond to a value in ``Organization: Name``.
+If the source for the incident states that specific units committed the alleged human rights violations described in the incident, we include these names in ``Incident: Perpetrator Unit``. The value in ``Incident: Perpetrator Unit`` will correspond to a value in ``Unit: Name``.
 
-Here is an example of source material that contains information that would be included in ``Incident: Perpetrator name``:
+Here is an example of source material that contains information that would be included in ``Incident: Perpetrator Unit``:
 
     According to the United States Department of State, Bureau of Democracy, Human Rights and Labor: "On March 24, the JTF reportedly killed four men near Isaka in the Okrika Local Government Area, Rivers State, when they confronted them and other armed men attempting to hijack a barge. There was no investigation conducted."
 
+In this case, we would search ``Unit: Name`` for the canonical entry for "JTF" and include it in the field ``Incident: Perpetrator Unit``.
+
 Incident: Perpetrator classification
----------------------------------
+------------------------------------
 
 **Description**
 
-General branch or tier of the security force alleged to have committed the human rights violation(s).
+General branch or tier of the security force alleged to have committed the act(s) described in the incident.
 
 **Type of field**
 
-Text and numbers, controlled vocabulary, taken from ``Organization: Classification``
+Text and numbers, multiple entry, controlled vocabulary taken from ``Unit: Classification``
 
 **Example of use**
 
-``Army``, ``Ejército``,\ ``Police``, ``Military``,\ ``Military Police``,\ ``Joint Operation``
+``Army``, ``Ejército``,\ ``Police``, ``Military``,\ ``Military Police ; Joint Operation``
 
 **Spreadsheet column name**
 
+``incident:perpetrator_classification``
+
 **Shortcode**
+
+``i_pcl``
 
 **Guidance for use**
 
-Sometimes a source will report that the alleged perpetrators of a human rights violation are from a generic security force such as “soldiers”, “police” or some other formulation. In this case, use this field to record a classification in the same way as for ``Organization: Classification``. For example:
+Sometimes a source will report general information about the alleged perpetrators of an act. For example, rather than state a unit or a specific person the source might include something generic like “soldiers” or “police". In cases like these where we can't be more specific we use this field to record the branch or general classification of the force implicated in the incident. For example:
 
     According to Amnesty International: "On 1 May 2012, around midnight, Nigerian soldiers arrested 37-year-old Dungus Ladan (not his real name), at his home in Maiduguri. Fatima, Dungus’ wife, told Amnesty International that the soldiers promised to just take him for an interrogation that should not last more than a few hours. When her husband did not return, she said, his father went on 3 May to Giwa barracks to check what had happened. Soldiers told him that Dungus had already been released. When he still did not return, the father went back again to the barracks, where soldiers told him that he should come back the next day to bail out his son. The following day, several relatives went together and gave the soldiers “what they could,” and the soldiers again promised to release Dungus that day. His wife said that the soldiers kept asking for money, and the family kept paying, but Dungus was never released. In February 2014, his father saw Dungus in the detention facility; they spoke briefly. Dungus said he had been framed by some people who owed him money and they arranged for him to be arrested and detained. Since then, his family has not seen him again; soldiers at Giwa barracks have told them he is not there."
 
-The only alleged perpetrators described in this alleged incident are "soldiers". The most appropriate term to enter in ``Incident: Perpetrator classification`` to match this description which would be ``Military`` because "soldiers" could refer to personnel of the Army, Navy or other armed services of a country.
+The only alleged perpetrators described in this alleged incident are "soldiers". The most appropriate term to enter in ``Incident: Perpetrator Classification`` to match this description which would be "military" because "soldiers" could refer to personnel of the Army, Navy or other armed services of a country.
+
+Entries in ``Incident: Perpetrator Classification`` correspond to those in ``Unit: Classification``.
 
 Incident: Source
--------------
+----------------
 
 **Description**
 
-The source of information about the incident.
+The UUID of the access point in the source that provides information about the incident.
 
 **Type of field**
 
-Text and numbers
+Text and numbers, chosen from list
 
 **Example of use**
 
-``"Recomendación No. 49/2011 sobre el caso de retención ilegal y tortura en agravio de V1 en Ciudad Juárez, Chihuahua". Comisión Nacional de los Derechos Humanos (Mexico). 30 August 2011. http://www.cndh.org.mx/sites/all/doc/Recomendaciones/2011/Rec_2011_049.pdf Internet Archive link: http://www.cndh.org.mx/sites/all/doc/Recomendaciones/2011/Rec_2011_049.pdf``
+``5b8362d6-b13a-4764-9ff0-2d7cfd7d5f37``
 
 **Spreadsheet column name**
 
-**Shortcode**
-
-**Guidance for use**
-
-The values we enter here should follow the general citation format used by Security Force monitor, as set out in this Research Handbook:
-
-    Title of article or website page. Name of publishing organization (country of organization). Date. URL. Internet Archive link: URL
-
-Where there are multiple sources about the same incident, they are listed in the order of the description.
-
-Incident: Notes
-------------
-
-**Description**
-
-To DO.
-
-**Type of field**
-
-Text and numbers
-
-**Example of use**
-
-``"Recomendación No. 49/2011 sobre el caso de retención ilegal y tortura en agravio de V1 en Ciudad Juárez, Chihuahua". Comisión Nacional de los Derechos Humanos (Mexico). 30 August 2011. http://www.cndh.org.mx/sites/all/doc/Recomendaciones/2011/Rec_2011_049.pdf Internet Archive link: http://www.cndh.org.mx/sites/all/doc/Recomendaciones/2011/Rec_2011_049.pdf``
-
-**Spreadsheet column name**
+``incident:all:source``
 
 **Shortcode**
 
+``i_all_s``
+
 **Guidance for use**
 
-The values we enter here should follow the general citation format used by Security Force monitor, as set out in this Research Handbook:
-
-    Title of article or website page. Name of publishing organization (country of organization). Date. URL. Internet Archive link: URL
-
-Where there are multiple sources about the same incident, they are listed in the order of the description.
+Unlike data captured about ``units`` or ``person``, data about ``incidents`` are not sourced at the level of each individual field. Instead, we have a single source for the whole incident. The entry in ``Incident: Source`` should be a Unique Identifier ("UUID") for a source access point that has been alreayd created in the master list of sources. The relevant values will be found in the field ``Source: Access Point Unique Identifier``.

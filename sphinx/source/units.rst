@@ -58,8 +58,7 @@ Bulk updates made to WhoWasInCommand.com by spreadsheet import are based on the 
 Unit: Research Owner
 --------------------
 
-Description
------------
+**Description**
 
 Initials of Staff Reseacher who first created the unit.
 
@@ -1772,7 +1771,7 @@ Text and numbers
 
 **Example of use**
 
-``In March 1990 the previous Central Regional Military Command based in Taungoo was renamed Southern Regional Military Command, the previous Northwestern Regional Military Command based in Mandalay was renamed as the Central Regional Military Command and a new Northwestern Regional Military Command was created in Monywa.``
+  In March 1990 the previous Central Regional Military Command based in Taungoo was renamed Southern Regional Military Command, the previous Northwestern Regional Military Command based in Mandalay was renamed as the Central Regional Military Command and a new Northwestern Regional Military Command was created in Monywa.
 
 **Spreadsheet column name**
 
