@@ -397,7 +397,7 @@ Unit: First Cited Date is also Unit's Start Date
 
 **Description**
 
-Indicates whether the value in ``Unit: Date first cited`` is the actual date a unit was founded.
+Indicates whether the value in ``Unit: First Cited Date`` is the actual date a unit was founded.
 
 **Type of field**
 
@@ -691,7 +691,7 @@ Unit: Unit Relationship Start Date
 
 **Description**
 
-Indicates whether the value in ``Parent relationship: Date first cited`` is the actual date on which a unit became the parent of another, or the earliest date a source has referred to the relationship
+Indicates whether the value in ``Unit: Related Units First Cited Date`` is the actual date on which a unit became the parent of another, or the earliest date a source has referred to the relationship
 
 **Type of field**
 
@@ -1645,7 +1645,7 @@ Unit: Membership First Cited Date is Start Date
 
 **Description**
 
-Indicates whether or not the value in ``Membership: Date first cited`` is the actual date on which a membership was started, or the earliest date a source has referred to a unit Membership.
+Indicates whether or not the value in ``Unit: Membership First Cited Date`` is the actual date on which a membership was started, or the earliest date a source has referred to a unit Membership.
 
 **Type of field**
 
