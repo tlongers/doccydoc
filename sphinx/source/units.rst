@@ -789,15 +789,16 @@ Single choice (Y, N, E)
 
 **Spreadsheet column name**
 
-``unit:related_unit_last_cited_date_open``
+``unit:related_unit_open``
 
 **Shortcode**
 
-``u_rulcdo``
+``u_ruo``
 
 **Sources**
 
 Yes. Inherits from ``Unit: Related Unit Last Cited Date`` (``unit:related_unit_last_cited_date:source``, ``u_rulcd_s``)
+
 **Confidence**
 
 Yes. Inherits from ``Unit: Related Unit Last Cited Date`` (``unit:related_unit_last_cited_date:confidence``, ``u_rulcd_c``)
@@ -932,7 +933,7 @@ We identify sites with a number of different levels of geographical precision.
 -  Where an object for the exact site is present on OpenStreetMap we will enter its ID number in this field.
 -  Where no OSM object exists for the exact site a pair of coordinates will be used, the latitude value recorded in this field.
 
-Unit: Site, Nearest Settlement (OSM object Name)
+Unit: Site, Nearest Settlement (Name)
 ----------------------------------
 
 **Description**
@@ -941,7 +942,7 @@ The city, town or village in which a unit site is based.
 
 **Type of field**
 
-First in a pair of values with ``Unit: Site, Settlement (OSM object ID)``, OSM object Name (text)
+First in a pair of values with ``Unit: Site, Settlement (ID)``, gazetteer settlement Name (text)
 
 **Example of use**
 
@@ -949,7 +950,7 @@ First in a pair of values with ``Unit: Site, Settlement (OSM object ID)``, OSM o
 
 **Spreadsheet column name**
 
-``unit:site_nearest_settlement_osm_name``
+``unit:site_nearest_settlement_name``
 
 **Shortcode**
 
@@ -957,17 +958,17 @@ First in a pair of values with ``Unit: Site, Settlement (OSM object ID)``, OSM o
 
 **Sources**
 
-Yes (``unit:site_neartest_settlement_osm_name:source``, ``u_nsn_s``)
+Yes (``unit:site_neartest_settlement_name:source``, ``u_nsn_s``)
 
 **Confidence**
 
-Yes (``unit:site_neartest_settlement_osm_name:confidence``, ``u_nsn_c``)
+Yes (``unit:site_neartest_settlement_name:confidence``, ``u_nsn_c``)
 
 **Guidance on use**
 
-We identify ``sites`` with a number of different levels of geographical precision. In ``Site: Settlement (OSM Object Name)`` we record the name of the OSM object (node, way or relation) that identifies a settlement in which there is a unit site. It could be a city, town or village or other OSM object that denotes a settlement.
+We identify ``sites`` with a number of different levels of geographical precision. In ``Site: Settlement (Name)`` we record the settlement name included in the gazetteer in use for the dataset. For example, if Open Street Map is the gazetter, then we will record the name of the OSM object (node, way or relation) that identifies a settlement in which there is a unit site. It could be a city, town or village or other gazetteer object that denotes a settlement.
 
-Unit: Site, Nearest Settlement (OSM object ID)
+Unit: Site, Nearest Settlement (ID)
 --------------------------------
 
 **Description**
@@ -976,7 +977,7 @@ The city, town or village in which a unit site is based.
 
 **Type of field**
 
-Second in a pair of values with ``Unit: Site, Settlement (OSM object ID)``, OSM object ID (number)
+Second in a pair of values with ``Unit: Site, Settlement (Name)``, gazetteer ID (number)
 
 **Example of use**
 
@@ -984,7 +985,7 @@ Second in a pair of values with ``Unit: Site, Settlement (OSM object ID)``, OSM 
 
 **Spreadsheet column name**
 
-``unit:site_nearest_settlement_osm_id``
+``unit:site_nearest_settlement_id``
 
 **Shortcode**
 
@@ -992,26 +993,26 @@ Second in a pair of values with ``Unit: Site, Settlement (OSM object ID)``, OSM 
 
 **Sources**
 
-Yes. Inherits from ``Unit: Site, Nearest Settlement (OSM object Name)`` (``unit:site_neartest_settlement_osm_name:source``, ``u_nsn_s``)
+Yes. Inherits from ``Unit: Site, Nearest Settlement (Name)`` (``unit:site_neartest_settlement_name:source``, ``u_nsn_s``)
 
 **Confidence**
 
-Yes. Inherits from ``Unit: Site, Nearest Settlement (OSM object Name)`` (``unit:site_neartest_settlement_osm_name:confidence``, ``u_nsn_c``)
+Yes. Inherits from ``Unit: Site, Nearest Settlement (Name)`` (``unit:site_neartest_settlement_name:confidence``, ``u_nsn_c``)
 
 **Guidance on use**
 
-We identify sites with a number of different levels of geographical precision. In ``Unit: Site, Nearest Settlement (OSM Object ID)`` field we record the name of the OSM object (``node``, ``way`` or ``relation``) ID number that identifies a settlement in which there is a unit site. It could be a city, town or village or other OSM object that denotes a settlement.
+We identify sites with a number of different levels of geographical precision. In ``Unit: Site, Nearest Settlement (ID)`` field we record the identity number of the location as provided by the gazetteer in use for the dataset. For example, if Open Steet Map is the gazetteer, then we will record the ID numberof the OSM object (``node``, ``way`` or ``relation``) that identifies a settlement in which there is a unit site. It could be a city, town or village or other gazetteer object that denotes a settlement.
 
-Unit: Site, First-level Administrative Area (OSM object Name)
+Unit: Site, First-level Administrative Area (Name)
 -----------------------------------------------
 
 **Description**
 
-The OSM name of the largest, generally used sub-national administrative area of a country, as defined by OSM (usually administrative level 4).
+The  name of the largest, generally used sub-national administrative area of a country, as defined by the gazetteer.
 
 **Type of field**
 
-First in a pair of values, OSM object name (text)
+First in a pair of values, gazetteer name (text)
 
 **Example of use**
 
@@ -1019,7 +1020,7 @@ First in a pair of values, OSM object name (text)
 
 **Spreadsheet column name**
 
-``unit:site_first_admin_area_osm_name``
+``unit:site_first_admin_area_name``
 
 **Shortcode**
 
@@ -1027,28 +1028,28 @@ First in a pair of values, OSM object name (text)
 
 **Sources**
 
-Yes (``unit:site_first_admin_area_osm_name:source``, ``u_sfaan_s``)
+Yes (``unit:site_first_admin_area_name:source``, ``u_sfaan_s``)
 
 **Confidence**
 
-Yes (``unit:site_first_admin_area_osm_name:confidence``, ``u_sfaan_c``)
+Yes (``unit:site_first_admin_area_name:confidence``, ``u_sfaan_c``)
 
 **Guidance on use**
 
-We identify sites with a number of different levels of geographical precision. In ``Unit: Site, First-level Administrative Area (OSM object Name)`` we record the text name of highest level subnational boundary for the country in which the site is located, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, these are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset, and are tagged as administrative level 4.
+We identify sites with a number of different levels of geographical precision. In ``Unit: Site, First-level Administrative Area (Name)`` we record the text name of highest level subnational boundary for the country in which the site is located, as defined in the gazetteer in use for the dataset. For example, if Open Steet Map is the gazetteer, administrative levels can be `found here <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, adminstrative areas are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset, and are tagged as administrative levels.
 
     Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: Site, First-level Administrative Area (OSM object Name)`` the name of the administrative level 4 object or the state.
 
-Unit: Site, First-level Administrative Area (OSM object ID number)
------------------------------------------------------------------
+Unit: Site, First-level Administrative Area (ID)
+------------------------------------------------
 
 **Description**
 
-The OSM ID of the largest, generally used sub-national administrative area of a country, as defined by OSM (usually administrative level 4).
+The identity number of the largest, generally used sub-national administrative area of a country, as defined by the gazetteer.
 
 **Type of field**
 
-Second in a pair of values,OSM object ID (number), second in a pair of values
+Second in a pair of values, gazetteer object ID (number
 
 **Example of use**
 
@@ -1056,7 +1057,7 @@ Second in a pair of values,OSM object ID (number), second in a pair of values
 
 **Spreadsheet column name**
 
-``unit:site_first_admin_area_osm_id``
+``unit:site_first_admin_area_id``
 
 **Shortcode**
 
@@ -1064,15 +1065,15 @@ Second in a pair of values,OSM object ID (number), second in a pair of values
 
 **Sources**
 
-Yes. Inherits from ``Unit: First-level Administrative Area (OSM object Name)`` (``unit:site_first_admin_area_osm_name:source``, ``u_sfaan_s``)
+Yes. Inherits from ``Unit: First-level Administrative Area (Name)`` (``unit:site_first_admin_area_name:source``, ``u_sfaan_s``)
 
 **Confidence**
 
-Yes. Inherits from ``Unit: First-level Administrative Area (OSM object Name)`` (``unit:site_first_admin_area_osm_name:confidence``, ``u_sfaan_c``)
+Yes. Inherits from ``Unit: First-level Administrative Area (Name)`` (``unit:site_first_admin_area_name:confidence``, ``u_sfaan_c``)
 
 **Guidance on use**
 
-We identify sites with a number of different levels of geographical precision. In ``Unit: First-level Administrative Area (OSM Object ID number)`` we record OSM object ID number of the highest level subnational boundary for the country in which the site is located, `as found in in OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, these are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset, and are tagged as administrative level 4.
+We identify sites with a number of different levels of geographical precision. In ``Unit: Site, First-level Administrative Area (ID)`` we record the text name of highest level subnational boundary for the country in which the site is located, as defined in the gazetteer in use for the dataset. For example, if Open Steet Map is the gazetteer, administrative levels can be `found here <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, adminstrative areas are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset, and are tagged as administrative levels.
 
     Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: First-level Administrative Area (OSM object ID number)`` the OSM object ID number of the administrative level 4 object or the state.
 
@@ -1257,11 +1258,11 @@ Single choice (Y, N, E)
 
 **Spreadsheet column name**
 
-``unit:site_last_cited_date_open``
+``unit:site_open``
 
 **Shortcode**
 
-``u_slcdo``
+``u_so``
 
 **Sources**
 
@@ -1281,8 +1282,8 @@ The values that can be entered in this field are restricted to the below:
 -  ``Y``: indicates that we assume this unit site continues to exist.
 -  ``N``: indicates we do not assume that this unit site continues to exist, but we do not have an exact end date.
 
-Unit: Area of Operations (OSM object Name)
------------------------------------------
+Unit: Area of Operations (Name)
+-------------------------------
 
 **Description**
 
@@ -1290,7 +1291,7 @@ A geographical area in which a unit exercises jurisdiction or has operated in an
 
 **Type of field**
 
-First in a pair of fields with ``Unit: Area of Operations (OSM object ID)``, OSM object name (text)
+First in a pair of fields with ``Unit: Area of Operations (ID)``, gazetteer object name (text)
 
 **Example of use**
 
@@ -1298,7 +1299,7 @@ First in a pair of fields with ``Unit: Area of Operations (OSM object ID)``, OSM
 
 **Spreadsheet column name**
 
-``unit:area_ops_osm_name``
+``unit:area_ops_name``
 
 **Shortcode**
 
@@ -1306,17 +1307,17 @@ First in a pair of fields with ``Unit: Area of Operations (OSM object ID)``, OSM
 
 **Sources**
 
-Yes (``unit:area_ops_osm_name:source``, ``u_an_s``)
+Yes (``unit:area_ops_name:source``, ``u_an_s``)
 
 **Confidence**
 
-Yes (``unit:area_ops_osm_name:confidence``, ``u_an_c``)
+Yes (``unit:area_ops_name:confidence``, ``u_an_c``)
 
 **Guidance on use**
 
-This pair of fields document multiple and concurrent areas of operation of a unit. The value entered in this field is the OSM name for the lowest-level formal geographical area that best describes where a unit has operated in some manner. In most cases, the OSM object type used in this field will be a ``relation``.
+This pair of fields document multiple and concurrent areas of operation of a unit. Where Open Street Map is used as the gazetteer for the dataset, the value entered in this field is the OSM name for the lowest-level formal geographical area that best describes where a unit has operated in some manner. In most cases, the OSM object type used in this field will be a ``relation``.
 
-Unit: Area of Operations (OSM object ID number)
+Unit: Area of Operations (ID)
 ----------------------------------------------
 
 **Description**
@@ -1325,7 +1326,7 @@ A geographical area in which a unit exercises jurisdiction or has operated in an
 
 **Type of field**
 
-Second in a pair of fields with ``Unit: Area of Operations (OSM object Name)``, OSM object ID (number)
+Second in a pair of fields with ``Unit: Area of Operations (Name)``, gazetteer reference or ID number (number)
 
 **Example of use**
 
@@ -1333,7 +1334,7 @@ Second in a pair of fields with ``Unit: Area of Operations (OSM object Name)``, 
 
 **Spreadsheet column name**
 
-``unit:area_ops_osm_id``
+``unit:area_ops_id``
 
 **Shortcode**
 
@@ -1341,15 +1342,15 @@ Second in a pair of fields with ``Unit: Area of Operations (OSM object Name)``, 
 
 **Sources**
 
-Yes. Inherits from ``Unit: Area of Operations (OSM object Name)`` (``unit:area_ops_name:source``, ``u_an_s``)
+Yes. Inherits from ``Unit: Area of Operations (Name)`` (``unit:area_ops_name:source``, ``u_an_s``)
 
 **Confidence**
 
-Yes. Inherits from ``Unit: Area of Operations (OSM object Name)`` (``unit:area_ops_name:confidence``, ``u_an_c``)
+Yes. Inherits from ``Unit: Area of Operations (Name)`` (``unit:area_ops_name:confidence``, ``u_an_c``)
 
 **Guidance on use**
 
-This pair fo fields document multiple and concurrent areas of operation of a unit. The value entered in this field is the OSM object ID number for the lowest-level formal geographical area that best describes where a unit has operated in some manner. In most cases, the OSM object type used in this field will be a ``relation``.
+This pair fo fields document multiple and concurrent areas of operation of a unit. If Open Street Map is the gazetteer in use for the dataset, the value entered in this field is the OSM object ID number for the lowest-level formal geographical area that best describes where a unit has operated in some manner. In most cases, the OSM object type used in this field will be a ``relation``.
 
 Unit: Country of Area of Operations
 -----------------------------------
@@ -1530,11 +1531,11 @@ Single choice from selection
 
 **Spreadsheet column name**
 
-``unit:area_ops_last_cited_date_open``
+``unit:area_ops_open``
 
 **Shortcode**
 
-``u_aolcdo``
+``u_aoo``
 
 **Sources**
 
