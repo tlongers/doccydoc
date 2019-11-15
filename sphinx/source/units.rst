@@ -897,7 +897,7 @@ Unit: Site, Exact Location (Latitude or Gazeteer Identity Number)
 
 **Description**
 
-The latitude or gazeteer identity number of the most precise location of a site associated with a unit.
+The latitude or gazetteer identity number of the most precise location of a site associated with a unit.
 
 **Type of field**
 
