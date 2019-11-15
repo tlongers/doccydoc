@@ -851,16 +851,16 @@ The ``Unit: Base Name`` field adds detail about a site. This field is used to re
 
 This field should not be used for anything that matches the name or alias of a unit. For example, ``North Sector Police Station`` should not be put in this field if the name of the unit is ``North Sector Police Station``.
 
-Unit: Site, Exact Location (Longitude or OSM object Name)
----------------------------------------------------
+Unit: Site, Exact Location (Longitude or Gazetteer Name)
+--------------------------------------------------------
 
 **Description**
 
-The longitude or OSM object name of the most precise location of a site associated with a unit.
+The longitude or gazetteer name of the most precise location of a site associated with a unit.
 
 **Type of field**
 
-First value of a latitude/longitude pair (using `EPSG:3857 <http://spatialreference.org/ref/epsg/wgs-84/>`__), or an OSM object Name.
+First value of a latitude/longitude pair (using `EPSG:3857 <http://spatialreference.org/ref/epsg/wgs-84/>`__), or a name provided by a gazetteer.
 
 **Example of use**
 
@@ -887,21 +887,21 @@ Yes (``unit:site_exact_location:confidence``, ``u_sel_c``)
 
 We identify sites with a number of different levels of geographical precision.
 
-``Unit: Site, Exact Location (Longitude or OSM Object Name)`` is the first of a pair of values with ``Unit: Site, Exact Location (Latitude or OSM Object ID)``. This pair of fields is used to record the most precise location of a site associated with a unit, whether this is an object (``node``, ``way`` or ``relation``) in OpenStreetMap or a pair of geographical coordinates.
+``Unit: Site, Exact Location (Longitude or Gazetteer Name)`` is the first of a pair of values with ``Unit: Site, Exact Location (Latitude or Gazetteer Identity Number)``. This pair of fields is used to record the most precise location of a site associated with a unit, whether this is a location name and ID provided by a gazetteer (such as an object (``node``, ``way`` or ``relation``) in OpenStreetMap) or a pair of geographical coordinates.
 
--  Where an object for the exact site is present on OpenStreetMap we will enter its name in this field.
--  Where no OSM object exists for the exact site a pair of coordinates will be used, the latitude value recorded in this field.
+-  Where an object for the exact site is present in the gazetteer we will enter its name in this field.
+-  Where no object exists in the gazetteer for the exact site a pair of coordinates will be used, the longitude value is recorded in this field.
 
-Unit: Site, Exact Location (Latitude or OSM object ID)
-------------------------------------------------------
+Unit: Site, Exact Location (Latitude or Gazeteer Identity Number)
+-----------------------------------------------------------------
 
 **Description**
 
-The latitude or OSM object ID number of the most precise location of a site associated with a unit.
+The latitude or gazeteer identity number of the most precise location of a site associated with a unit.
 
 **Type of field**
 
-Second value of a longitude/latitude pair (using `EPSG:3857 <http://spatialreference.org/ref/epsg/wgs-84/>`__), or an OSM object ID number.
+Second value of a longitude/latitude pair (using `EPSG:3857 <http://spatialreference.org/ref/epsg/wgs-84/>`__), or an identity/reference number provided by a gazetteer.
 
 **Example of use**
 
@@ -928,13 +928,13 @@ Yes (``unit:site_exact_location:confidence``, ``u_sel_c``)
 
 We identify sites with a number of different levels of geographical precision.
 
-``Unit: Site, Exact Location (Latitude or OSM Object ID)`` is the second of a pair of values with ``Unit: Site, Exact Location (Longitude or OSM Object Name)``. It is used to record the most precise location of a site associated with a unit, whether this is an object (``node``, ``way`` or ``relation``) on OpenStreetMap or a pair of geographical coordinates.
+``Unit: Site, Exact Location (Latitude or Gazetteer Identity Number)`` is the second of a pair of values with ``Unit: Site, Exact Location (Longitude or Gazetteer Name)``. This pair of fields is used to record the most precise location of a site associated with a unit, whether this is a location name and ID provided by a gazetteer (such as an object (``node``, ``way`` or ``relation``) in OpenStreetMap) or a pair of geographical coordinates.
 
--  Where an object for the exact site is present on OpenStreetMap we will enter its ID number in this field.
--  Where no OSM object exists for the exact site a pair of coordinates will be used, the latitude value recorded in this field.
+-  Where an object for the exact site is present in the gazetteer we will enter its identity/reference number in this field.
+-  Where no object exists in the gazetteer for the exact site a pair of coordinates will be used, the latitude value is recorded in this field.
 
 Unit: Site, Nearest Settlement (Name)
-----------------------------------
+-------------------------------------
 
 **Description**
 
@@ -969,7 +969,7 @@ Yes (``unit:site_neartest_settlement_name:confidence``, ``u_nsn_c``)
 We identify ``sites`` with a number of different levels of geographical precision. In ``Site: Settlement (Name)`` we record the settlement name included in the gazetteer in use for the dataset. For example, if Open Street Map is the gazetter, then we will record the name of the OSM object (node, way or relation) that identifies a settlement in which there is a unit site. It could be a city, town or village or other gazetteer object that denotes a settlement.
 
 Unit: Site, Nearest Settlement (ID)
---------------------------------
+-----------------------------------
 
 **Description**
 
@@ -1001,7 +1001,7 @@ Yes. Inherits from ``Unit: Site, Nearest Settlement (Name)`` (``unit:site_nearte
 
 **Guidance on use**
 
-We identify sites with a number of different levels of geographical precision. In ``Unit: Site, Nearest Settlement (ID)`` field we record the identity number of the location as provided by the gazetteer in use for the dataset. For example, if Open Steet Map is the gazetteer, then we will record the ID numberof the OSM object (``node``, ``way`` or ``relation``) that identifies a settlement in which there is a unit site. It could be a city, town or village or other gazetteer object that denotes a settlement.
+We identify sites with a number of different levels of geographical precision. In ``Unit: Site, Nearest Settlement (ID)`` field we record the identity number of the location as provided by the gazetteer in use for the dataset. For example, if Open Steet Map is the gazetteer, then we will record the ID number of the OSM object (``node``, ``way`` or ``relation``) that identifies a settlement in which there is a unit site. It could be a city, town or village or other gazetteer object that denotes a settlement.
 
 Unit: Site, First-level Administrative Area (Name)
 -----------------------------------------------
@@ -1318,7 +1318,7 @@ Yes (``unit:area_ops_name:confidence``, ``u_an_c``)
 This pair of fields document multiple and concurrent areas of operation of a unit. Where Open Street Map is used as the gazetteer for the dataset, the value entered in this field is the OSM name for the lowest-level formal geographical area that best describes where a unit has operated in some manner. In most cases, the OSM object type used in this field will be a ``relation``.
 
 Unit: Area of Operations (ID)
-----------------------------------------------
+-----------------------------
 
 **Description**
 
