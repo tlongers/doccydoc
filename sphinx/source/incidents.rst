@@ -199,13 +199,13 @@ No
 
 **Guidance for use**
 
-If an incident occurred within a single day, ``Incident: Start Date`` and ``Event: End Date`` should be the same.
+If an incident occurred within a single day, ``Incident: Start Date`` and ``Incident: End Date`` should be the same.
 
 Incidents may occur at some point during a range:
 
     For example: “On or about August 9, 2006, personnel of the NPF paraded 12 alleged armed robbers—including a 12-year-old—before the media at the Central Police Station in Umuahia, capital of Abia State. They claimed to have arrested the suspects after an exchange of gunfire with the police. Some of those in custody had gunshot wounds, and four others were killed during the incident at Olokobe-Ndume community in Umuahia North Local Government Area of Abia State. Following the parade, the police summarily executed the suspects and deposited their bodies at the premises of the Federal Medical Centre in Umuahia. They claimed that the executed victims signed confessional statements before they were killed. On August 17, 2006, the authorities of the Federal Medical Centre arranged a mass burial for the decomposing bodies of the victims. There were no autopsies or inquests. The police later organized a press conference at which they announced the executions.”
 
-We know from this source that the victims were alive as of 9 August 2006 and we know they were dead as of 17 August 2006. However the exact time of the killing occurred is not clear; it could have happened at any point during that time frame. To accommodate this, we would record ``2006-08-09`` in ``Incident: Start date`` and ``2006-08-17`` in ``Event: End date``.
+We know from this source that the victims were alive as of 9 August 2006 and we know they were dead as of 17 August 2006. However the exact time of the killing occurred is not clear; it could have happened at any point during that time frame. To accommodate this, we would record ``2006-08-09`` in ``Incident: Start Date`` and ``2006-08-17`` in ``Incident: End Date``.
 
 In keeping with all date fields we include in this dataset, where research indicates that only a year or a year and a month, these partial dates can be included in ``Incident: Start Date`` .
 
@@ -254,7 +254,7 @@ Here's another example:
 
     “Melvin, a 23-year-old sex worker in Port Harcourt, said she was raped twice by the police. She said: “I was arrested twice. Last month they took all of us to Mile 1 police station. We were six that day, we see different people. They put us in different places [in the police station]. We just have to allow them have sex with us. We were detained for three days. We were asked to pay N3,500 each. The one that will bail you will sleep with you. After that you can go.”
 
-In this case, we can look at the footnotes. They often will give the date of when the victim was interviewed. In this case, both footnotes read: “Amnesty International interview in Port Harcourt, October 2011.” - so “last month” would be ``September 2011`` and we would record this as ``2011-09`` in ``Incident: Start date``. While they were detained for three days it is unclear if the complete incident occurred in September because Amnesty interviewed this person in October 2011. Accordingly, we could record ``2011-10`` in ``Event: End date`` as they could have been arrested on September 29 and then released on 1 October 2011.
+In this case, we can look at the footnotes. They often will give the date of when the victim was interviewed. In this case, both footnotes read: “Amnesty International interview in Port Harcourt, October 2011.” - so “last month” would be ``September 2011`` and we would record this as ``2011-09`` in ``Incident: Start Date``. While they were detained for three days it is unclear if the complete incident occurred in September because Amnesty interviewed this person in October 2011. Accordingly, we could record ``2011-10`` in ``Incident: End Date`` as they could have been arrested on September 29 and then released on 1 October 2011.
 
 In keeping with all date fields we include in this dataset, where our research can only find a year or a year and a month, this can be included in ``Incident: End Date``.
 
