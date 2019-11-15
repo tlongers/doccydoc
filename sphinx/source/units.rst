@@ -892,7 +892,7 @@ We identify sites with a number of different levels of geographical precision.
 -  Where an object for the exact site is present in the gazetteer we will enter its name in this field.
 -  Where no object exists in the gazetteer for the exact site a pair of coordinates will be used, the longitude value is recorded in this field.
 
-Unit: Site, Exact Location (Latitude or Gazeteer Identity Number)
+Unit: Site, Exact Location (Latitude or Gazetteer Identity Number)
 -----------------------------------------------------------------
 
 **Description**
