@@ -19,10 +19,11 @@ Security Force Monitor: Research Handbook
    :maxdepth: 1
 
    datamodel
-   sources_confidence
-   organizations
+   data_integrity
+   units
    persons
-   events
+   incidents
+   sources
 
 .. toctree::
    :caption: WhoWasInCommand
@@ -31,7 +32,7 @@ Security Force Monitor: Research Handbook
    generalfunctions
    unitrec
    personsrec
-   eventrec
+   incidentrec
 
 Indices and tables
 ==================
