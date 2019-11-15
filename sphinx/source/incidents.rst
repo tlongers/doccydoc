@@ -419,11 +419,11 @@ Incident: Site, Exact location
 
 **Description**
 
-A pair of fields used to capture the most precise location of an incident, using whichever is the more precise of a geographical coordinates or the OSM object ID and name.
+A pair of fields used to capture the most precise location of an incident, using whichever is the more precise of a geographical coordinates or a name and reference/identity number from a gazetteer.
 
 **Type of field**
 
-Field pair that takes as input an EPSG:4326 coordinate pair, or an OSM object ID and name.
+Field pair that takes as input an EPSG:4326 coordinate pair, or a name and reference/identity number from a gazetteer.
 
 **Example of use**
 
@@ -433,7 +433,7 @@ Field pair that takes as input an EPSG:4326 coordinate pair, or an OSM object ID
 
 **Spreadsheet column name**
 
-``incident:site_exact_location_osm_name`` and ``incident:site_exact_location_osm_id``
+``incident:site_exact_location_name`` and ``incident:site_exact_location_id``
 
 **Shortcode**
 
@@ -451,19 +451,19 @@ No
 
 Where research indicates that an incident occurred at a location that can be geocoded precisely, we record this data in the pair of fields called ``Incident: Site, Exact Location``. This field pair will take input in two ways:
 
-- A coordinate pair in EPSG:4326 format: The number for longitude should go in ``incident:site_exact_location_osm_name`` and the number for latitude should go in ``incident:site_exact_location_osm_id``
-- An OSM object name and ID number: The OSM object name should go in ``incident:site_exact_location_osm_name`` and the OSM object ID should go in ``incident:site_exact_location_osm_id``.
+- A coordinate pair in EPSG:4326 format: The number for longitude should go in ``incident:site_exact_location_name`` and the number for latitude should go in ``incident:site_exact_location_id``
+- if the gazetteer in use is Open Street Maps, then we use an OSM object name and ID number: The OSM object name should go in ``incident:site_exact_location_name`` and the OSM object ID should go in ``incident:site_exact_location_id``.
 
-Incident: Site, Settlement
---------------------------
+Incident: Site, Nearest Settlement
+----------------------------------
 
 **Description**
 
-A pair of fields used to capture data on the city, town or village in which an incident occurred.
+A pair of fields used to capture data on the nearest city, town or village to where an incident occurred.
 
 **Type of field**
 
-Field pair that takes as an input an OSM object name and ID number.
+Field pair that takes as an input a name and reference/identity number from a gazetteer.
 
 **Example of use**
 
@@ -471,7 +471,7 @@ Field pair that takes as an input an OSM object name and ID number.
 
 **Spreadsheet column name**
 
-``incident:site_settlement_osm_name`` and ``incident:site_settlement_osm_id``
+``incident:site_settlement_name`` and ``incident:site_settlement_id``
 
 **Shortcode**
 
@@ -487,10 +487,10 @@ No
 
 **Guidance for use**
 
-Where a source states that an incident happened in a particular settlement (whether village, town or city), we find the appropriate OSM object name and ID, and record it in this pair of fields:
+Where a source states that an incident happened in a particular settlement (whether village, town or city), we find the appropriate name and reference/idetity number provided by the gazetteer in use for the dataset, and record it in this pair of fields. If the gazetteer is Open Street Map, for example, we would do the following:
 
-- The OSM object name should be placed in ``incident:site_settlement_osm_name``
-- The OSM object ID number should be placed in ``incident:site_settlemtn_osm_id``
+- The OSM object name should be placed in ``incident:site_settlement_name``
+- The OSM object ID number should be placed in ``incident:site_settlement_id``
 
 Often, information about incidents does not list a settlement by name. If so, we will leave this field blank even if by the description it seems to indicate a particular place. This is because we only transcribe what other groups have reported about an incident, and do not augment it. 
 
@@ -504,7 +504,7 @@ A pair of fields used to record the highest sub-national administrative area of 
 
 **Type of field**
 
-Field pair that takes as an input an OSM object name and ID number.
+Field pair that takes as an input a name and reference/identity number from a gazetteer.
 
 **Example of use**
 
@@ -512,7 +512,7 @@ Field pair that takes as an input an OSM object name and ID number.
 
 **Spreadsheet column name**
 
-``incident:site_first_admin_area_osm_name`` and ``incident:site_first_admin_area_osm_id``
+``incident:site_first_admin_area_name`` and ``incident:site_first_admin_area_id``
 
 **Shortcode**
 
@@ -528,14 +528,14 @@ No
 
 **Guidance for use**
 
-We identify ``incidents`` with a number of different levels of geographical precision. In this field pair we record details of the first level subnational administrative area for the country in which the incident site is located, `as defined by OpenStreetMap <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. 
+We identify ``incidents`` with a number of different levels of geographical precision. In this field pair we record details of the first level subnational administrative area for the country in which the incident site is located, as defined by the gazetteer in use. For example, if Open Street Map is the gazetteer in use for the dataset, the administrative areas are  `defined here<http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. 
 
 For example, in  Mexico there are "*municipios*" (classified as administrative level 6 in OSM) and states (administrative level 4 in OSM). "States" are larger in area than "*municipios*" but in the hierarchy of administrative areas are immediately beneath the international national boundary of Mexico: therefore, "states" are the first-level administrative area. For a ``incident`` which occurred in Mexico, we would record the OSM object name and ID number of the relevant "state" in the field pair called ``Incident: Site, First-level Administrative Area``.
 
-This pair of fields takes input in the following form:
+This pair of fields takes input in the following form, using Open Street Map as an example:
 
-- the OSM object name should be placed in the field ``incident:site_first_admin_area_osm_name``
-- the OSM object ID number should be placed in the field ``incident:site_first_admin_area_osm_id``
+- the OSM object name should be placed in the field ``incident:site_first_admin_area_name``
+- the OSM object ID number should be placed in the field ``incident:site_first_admin_area_id``
 
 Incident: Country
 -----------------
