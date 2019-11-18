@@ -414,12 +414,12 @@ Often a person is arrested and, for example, beaten at a specific site (and the 
 
 In such instances, researchers should consider the initial arrest and transportation to the site of detention to be one ``incident`` and abuses committed or otherwise tied to site of detention a separate ``incident``.
 
-Incident: Site, Exact location
-------------------------------
+Incident: Site, Exact location (Coordinate Pair or Gazetteer Name and Identity Number)
+--------------------------------------------------------------------------------------
 
 **Description**
 
-A pair of fields used to capture the most precise location of an incident, using whichever is the more precise of a geographical coordinates or a name and reference/identity number from a gazetteer.
+A pair of fields used to capture the most precise location of an incident, using whichever is the more precise of a set of geographical coordinates or a name and reference/identity number from a gazetteer.
 
 **Type of field**
 
@@ -433,11 +433,11 @@ Field pair that takes as input an EPSG:4326 coordinate pair, or a name and refer
 
 **Spreadsheet column name**
 
-``incident:site_exact_location_name`` and ``incident:site_exact_location_id``
+``incident:site_exact_location_name_longitude`` and ``incident:site_exact_location_id_latitude``
 
 **Shortcode**
 
-``i_seln`` and  ``i_selid``
+``i_selnlon`` and  ``i_selidlat``
 
 **Sources**
 
@@ -449,10 +449,10 @@ No
 
 **Guidance for use**
 
-Where research indicates that an incident occurred at a location that can be geocoded precisely, we record this data in the pair of fields called ``Incident: Site, Exact Location``. This field pair will take input in two ways:
+Where research indicates that an incident occurred at a location that can be geocoded precisely, we record this data in the pair of fields called ``Incident: Site, Exact Location (Coordinate Pair or Gazetteer Name and Identity Number)``. This field pair will take input in two ways:
 
-- A coordinate pair in EPSG:4326 format: The number for longitude should go in ``incident:site_exact_location_name`` and the number for latitude should go in ``incident:site_exact_location_id``
-- if the gazetteer in use is Open Street Maps, then we use an OSM object name and ID number: The OSM object name should go in ``incident:site_exact_location_name`` and the OSM object ID should go in ``incident:site_exact_location_id``.
+- A coordinate pair in EPSG:4326 format: The number for longitude should go in ``incident:site_exact_location_name_longitude`` and the number for latitude should go in ``incident:site_exact_location_id_latitude``.
+- if the gazetteer in use is Open Street Maps, then we use an OSM object name and ID number: The OSM object name should go in ``incident:site_exact_location_name_longitude`` and the OSM object ID should go in ``incident:site_exact_location_id_latitude``.
 
 Incident: Site, Nearest Settlement
 ----------------------------------
