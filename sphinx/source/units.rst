@@ -536,15 +536,15 @@ Text and numbers
 
 **Shortcode**
 
-``u_rc``
+``u_ru``
 
 **Sources**
 
-Yes (``unit:related_unit:source``, ``u_rc_s``)
+Yes (``unit:related_unit:source``, ``u_ru_s``)
 
 **Confidence**
 
-Yes (``unit:related_unit:confidence``, ``u_rc_c``)
+Yes (``unit:related_unit:confidence``, ``u_ru_c``)
 
 **Guidance on use**
 
