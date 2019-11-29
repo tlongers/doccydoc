@@ -7,7 +7,7 @@ The Security Force Monitor focuses its research on the structure, personnel and 
 
 For each incident, we include data about what happened and when, the location(s) it occurred at, the alleged perpetrators and the type of human rights violation the reporting organization claims has occurred.
 
-In a departure from how we compile data about ``units`` and ``persons``, individual fields in incident records are not sourced and rated for confidence. Rather, we provide a single source for the entire incident. This is because each incident is a direct copy of material from a single source rather than a tapestry of material from a range of different sources.
+In a departure from how we compile data about :doc:`units` and :doc:`persons`, individual fields in incident records are not sourced and rated for confidence. Rather, we provide a single source for the entire incident. This is because each incident is a direct copy of material from a single source rather than a tapestry of material from a range of different sources.
 
 Incident: Unique Identifying Number
 -----------------------------------

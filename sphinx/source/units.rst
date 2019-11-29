@@ -1038,7 +1038,7 @@ Yes (``unit:site_first_admin_area_name:confidence``, ``u_sfaan_c``)
 
 We identify sites with a number of different levels of geographical precision. In ``Unit: Site, First-level Administrative Area (Name)`` we record the text name of highest level subnational boundary for the country in which the site is located, as defined in the gazetteer in use for the dataset. For example, if Open Steet Map is the gazetteer, administrative levels can be `found here <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, adminstrative areas are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset, and are tagged as administrative levels.
 
-    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: Site, First-level Administrative Area (OSM object Name)`` the name of the administrative level 4 object or the state.
+    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: Site, First-level Administrative Area (Name)`` the name of the administrative level 4 object or the state.
 
 Unit: Site, First-level Administrative Area (ID)
 ------------------------------------------------
@@ -1075,7 +1075,7 @@ Yes. Inherits from ``Unit: First-level Administrative Area (Name)`` (``unit:site
 
 We identify sites with a number of different levels of geographical precision. In ``Unit: Site, First-level Administrative Area (ID)`` we record the text name of highest level subnational boundary for the country in which the site is located, as defined in the gazetteer in use for the dataset. For example, if Open Steet Map is the gazetteer, administrative levels can be `found here <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, adminstrative areas are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset, and are tagged as administrative levels.
 
-    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: First-level Administrative Area (OSM object ID number)`` the OSM object ID number of the administrative level 4 object or the state.
+    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: First-level Administrative Area (ID number)`` the OSM object ID number of the administrative level 4 object or the state.
 
 Unit: Site Country
 ------------------

@@ -8,9 +8,9 @@ This Research Handbook contains information about the data and tools used by Sec
 
 -  **WhoWasInCommand.com User Guide**: The data created by Security Force Monitor is published online at https://WhoWasInCommand.com, a purpose-built platform with powerful search functions, clean and interactive views of the organizational structure, command of personnel and chains of command, and the geographical footprint of security forces in many countries.
 -  **Methodology**: Security Force Monitor has a four phase approach to researching a country's security forces. This section outlines our process.
--  **Data Model**: this section describes the way that Security Force Monitor structures the data it collects, the steps taken to ensure data integrity, and it also details the main entities and the fields used to describe them (``persons``,\ ``units`` and ``incidents``).
+-  **Data Model**: this section describes the way that Security Force Monitor structures the data it collects and the steps taken to ensure data integrity. In this section, we also document the main entities and fields used to describe them (:doc:`persons` and :doc:`persons_extra`, :doc:`units`` and :doc:`incidents`).
 
-The Research Handbook is a work-in-progress, and is updated during the course of the work of Security Force Monitor.
+This Research Handbook is a work-in-progress, and is regularly updated during the course of the work of Security Force Monitor.
 
 Contributors
 ------------

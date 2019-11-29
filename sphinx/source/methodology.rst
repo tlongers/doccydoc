@@ -8,7 +8,7 @@ Phase 1: Scope out sources
 
 **General sources**
 
-Security Force Monitor collects data about the persons and units that comprise security forces, along with allegations of human rights abuses made against security forces. This data is carefully collected from a variety of sources, generally online. These include:
+Security Force Monitor collects data about the :doc:`persons` and :doc:`units` that comprise security forces, along with allegations of human rights abuses made against security forces. This data is carefully collected from a variety of sources, generally online. These include:
 
 -  Laws of the country;
 -  Official government media;
@@ -57,7 +57,6 @@ Researchers use the initial keywords and sources to begin a “deep dive” into
 
 Anything relating to the types of information the Monitor collects is entered into the Monitor’s database. The Data Model section of this Research Handbook gives detailed guidance to Monitor researchers about the types of data to take from sources and how it should be entered.
 
-
 Additionally, data from this research is used to update the Country Guide to provide greater granular detail on the security forces of a country or to update sections as needed. New sources and keywords discovered during research are added to the existing guide as well.
 
 As the Monitor builds its database on the security forces of a country, new information is cross-referenced to further evidence data, discover gaps, or identify mistakes. There are three key questions Monitor researchers ask themselves whenever they review information in a source:
@@ -71,4 +70,4 @@ The Country Guide acts as a framework for researchers to understand the security
 Phase 4: Publish data
 ---------------------
 
-Researchers will publish data online when confident that the main branches and overall structure of a country’s security forces are adequately covered. Data is published online on the Monitor’s innovative platform: `WhoWasInCommand.com <https://whowasincommand.com/>`__.
+Researchers will publish data online when confident that the main branches and overall structure of a country’s security forces are adequately covered. Data is published online on the Monitor’s platform: `WhoWasInCommand.com <https://whowasincommand.com/>`__.

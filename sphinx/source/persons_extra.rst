@@ -1,16 +1,16 @@
 Persons Extra
 =============
 
-"Persons Extra" is used to extend the data in the :doc:`persons` format to include a person's social media and other online accounts, official webpages, and media materials containing information about how they look and sound. 
+The "Persons Extra" data capture format is used to extend the data in the :doc:`persons` format to cover a person's social media and other online accounts, official webpages, and media materials containing information about how the person looks and sounds. 
 
-It also serves the purpose of grouping resources that are *ipso facto* - resources that are valuable in themselves, and not only as sources for other data points. This provides the Staff Analyst with a collection of audiovisual media resources that can be used to identify and further research the person. For convenience, some of the data usually captured in sources is treated as sustantive data by this format.
+It also serves the purpose of grouping resources that are *ipso facto* - resources that are valuable in themselves, and not only as sources for other data points. This provides the Staff Analyst with a collection of audiovisual media resources that can be used to identify and further research the person.
 
 Person Extra: Name
 ------------------
 
 **Description**
 
-Full name of the person, including given, patronym and surnames, as already recorded in the ``person:name`` field of the "Persons" sheet.
+Full name of the person, including given, patronym and surnames, as already recorded in the ``person:name`` field of the :doc:`persons` sheet.
 
 **Type of field**
 
@@ -22,7 +22,7 @@ Text and numbers
 
 **Spreadsheet column name**
 
-``persons_extra:name``
+``person_extra:name``
 
 **Shortcode**
 
@@ -38,7 +38,7 @@ No.
 
 **Guidance on use**
 
-This field is used to store the name of the person about whom extra information is being entered. The person must already have an entry in the `Persons`_ sheet. The value must be identical to that in ``person:name``.
+This field is used to store the name of the person about whom extra information is being entered. The person must already have an entry in the :doc:`persons` sheet. The value must be identical to that in ``person:name``.
 
 This field is duplicated for every row of data about the person.
 
@@ -47,7 +47,7 @@ Person Extra: Unique Identifier
 
 **Description**
 
-A unique 32 character code assigned to each person in the dataset, as already recorded in the ``person:id:admin`` field of the `Persons`__ sheet.
+A unique 32 character code assigned to each person in the dataset, as already recorded in the ``person:id:admin`` field of the :doc:`persons` sheet.
 
 **Type of field**
 
@@ -59,7 +59,7 @@ Text and numbers
 
 **Spreadsheet column name**
 
-``persons_extra:id:admin``
+``person_extra:id:admin``
 
 **Shortcode**
 
@@ -75,7 +75,7 @@ No.
 
 **Guidance on use**
 
-This field is used to store the UUID of the person about whom extra information is being entered. The person must already have an entry in the `Persons`_ sheet. The value must be identical to that in ``person:id:admin``.
+This field is used to store the UUID of the person about whom extra information is being entered. The person must already have an entry in the :doc:`persons` sheet. The value must be identical to that in ``person:id:admin``.
 
 This field is duplicated for every row of data about the person.
 
@@ -356,7 +356,7 @@ Text and numbers.
 
 **Example of use**
 
-``Face and shoulders of Bosco Ntaganda, in military uniform with hat, tie and lapels, backed by two other men in combat fatigues armed with rifles. Taken at a news conference in January 2009.``
+"Face and shoulders of Bosco Ntaganda, in military uniform with hat, tie and lapels, backed by two other men in combat fatigues armed with rifles. Taken at a news conference in January 2009."
 
 **Spreadsheet column name**
 
@@ -368,11 +368,11 @@ Text and numbers.
 
 **Sources**
 
-Yes (``persons_extra:media:source``, ``px_m_s``)
+Yes (``person_extra:media:source``, ``px_m_s``)
 
 **Confidence**
 
-Yes (``persons_extra:media:confidence``, ``px_m_c``)
+Yes (``person_extra:media:confidence``, ``px_m_c``)
 
 **Guidance on use**
 
@@ -413,4 +413,4 @@ No.
 
 **Guidance on use**
 
-We use this field to record information about the material in Person Extra that is likely to provide useful context, additional information that does not fit into the data structure, and notes about how decisions were made about which data to include. Any sources used to write the notes should be included directly inside this field.
+We use this field to record information about the material recorded in Persons Extra that is likely to provide useful context, additional information that does not fit into the data structure, and notes about how decisions were made about which data to include. Any sources used to write the notes should be included directly inside this field.
