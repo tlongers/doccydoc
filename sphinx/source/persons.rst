@@ -5,7 +5,7 @@ Persons are natural persons who are affiliated with, or hold positions of comman
 
 The fields in the "Persons" data capture format are used to record basic details about a person's identity, along with their career within a branch of the security force. Using these fields we can capture a persons rank, role and title in one or numerous differe units and see how it has changed over time.
 
-This data capture format is supplemented by `Persons Extra`__, which enables the capture of other biographical details (like their date of birth, and then they may have died), their social media accounts, and media that provide information about how a person looks and sounds.
+This data capture format is supplemented by the "Persons Extra" format, which enables the capture of other biographical details (like their date of birth, and then they may have died), their social media accounts, and media that provide information about how a person looks and sounds.
 
 Person: Unique Identier
 -----------------------

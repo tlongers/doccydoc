@@ -1,16 +1,16 @@
 Persons Extra
 =============
 
-"Persons Extra" is used to extend the data in `Persons`__ to include a person's social media and other online accounts, official webpages, and media materials containing information about how they look and sound. 
+"Persons Extra" is used to extend the data in the `Persons`_ format to include a person's social media and other online accounts, official webpages, and media materials containing information about how they look and sound. 
 
-It also serves the purpose of grouping resources that are "ipso facto" - resources that are valuable in themselves, and not only as sources for other data points. This provides the Staff Analyst with a collection of audiovisual media resources that can be used to identify and further research the person. For convenience, some of the data usually captured in sources is treated as sustantive data by this format.
+It also serves the purpose of grouping resources that are *ipso facto* - resources that are valuable in themselves, and not only as sources for other data points. This provides the Staff Analyst with a collection of audiovisual media resources that can be used to identify and further research the person. For convenience, some of the data usually captured in sources is treated as sustantive data by this format.
 
 Person Extra: Name
 ------------------
 
 **Description**
 
-Full name of the person, including given, patronym and surnames, as already recorded in the ``person:name`` field of the `Persons`__ sheet.
+Full name of the person, including given, patronym and surnames, as already recorded in the ``person:name`` field of the "Persons" sheet.
 
 **Type of field**
 
@@ -26,7 +26,7 @@ Text and numbers
 
 **Shortcode**
 
-``px_name``
+``px_n``
 
 **Sources**
 
@@ -85,7 +85,7 @@ Person Extra: Gender
 
 **Description**
 
-Indicators of a person's sex or gender identity, as observable from available sources.
+Indicators of a person's sex or gender identity, as inferred from pronouns used in the text of available sources.
 
 **Type of field**
 
@@ -303,50 +303,12 @@ Sources and confidence fields for ``Person Extra: Account Identity`` are shared 
 
 Where a person has more than one account, on the same or different platforms, a new row should be created.
 
-
-Person Extra: External URL Actual
----------------------------------
-
-**Description**
-
-Full URL to an external resource about that person, such as a Wikipedia page, official biography or personal website.
-
-**Type of field**
-
-URL
-
-**Example of use**
-
-``https://www.gob.mx/sedena/estructuras/general-luis-cresencio-sandoval-gonzalez``, ``https://en.wikipedia.org/wiki/Luis_Cresencio_Sandoval``
-
-**Spreadsheet column name**
-
-``person_extra:external_url_actual``
-
-**Shortcode**
-
-``px_eua``
-
-**Sources**
-
-No.
-
-**Confidence**
-
-No.
-
-**Guidance on use**
-
-This field is used to store links to material about a person on official websites, other important, widely used online resources about the person (such as a Wikipedia page) , and (if it exists) their own personal website.
-
-A new row is created for each link.
-
-Person Extra: External URL Description
+Person Extra: External Link Description
 ---------------------------------------
 
 **Description**
 
-Short description of the URL recorded in ``Person Extra: External URL Actual``
+Short textual description of the relevent content of a URL containing information about the person.
 
 **Type of field**
 
@@ -358,108 +320,35 @@ Text and numbers.
 
 **Spreadsheet column name**
 
-``person_extra:external_url_description``
+``person_extra:external_link_description``
 
 **Shortcode**
 
-``px_eud``
+``px_eld``
 
 **Sources**
 
-No.
+Yes (``person_extra:external_link_source``, ``px_eld_s``
 
 **Confidence**
 
-No.
+
+Yes (``person_extra:external_link_confidence``, ``px_eld_c``
 
 **Guidance on use**
 
-This field is used to store a short decription of the link recorded in ``Person Extra: External URL Actual``.
+This field is used to store a short decription of the content found at an external URL about this person. The details of the external link are stored in the relevant source record. This field is used to gather together resources that provide a high level of detail about the person, and will include official websites, blogs operated by the person, the Wikipedia page about them (if they have one), or Facebook pages credibly linked to the person. Details about the social media footprint of the person are not stored in this field - ``Person Extra: Account Type`` and ``Person Extra: Account Identity`` are used toe capture this data.
 
-A new row is created for each link.
+The source field associated with ``Person Extra: External Link Description`` is used to store data about the resource itself, along with other material that evidences why the external link is about the person.
 
-Person Extra: Media Type
-------------------------
-
-**Description**
-
-The type of media in which information is found about a how a person looks or sounds.
-
-**Type of field**
-
-Text and numbers, from a list.
-
-**Example of use**
-
-``audio``, ``image``, ``clip``, ``frame``
-
-**Spreadsheet column name**
-
-``person_extra:media_type``
-
-**Shortcode**
-
-``px_mt``
-
-**Sources**
-
-Yes (``persons_extra:media:source``, ``px_m_s``)
-
-**Confidence**
-
-Yes (``persons_extra:media:confidence``, ``px_m_c``)
-
-**Guidance on use**
-
-This field is used to describe the type of media in which information about how a person looks or sounds is found. It could be an audio capture (from radio, or from a video), an still image, or full or partial video clip or a specific frame captured from a video. The value in ``Person Extra: Media Type`` is chosen from a list, which will be updated as required.
-
-A new row is created for each media item.
-
-Person Extra: Media Actual
---------------------------
-
-**Description**
-
-A hyperlink to media containing information about how a person looks or sounds.
-
-**Type of field**
-
-Hyperlink.
-
-**Example of use**
-
-``https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/3/19/1363712095397/Bosco-Ntaganda--010.jpg?width=620&quality=85&auto=format&fit=max&s=275e5d8ea722e40675a6eb4f867656b8``
-
-**Spreadsheet column name**
-
-``person_extra:media_actual``
-
-**Shortcode**
-
-``px_mt``
-
-**Sources**
-
-Yes (``persons_extra:media:source``, ``px_m_s``)
-
-**Confidence**
-
-Yes (``persons_extra:media:confidence``, ``px_m_c``)
-
-**Guidance on use**
-
-Identify the exact hyperlink for the media. Try to identify the simplest possible link, testing whether any image processing or session parameters that may exist in the URL can be removed safely. Where possible, archive the media resource in the Internet Archive or other appropriate archival services. Link to the version of the media that was published as close to its creation date as possible.
-
-The hyperlink can either to an online, public resource, or to a restricted collection.
-
-A new row is created for each media item.
+A new row is created for each new resource.
 
 Person Extra: Media Description
 -------------------------------
 
 **Description**
 
-Description of content of the hyperlink stored in ``Person Extra: Media Actual``
+Short textual description of material found in a media resource that provides information about a how person looks or sounds.
 
 **Type of field**
 
@@ -471,7 +360,7 @@ Text and numbers.
 
 **Spreadsheet column name**
 
-``person_extra:media_description``
+``person_extra:media_desc``
 
 **Shortcode**
 
@@ -487,80 +376,9 @@ Yes (``persons_extra:media:confidence``, ``px_m_c``)
 
 **Guidance on use**
 
-This field is used to store a brief description the content of the media recorded in ``Person Extra: Media Actual``. The description should be sufficient for the analyst to quickly appraise what they can expect to find in the media about what the person looks or sounds like. 
+This field is used to store a brief description of the content of external. The description should be sufficient for the analyst to quickly appraise what they can expect to find in the media about what the person looks or sounds like. Details about the media type, URL and other metadata are contained in the source associated with ``Person Extra: Media Description``.
 
-A new row is created for each media item.
-
-
-Person Extra: Media Creation Timestamp
---------------------------------------
-
-**Description**
-
-The date and time at which the media was created.
-
-**Type of field**
-
-Date and time in ISO 8601 (YYYY-MM-DDThh:mm:ss), fuzzy.
-
-**Example of use**
-
-``2012``, ``2012-11``, ``2012-11-23``, ``2012-11-23T14:23:23``
-
-**Spreadsheet column name**
-
-``person_extra:media_creation_timestamp``
-
-**Shortcode**
-
-``px_mct``
-
-**Sources**
-
-Yes (``persons_extra:media:source``, ``px_m_s``)
-
-**Confidence**
-
-Yes (``persons_extra:media:confidence``, ``px_m_c``)
-
-**Guidance on use**
-
-This field is used to store the date and time at which the media was created. It can be the same or different than the date of upload, publication (or redistribution) of the media. Use the most full, precise timestamp that is available. Times should be converted to UTC.
-
-Person Extra: Media Upload Timestamp
-------------------------------------
-
-**Description**
-
-The date and time at which the media was uploaded to the online service or platform that hosts it.
-
-**Type of field**
-
-Date and time in ISO 8601 (YYYY-MM-DDThh:mm:ss), fuzzy
-
-**Example of use**
-
-``2012``, ``2012-11``, ``2012-11-23``, ``2012-11-23T14:23:23``
-
-**Spreadsheet column name**
-
-``person_extra:media_upload_timestamp``
-
-**Shortcode**
-
-``px_mut``
-
-**Sources**
-
-Yes (``persons_extra:media:source``, ``px_m_s``)
-
-**Confidence**
-
-Yes (``persons_extra:media:confidence``, ``px_m_c``)
-
-**Guidance on use**
-
-This field is used to store the date and time at which the media was uploaded to the online platform or service that hosts it. This timestamp can be the same or different than the date of upload, publication (or redistribution) of the media. Use the most full, precise timestamp that is available. Times should be converted to UTC.
+A new row is created for each distinct media item about the person.
 
 Person Extra: Notes
 -------------------
