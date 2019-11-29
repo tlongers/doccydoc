@@ -71,14 +71,6 @@ It's trying to be helpful. When you enter a search term and WhoWasInCommand does
 .. figure:: _static/wwic_suggestions.png
    :alt: 
 
-How do I get all the sources used in a record?
-----------------------------------------------
-
-To get all the sources, hit "Download as CSV" on any record. This will start a download of an archive (``.zip`` file) that will contain a number of Comma Separated Values (``.csv``) files with all the data used in that record, along with all the sources. These can be opened in any spreadsheet package.
-
-.. figure:: _static/wwic_download_button.png
-   :alt: 
-
 How do I see the sources used for a specific datapoint?
 -------------------------------------------------------
 
@@ -128,4 +120,3 @@ There can sometimes be a short delay between loading a page and the appearance o
 
 .. figure:: _static/wwic_command_chart_spinner.png
    :alt: 
-

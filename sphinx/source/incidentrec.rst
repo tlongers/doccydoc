@@ -5,8 +5,8 @@ This page contains an overview of the data that visitors to WhoWasInCommand will
 
 This includes the different sections of the incident record, the data fields that are used to create it and links to more information about each field.
 
-Incident title area
--------------------
+Incident record: title area
+---------------------------
 
 .. figure:: _static/incident_record_anatomy_title_area.png
    :alt: 
@@ -17,21 +17,21 @@ This section contains key information about the incident. It also contains links
 
 The following fields are used in the incident title area section:
 
--  :ref:`Event: Start date`
--  :ref:`Event: End date`
--  :ref:`Event: Country`
--  :ref:`Event: Violation type`
+-  :ref:`Incident: Start Date`
+-  :ref:`Incident: End Date`
+-  :ref:`Incident: Country`
+-  :ref:`Incident: Violation type`
 
-Incident content sidebar
-------------------------
+Incident record: Content sidebar
+-------------------------------
 
 .. figure:: _static/incident_record_anatomy_content_sidebar.png
    :alt: 
 
-The content sidebar is a navigation aid. It provides quick links to different sections of the record. The items inside the content sidebar indicate what sort of data is available about this incident. For example if "Perpetrator organizations" is not listed in the content sidebar, then there is no data available about alleged perpetrators of the incident.
+The content sidebar is a navigation aid. It provides quick links to different sections of the record. The items inside the content sidebar indicate what sort of data is available about this incident. For example if "Perpetrator units" is not listed in the content sidebar, then there are no data available about alleged perpetrators of the incident.
 
-Incident location
------------------
+Incident record: Location
+-------------------------
 
 .. figure:: _static/incident_record_anatomy_location.png
    :alt: 
@@ -40,17 +40,14 @@ This section contains an interactive map and some text that describe the locatio
 
 **Fields used in incident location section**
 
--  :ref:`Event: Location`
--  :ref:`Event: Exact location (Longitude or OSM object Name)`
--  :ref:`Event: Exact location (Latitude or OSM object ID number)`
--  :ref:`Event: Settlement (OSM object Name)`
--  :ref:`Event: Settlement (OSM object ID Number)`
--  :ref:`Event: Top Administrative Area (OSM object name)`
--  :ref:`Event: Top Administrative Area (OSM object ID number)`
--  :ref:`Event: Country`
+-  :ref:`Incident: Location Description`
+-  :ref:`Incident: Exact Location (Coordinate Pair or Gazetteer Name and Identity Number)`
+-  :ref:`Incident: Site, Nearest Settlement`
+-  :ref:`Incident: First-level Administrative Area`
+-  :ref:`Incident: Country`
 
-Incident description
---------------------
+Incident record: Description
+----------------------------
 
 .. figure:: _static/incident_record_anatomy_description.png
    :alt: 
@@ -61,29 +58,21 @@ This section contains a direct quotation from the civil society, governmental or
 
 The following field is used in the incident description section:
 
--  :ref:`Event: Description`
+-  :ref:`Incident: Violation Description`
 
-Perpetrator organizations
--------------------------
+Incident record: Perpetrator units
+----------------------------------
 
-.. figure:: _static/incident_record_anatomy_perpetrator_organizations.png
+.. figure:: _static/incident_record_anatomy_perpetrator_units.png
    :alt: 
 
-This section contains a table listing the organization(s) that sources allege committed the human rights violation(s) described in the incident. As with all tables in person, unit and incident records on WhoWasInCommand, hovering over or tapping any value in the table will cause a little coloured circle to appear. Clicking or tapping again on this will show the sources and confidence ratings we have assigned to that value.
+This section contains a table listing the unit(s) that sources allege committed the human rights violation(s) described in the incident. As with all tables in person, unit and incident records on WhoWasInCommand, hovering over or tapping any value in the table will cause a little coloured circle to appear. Clicking or tapping again on this will show the sources and confidence ratings we have assigned to that value.
 
-**Fields used in perpetrator organizations section**
+**Fields used in perpetrator units section**
 
-The following fields are used in the perpetrator organizations section:
+The following fields are used in the perpetrator units section:
 
--  :ref:`Event: Perpetrator organization`
--  :ref:`Organization: Name`
--  :ref:`Organization: Aliases`
--  :ref:`Organization: Classification`
-
-Incident Changelog
-------------------
-
-.. figure:: _static/incident_record_anatomy_changelog.png
-   :alt: 
-
-The data displayed in any record on WhoWasInCommand is always the most up to date version. The changelog section shows when the data included in this record were first added and subsequently updated. This data is generated by the software that powers WhoWasInCommand whenever a new data import is run. Clicking on the name of the field will open a box showing all the changes that were made to a datapoint, including the time the change was made and the source used to evidence the change.
+-  :ref:`Incident: Perpetrator Unit`
+-  :ref:`Unit: Name`
+-  :ref:`Unit: Other Names`
+-  :ref:`Unit: Classification`
