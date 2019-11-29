@@ -122,7 +122,7 @@ Test and numbers
 
 **Example of use**
 
-`0E94AE36DA6FF03992A57FDDBDF4728B609D0D7FE6EB019FA9F1B9B5B540D835`
+``0E94AE36DA6FF03992A57FDDBDF4728B609D0D7FE6EB019FA9F1B9B5B540D835``
 
 **Spreadsheet column name**
 
@@ -166,7 +166,7 @@ Text and numbers
 This value is a Universally Unique Indentifier (UUID) generated using a computer program. UUIDs can be created easily using either installable or online tools, for example:
 
 - Linux and OSX users: ``uuidgen`` command line tool.
-- On the web: `UUID Generator<https://www.uuidgenerator.net/version>`_.
+- On the web: `UUID Generator<https://www.uuidgenerator.net/version>`__.
 
 The field is administrative, providing a reliable way to differentiate between different access points.
 
@@ -636,7 +636,7 @@ Text and numbers
 This value is a Universally Unique Indentifier (UUID) generated using a computer program. UUIDs can be created easily using either installable or online tools, for example:
 
 - Linux and OSX users: `uuidgen` command line tool.
-- On the web: `UUID Generator<https://www.uuidgenerator.net/version>`_.
+- On the web: `UUID Generator<https://www.uuidgenerator.net/version>`__.
 
 The field is administrative, providing a reliable way to differentiate between different publications (which in some cases may have the same name).
 
