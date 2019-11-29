@@ -1,7 +1,7 @@
 Persons Extra
 =============
 
-"Persons Extra" is used to extend the data in the `Persons`_ format to include a person's social media and other online accounts, official webpages, and media materials containing information about how they look and sound. 
+"Persons Extra" is used to extend the data in the :role:`Persons` format to include a person's social media and other online accounts, official webpages, and media materials containing information about how they look and sound. 
 
 It also serves the purpose of grouping resources that are *ipso facto* - resources that are valuable in themselves, and not only as sources for other data points. This provides the Staff Analyst with a collection of audiovisual media resources that can be used to identify and further research the person. For convenience, some of the data usually captured in sources is treated as sustantive data by this format.
 
