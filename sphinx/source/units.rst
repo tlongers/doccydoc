@@ -718,7 +718,7 @@ Yes. Inherits from ``Unit: Related Unit First Cited Date`` (``unit:related_unit_
 
 **Confidence**
 
-Yes. Inherits from ``Unit: Related Unit First Cited Dates`` (``unit:related_unit_first_cited_date:confidence``, ``u_rufcd_c``)
+Yes. Inherits from ``Unit: Related Unit First Cited Date`` (``unit:related_unit_first_cited_date:confidence``, ``u_rufcd_c``)
 
 **Guidance on use**
 
