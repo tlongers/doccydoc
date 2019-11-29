@@ -41,10 +41,10 @@ This section contains an interactive map and some text that describe the locatio
 **Fields used in incident location section**
 
 -  :ref:`Incident: Location Description`
--  :ref:`Incident: Exact Location (Coordinate Pair or Gazetteer Name and Identity Number)`
+-  :ref:`Incident: Site, Exact location (Coordinate Pair or Gazetteer Name and Identity Number)`
 -  :ref:`Incident: Site, Nearest Settlement`
--  :ref:`Incident: First-level Administrative Area`
--  :ref:`Incident: Country`
+-  :ref:`Incident: Site, First-level Administrative Area`
+-  :ref:`Incident: Country`   
 
 Incident record: Description
 ----------------------------
