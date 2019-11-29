@@ -1,6 +1,9 @@
 Persons
 =======
 
+What are persons?
+-----------------
+
 Persons are natural persons who are affiliated with, or hold positions of command over a specific unit at a particular point in time.
 
 The fields in the "Persons" data capture format are used to record basic details about a person's identity, along with their career within a branch of the security force. Using these fields we can capture a persons rank, role and title in one or numerous differe units and see how it has changed over time.

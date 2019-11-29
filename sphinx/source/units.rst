@@ -1,9 +1,12 @@
 Units
 =====
 
+What are units?
+---------------
+
 Units are official state or state-sanctioned organizations responsible for the internal or external security for a country. They include police, army, navy, air force and other security forces, as well as those civilian institutions linked to security forces through the chain of command or other linkages. Units refer to any part of the hierarchy of a security force, ranging from a national defense ministry to a police post in a small town. Units can also be groupings of other units, including joint operations, task forces or peacekeeping missions. 
 
-Documented in this chapter are a range of different pieces of data about units, including:
+Documented in this section of the handbook are field describing the following dimensions of units:
 
 -  their existence and identity;
 -  their position in the hierarchy of a security force;
@@ -16,7 +19,7 @@ Unit: Unique Identifier
 
 **Description**
 
-A unique 32 chracter code assigned to each unit in the dataset. 
+A unique 32 character code assigned to each unit in the dataset. 
 
 **Type of field**
 

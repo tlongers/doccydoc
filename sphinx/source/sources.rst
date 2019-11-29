@@ -1,6 +1,9 @@
 Sources
 =======
 
+What are sources?
+-----------------
+
 Security Force Monitor collects data about the persons and units that comprise security forces, along with allegations of human rights abuses made against security forces. This data is carefully collected from a variety of sources, generally online. These include:
 
 - Laws of the country;

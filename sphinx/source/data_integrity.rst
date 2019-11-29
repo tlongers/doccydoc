@@ -1,20 +1,20 @@
 Data integrity measures
 =======================
 
-The data we create is carefully collected from a variety of publicly available sources, generally online, which include laws of the country, government media and press releases, reports from civil society groups, and local and international news reports and many others. We comb through these sources and use the information we find to populate a set of fields about persons, units and incidents, and the relationships between them. The resulting data is a synthesis of information provided within a tapestry of different sources - over 7,000 at the time of writing. We collect data on sources themselves, including their titles, date of publication, online location - the data model for sources is documented here. 
+The data we create is carefully collected from a variety of publicly available sources, generally online, which include laws of the country, government media and press releases, reports from civil society groups, and local and international news reports and many others. We comb through these sources and use the information we find to populate a set of fields about persons, units and incidents, and the relationships between them. The resulting data is a synthesis of information provided within a tapestry of different sources - over 7,000 at the time of writing. We collect data on sources themselves, including their titles, date of publication, online location - the data model for sources is documented in the :doc:`sources` section of this handbook. 
 
-As part of our data creation method, we have implemented four powerful integrity measures that help ourselves and others users of the data interrogate and assess its quality: data point level evidencing; data point confidence scores; making data timebound; and, differentiation of unknown and unnamed units in the command chain. We'll look at each in turn
+As part of our data creation method, we have implemented four powerful integrity measures that help ourselves and others users of the data interrogate and assess its quality: data point level evidencing; data point confidence scores; making data timebound; and, differentiation of unknown and unnamed units in the command chain. We'll now look at each in turn
 
 Data point level evidencing
 ---------------------------
 
 Data point level evidencing is the practice of recording the exact source we used to create a specific piece of data right alongside that piece of data.
 
-For example, records about units cover dimensions like the unit's basic identity (``Unit: Name``, ``Unit: Country``, ``Unit: Classification``), its relationships with other units (``Unit: Related Unit``, ``Unit: Membership``), its physical infrastructure (``Unit: Base Name``) and other things.  Data on units are structured in standard formats of over 60 possible fields. We may use hundreds of different sources to create a record about a single unit: however, the sources used to evidence the existence of a unit's base or area of operations may be different from those we use to evidence its participation in a peacekeeping mission. Further, the sources that show when a unit entered a particular location may be different from those that show when it left.
+For example, records about units cover dimensions like the unit's basic identity (``Unit: Name``, ``Unit: Country``, ``Unit: Classification``), its relationships with other units (``Unit: Related Unit``, ``Unit: Membership``), its physical infrastructure (``Unit: Base Name``) and other dimensions.  Data on units are structured in standard formats of over 60 possible fields. We may use hundreds of different sources to create a record about a single unit: however, the sources used to evidence the existence of a unit's base or area of operations may be different from those we use to evidence its participation in a peacekeeping mission. Further, the sources that show when a unit entered a particular location may be different from those that show when it left.
 
-To overcome this problem, we state what sources are used for each data point. This gives us the advantage of being able to quickly audit a data point; it also means we can see all the data points evidenced by a specific source, or a specific part of the source. This point is important: sources can have multiple access points, which we create to show that we used material from a particular page number or archive version of a source. The :ref:`Sources and Access Points` section of the Research Handbook provides more detail on this.
+To overcome this challenge, we state what sources are used for each and every data point. This gives us the advantage of being able to quickly audit a data point; it also means we can see all the data points evidenced by a specific source, or a specific part of the source. This point is important: sources can have multiple access points, which we create to show that we used material from a particular page number or archive version of a source. The :ref:`Sources and Access Points` section of this Research Handbook provides more detail on this important concept.
 
-This is quite an unusual way to structure data. In most row-based data capture systems that include data drawn from different sources, there may be a column that contains all the sources for that *row*, leaving the user to guess which sources refer to which data point in the row:
+This is quite an unusual way to structure data. In most row-based data capture systems that include data drawn from different sources, there may be a column that contains all the sources for that *row*, leaving the user of the data to guess which sources refer to which data point in the row:
 
 =========  ==========  =========
 Unit name  Start date  Sources	
@@ -34,13 +34,14 @@ Unit name  Unit name sources  Start date  Start date sources
 2 BAT      E,F,G              February    C,D,E
 =========  =================  ==========  ==================
 
-Implementing this sytem in practice is challenging. For simple data capture systems like spreadsheets, it means adding lots of additional columns to records the sources. If the data model has only a few fields/columns, this isn't a problem; but for a model like ours with over 60 fields, it create a very wide and cumbersome spreadsheet. Where the data capture system is a database with some control over the user interface, it still presents a challenge: we have overcome this in WhoWasInCommand by creating a special "source picker" which enables the user to search for a source, and then associate it with a data point.
-	
+Implementing this sytem in practice is challenging. For simple data capture systems like spreadsheets, it means adding lots of additional columns to records the sources. If the data model has only a few columns, this isn't a problem; but for a model like ours with over 60 fields, it create a very wide and cumbersome spreadsheet. Where the data capture system is a database with some control over the user interface, it still presents a challenge: we have overcome this in WhoWasInCommand by creating a special "source picker" which enables the user to search for a source, and then associate it with a data point.
 
 Confidence scores
 -----------------
 
-Confidence scores are measures of the degree to which the sources available to us agree on the content of a particular data point. All the data points we create start with a confidence score of ``Low`` until a confluence of different sources indicate we should upgrade it to a designation of ``Medium``. The gap between upgrading the confidence score of a data point from ``Low`` to ``Medium`` is smaller than when moving from ``Medium`` to ``High``. This scoring system gives a useful indicator of a degree to which we can rely on a data point's accuracy.
+Confidence scores are measures of the degree to which the sources available to us agree on the content of a particular data point.
+
+All the data points we create start with a confidence score of ``Low`` until a confluence of different sources indicate we should upgrade it to a designation of ``Medium``. The gap between upgrading the confidence score of a data point from ``Low`` to ``Medium`` is smaller than when moving from ``Medium`` to ``High``. This scoring system gives a useful indicator of a degree to which we can rely on a data point's accuracy.
 
 Each data point (except those tied to an alleged ``incident``) has a confidence score attached to it. The confidence scores only relate to the specific data point to which they are attached.
 
