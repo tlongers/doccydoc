@@ -50,7 +50,7 @@ The following fields are used in the Last Seen As section:
 -  :ref:`Person: Posting Role`
 -  :ref:`Unit: Classification`
 -  :ref:`Person: Posting Last Cited Date`
--  :ref:`Person: Posting: Last Cited Date is End Date`
+-  :ref:`Person: Posting Last Cited Date is End Date`
 
 Person memberships
 ------------------
