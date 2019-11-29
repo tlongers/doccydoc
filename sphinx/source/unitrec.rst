@@ -80,7 +80,7 @@ The following fields are used in the Site section:
 -  :ref:`Unit: Site, First-level Administrative Area (Name)`
 -  :ref:`Unit: Site, First-level Administrative Area (ID)`
 -  :ref:`Unit: Site, First Cited Date`
--  :ref:`Unit: Site, Site was Founded on First Cited Date`
+-  :ref:`Unit: Site was Founded on First Cited Date`
 -  :ref:`Unit: Site, Last Cited Date`
 -  :ref:`Unit: Site, Last Cited Date is Open-Ended`
 
@@ -144,12 +144,12 @@ The parent units section displays an interactive chart. This shows the links bet
 The following fields are used in the parent units sections:
 
 -  :ref:`Unit: Name`
--  :ref:`Unit: Related Uit`
+-  :ref:`Unit: Related Unit`
 -  :ref:`Unit: Related Unit Classification`
 -  :ref:`Unit: Related Unit First Cited Date`
--  :ref:`Unit: Related Unit start date?`
--  :ref:`Parent organization: date last cited`
--  :ref:`Unit: Related Unit Open-ended?`
+-  :ref:`Unit: Unit Relationship Start Date`
+-  :ref:`Unit: Related Unit Last Cited Date`
+-  :ref:`Unit: Related Unit is Open-Ended`
 
 Where a unit does not have a parent relationship, this section will not be displayed in the unit record.
 
@@ -175,7 +175,7 @@ The following fields are used in the subsidiaries section:
 -  :ref:`Unit: Related Unit First Cited Date`
 -  :ref:`Unit: Unit Relationship Start Date`
 -  :ref:`Unit: Related Unit Last Cited Date`
--  :ref:`Unit: Related Unit Open-Ended`
+-  :ref:`Unit: Related Unit is Open-Ended`
 
 Where a unit has no subsidaires, this section will not be displayed in the unit record.
 
@@ -200,7 +200,7 @@ The following fields are used in the personnel section:
 -  :ref:`Person: Posting Rank`
 -  :ref:`Person: Posting First Cited Date`
 -  :ref:`Person: Posting First Cited Date is Start Date`
--  :ref:`Person: Posting Context for Posting Start Date`
+-  :ref:`Person: Posting for Posting Start Date`
 -  :ref:`Person: Posting Last Cited Date`
 -  :ref:`Person: Posting Last Cited Date is End Date`
 
