@@ -1,7 +1,14 @@
 Persons
 =======
 
+What are persons?
+-----------------
+
 Persons are natural persons who are affiliated with, or hold positions of command over a specific unit at a particular point in time.
+
+The fields in the "Persons" data capture format are used to record basic details about a person's identity, along with their career within a branch of the security force. Using these fields we can capture a persons rank, role and title in one or numerous differe units and see how it has changed over time.
+
+This data capture format is supplemented by the "Persons Extra" format, which enables the capture of other biographical details (like their date of birth, and then they may have died), their social media accounts, and media that provide information about how a person looks and sounds.
 
 Person: Unique Identier
 -----------------------
@@ -261,188 +268,6 @@ Yes (``person:country:confidence``, ``p_c_c``), but only in WhoWasInCommand and 
 **Guidance on use**
 
 Values for this field are chosen from the list of ISO 3166-1 alpha-2 codes, which can be found (`on the ISO website <https://www.iso.org/obp/ui/#search/code/>`__ and on `Wikipedia <https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements>`__. This field does not denote the citizenship or country of origin of a person. Rather, it denotes where a unit they are a member of is located. For example, if ``1 Batallón de Infantería`` is located in Juarez, Mexico, the unit will be assigned a value of ``mx`` in the field ``Unit: Country``. Any person who is a member of that unit will be assigned a value of ``mx`` in the field ``Person: Country`` as well. A person may have multiple entries for ``Person: Country`` where our research shows they or a unit they are a member of is deployed to different countries.
-
-Person: Gender
---------------
-
-**Description**
-
-Indicators of a person's sex or gender identity, as observable from available sources.
-
-**Type of field**
-
-Open list, single choice
-
-**Example of use**
-
-``Male``, ``Female``, ``Other``
-
-**Spreadsheet column name**
-
-``person:gender``
-
-**Shortcode**
-
-``p_g``
-
-**Sources**
-
-Yes (``person:gender:source``, ``p_g_s``)
-
-**Confidence**
-
-Yes (``person:gender:confidence``, ``p_g_c``)
-
-**Guidance on use**
-
-This field is used to capture data about the gender of a person, as determined only by the pronouns ("her", "she", "his", "him", etc) used in any available textual sources about this person. We do not infer a person's gender from their name or images of them. 
-
-Echoing the definition used in the `FOAF standard<http://xmlns.com/foaf/spec/#term_gender>`__, the ``Person: Gender`` field is not intended to capture the full range of possible biological, social and sexual associated with the word "gender". In the majority of cases the value recorded in this field will be ``male`` or ``female``. However, we have left this field open to include alternatives that are expressed within the available sources about a person.
-
-Where the sources contain no textual indication about the person's gender, the field should be left blank.
-
-Person: Date of Birth
----------------------
-
-**Description**
-
-The date on which a person was born.
-
-**Type of field**
-
-Date (YYYY-MM-DD), fuzzy
-
-**Example of use**
-
-``1985-10-01``, ``1985-10``, ``1985``
-
-**Spreadsheet column name**
-
-``person:date_of_birth``
-
-**Shortcode**
-
-``p_dob``
-
-**Sources**
-
-Yes (``person:date_of_birth:source``, ``p_dob_s``)
-
-**Confidence**
-
-Yes (``person:date_of_birth:confidence``, ``p_dob_c``)
-
-**Guidance on use**
-
-This field is used to capture the date of birth of a person, with as much specificity as allowed by available sources. The field can accept a full or partial date.
-
-Person: Deceased
-----------------
-
-**Description**
-
-Indicates whether a person is died.
-
-**Type of field**
-
-Checkbox, single value
-
-**Example of use**
-
-``Y``
-
-**Spreadsheet column name**
-
-``person:deceased``
-
-**Shortcode**
-
-``p_d``
-
-**Sources**
-
-Yes (``person:deceased:source``, ``p_d_s``)
-
-**Confidence**
-
-Yes (``person:deceased:confidence``, ``p_d_c``)
-
-**Guidance on use**
-
-Where sources indicate that a person has died, enter ``Y`` in the field ``Person: Deceased``. In all other cases, leave the field empty.
-
-In many cases the sources used to evidence ``Person: Deceased`` and ``Person: Date of Death`` will be the same. In some cases, however, sources may indicate a person has died without specifying a date. In these casess, the field ``Person: Date of Death`` should not be filled in. 
-
-Person: Date of Death
----------------------
-
-**Description**
-
-A date on which a person died.
-
-**Type of field**
-
-Date (YYYY-MM-DD), fuzzy
-
-**Example of use**
-
-``2017-07-22``, ``2017-07``, ``2017``
-
-**Spreadsheet column name**
-
-``person:date_of_death``
-
-**Shortcode**
-
-``p_dod``
-
-**Sources**
-
-Yes (``person:date_of_death:source``, ``p_dod_s``)
-
-**Confidence**
-
-Yes (``person:date_of_death:confidence``, ``p_dod_c``)
-
-**Guidance on use**
-
-Use this field to record the full or partial date of a person's death, as recorded in a source. Where a source reports that a person has died, but does not indicate the date on which this happened, only the field ``Person: Deceased`` should be filled in. 
-
-Person: External Links
----------------------
-
-**Description**
-
-A link to an external resource specifically about this person, such as a Wikipedia page, official biography or social media accounts. This field is not presently in use.
-
-**Type of field**
-
-URL, multiple entry
-
-**Example of use**
-
-``https://en.wikipedia.org/wiki/Kenneth_Minimah``
-
-**Spreadsheet column name**
-
-``person:external_links``
-
-**Shortcode**
-
-``p_el``
-
-**Sources**
-
-Yes (``person:external_links:sources``, ``p_el_s``)
-
-**Confidence**
-
-Yes (``person:external_links:confidence``, ``p_el_c``)
-
-**Guidance on use**
-
-Though present in WhoWasInCommand's data entry, this field is not in use.
-
 
 Person: Posting to Unit
 -----------------------
@@ -874,15 +699,3 @@ No
 **Guidance on use**
 
 We use this field to record information about the person that is likely to provide useful context, additional information that does not fit into the data structure, and notes about how decisions were made about which data to include. Any sources used should be included directly inside the field.
-
-Person fields that are not in use
----------------------------------
-
-In the future, SFM will extend data capture to include other biographical information about a person. The following fields (accompanied by their respective source and confidence fields) exist in spreadsheets, but are not currently in use:
-
-- ``Person: Biography``
-- ``Person: External Link``
-- ``Person: Facebook Account``
-- ``Person: Twitter Account``
-- ``Person: Headshot``
-- ``Person: Wikipedia``

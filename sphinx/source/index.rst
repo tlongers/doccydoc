@@ -22,6 +22,7 @@ Security Force Monitor: Research Handbook
    data_integrity
    units
    persons
+   persons_extra
    incidents
    sources
 

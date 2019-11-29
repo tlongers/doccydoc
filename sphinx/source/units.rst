@@ -1,9 +1,12 @@
 Units
 =====
 
+What are units?
+---------------
+
 Units are official state or state-sanctioned organizations responsible for the internal or external security for a country. They include police, army, navy, air force and other security forces, as well as those civilian institutions linked to security forces through the chain of command or other linkages. Units refer to any part of the hierarchy of a security force, ranging from a national defense ministry to a police post in a small town. Units can also be groupings of other units, including joint operations, task forces or peacekeeping missions. 
 
-Documented in this chapter are a range of different pieces of data about units, including:
+Documented in this section of the handbook are field describing the following dimensions of units:
 
 -  their existence and identity;
 -  their position in the hierarchy of a security force;
@@ -16,7 +19,7 @@ Unit: Unique Identifier
 
 **Description**
 
-A unique 32 chracter code assigned to each unit in the dataset. 
+A unique 32 character code assigned to each unit in the dataset. 
 
 **Type of field**
 
@@ -536,15 +539,15 @@ Text and numbers
 
 **Shortcode**
 
-``u_rc``
+``u_ru``
 
 **Sources**
 
-Yes (``unit:related_unit:source``, ``u_rc_s``)
+Yes (``unit:related_unit:source``, ``u_ru_s``)
 
 **Confidence**
 
-Yes (``unit:related_unit:confidence``, ``u_rc_c``)
+Yes (``unit:related_unit:confidence``, ``u_ru_c``)
 
 **Guidance on use**
 
@@ -1038,7 +1041,7 @@ Yes (``unit:site_first_admin_area_name:confidence``, ``u_sfaan_c``)
 
 We identify sites with a number of different levels of geographical precision. In ``Unit: Site, First-level Administrative Area (Name)`` we record the text name of highest level subnational boundary for the country in which the site is located, as defined in the gazetteer in use for the dataset. For example, if Open Steet Map is the gazetteer, administrative levels can be `found here <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, adminstrative areas are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset, and are tagged as administrative levels.
 
-    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: Site, First-level Administrative Area (OSM object Name)`` the name of the administrative level 4 object or the state.
+    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: Site, First-level Administrative Area (Name)`` the name of the administrative level 4 object or the state.
 
 Unit: Site, First-level Administrative Area (ID)
 ------------------------------------------------
@@ -1075,7 +1078,7 @@ Yes. Inherits from ``Unit: First-level Administrative Area (Name)`` (``unit:site
 
 We identify sites with a number of different levels of geographical precision. In ``Unit: Site, First-level Administrative Area (ID)`` we record the text name of highest level subnational boundary for the country in which the site is located, as defined in the gazetteer in use for the dataset. For example, if Open Steet Map is the gazetteer, administrative levels can be `found here <http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#Super-national_administrations>`__. Generally, adminstrative areas are `relations <https://wiki.openstreetmap.org/wiki/Relation>`__ in the OSM dataset, and are tagged as administrative levels.
 
-    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: First-level Administrative Area (OSM object ID number)`` the OSM object ID number of the administrative level 4 object or the state.
+    Example: Mexico has both *municipios* (administrative level 6 in OSM) and states (administrative level 4). For a ``site`` based in Mexico, we would record in ``Unit: First-level Administrative Area (ID number)`` the OSM object ID number of the administrative level 4 object or the state.
 
 Unit: Site Country
 ------------------
